@@ -50,3 +50,30 @@ If you're interested, you could consult these [definitions/explanations Alexis a
 **phylogenetic tree**: A description of a path of transmission of genetic information between a set of taxo.  
 **branch** (of a phylogenetic tree): Lineages of taxonomic units that link nodes within a phylogenetic tree.  
 **root** (of a rooted phylogenetic tree): In a rooted tree, the node that represents the most recent common ancestor taxon of all other taxa in the tree.  
+
+
+##Visualising Trees with NJplot
+
+###Learning Objectives
+
+After completing this section, you will hopefully be able to use NJplot to change the way a phylogenetic tree is visualised/drawn by the software by changing the root and rotating subtrees around internal branches to reach a specified/desired representation of a tree.
+
+###Notes
+
+Many applications of phylogenies involve using them to check whether a given set of taxa/organisms/OTUs are related to each other in a particular way i.e. whether the topology of the estimated phylogeny supports a particular set of relationships between OTUs. As a tree with a given topology can be drawn/represented/visualised in many different ways, it can sometimes be tricky to tell whether a given representation of a phylogenetic tree indeed contains the relationship of interest. Thus, working with and changing between different representations of a tree is a useful skill when interpreting the results of phylogenetic analyses.
+
+NJplot does not have many features and options, however it carries out the simple tasks of re-rooting and rotating branches - very useful when attempting to determine whether a given set of relationships exists in a tree, or when comparing to tree topologies - very quickly, which is often all you need when taking a first look at a phylogeny.
+
+This page describes how to carry out these kinds of manipulations using NJplot - we will also demo them for you.
+
+###Exercise
+
+Load the following NEWICK/PHYLIP format [unscaled phylogenetic file](./trees/eightTaxaUnscaledNjplotExercise.ph) into NJplot and use the software to try and reproduce as closely as possible the following image:
+
+![](./images/eightTaxaNjplotExercise.gif "Eight OTU unscaled tree shown in NJplot")
+
+If the previous exercise was easy, try the same thing with the following [tree file](./trees/twentyUnscaledTaxaNjplotExercise.ph) and image:
+
+![](./images/twentyTaxaNjplotExercise.gif "Twenty OTU unscaled tree shown in NJplot")
+
+
