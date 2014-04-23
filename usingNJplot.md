@@ -1,11 +1,11 @@
 # Using NJplot
 
 ## Introduction
-NJplot was written to view and investigate rooted phylogenetic trees estimated using the neighbor-joining (NJ) algorithm, described in this reference and distributed from this webpage at the University of Lyon 1.
+NJplot was written to view and investigate rooted phylogenetic trees estimated using the neighbor-joining (NJ) algorithm, described in [this article](http://www.ncbi.nlm.nih.gov/pubmed/8905155) and distributed by the University of Lyon 1 under [this link](http://doua.prabi.fr/software/njplot)
 
 NJplot is ideal for examining the initial results of a phylogenetic analysis, as long as the method used to estimate the phylogeny yields a bifurcating tree (as old versions of NJplot can not represent non-bifurcating trees - although newer versions e.g. 2.3 are able to display such trees). NJplot is ideal for this as it makes it both quick and easy to rotate subtrees around internal branches, basic but key features needed when exploring and comparing a tree with expectations/other trees.
 
-There are many software packages available for viewing trees, many of which offer more features and options than NJplot (for example Dendroscope or FigTree). These additional features can make these tools much more appropriate than NJplot as a starting place for preparing figures that include phylogenetic trees - however, the basic tasks of subtree rotation and rerooting are typically considerably quicker and easier to carry out in NJplot than more complex packages.
+There are many software packages available for viewing trees, many of which offer more features and options than NJplot (for example [Dendroscope](http://ab.inf.uni-tuebingen.de/software/dendroscope/welcome.html) or [FigTree](http://tree.bio.ed.ac.uk/software/figtree/)). These additional features can make these tools much more appropriate than NJplot as a starting place for preparing figures that include phylogenetic trees - however, the basic tasks of subtree rotation and rerooting are typically considerably quicker and easier to carry out in NJplot than more complex packages.
 
 Additionally, NJplot is fairly forgiving in the variety of input formats it accepts - allowing us to examine trees from most sources without manually editing the input files.
 
@@ -13,8 +13,8 @@ Additionally, NJplot is fairly forgiving in the variety of input formats it acce
 
 The following are the two example tree files provided with version 2.3 of NJplot
 
-- Bifurcating tree
-- Multifurcating tree
+- [Bifurcating tree](./trees/bifurcatingNjplotExample.phb)
+- [Multifurcating tree](./trees/multiNjplotExample.phb)
 
 We can use these to see how to do the following in NJplot
 
@@ -56,6 +56,7 @@ To reroot the tree, simply click on the appropriate # symbol - for example, clic
 ![](./images/njplotNewOutgroupRerootedTsv.png)
 
 ## Saving a rooted tree
+
 NJplot accepts as input both rooted and unrooted trees.
 
 If you have input a rooted tree to NJplot, and have then rearranged and rerooted it into a convenient representation you would like to use in other software, you can save the tree in NEWICK format to represent the tree in a way that reflects how you have displayed and rooted it.
@@ -66,6 +67,7 @@ To save the tree in this way do:
 File->Save Rooted Tree
 
 ## Displaying internal branch labels/bootstrap support values
+
 NJplot can label internal branches of the tree using values/strings written after the parentheses describing an internal tree branch. For example, this excerpt from the multifurcating tree example file given at the top of this page will label the internal branch that defines the clan TEV and BaYMV with the label "55"
 
 (TEV:0.60499,BaYMV:0.49954)55:1.32670

@@ -33,7 +33,7 @@ B. Once you've finished, compare your definitions with those of your neighbours.
 
 Make notes on how your definitions differ, and write together a definition that agrees with both your ideas of the meaning of these terms.
 
-C. We'll compare the definitions you have written together with [definitions we prepared before coming to the class](#SuggestedPhylogenyDefinitions) - we'll discuss together any ways in which these pre-prepared definitions differ with the ones you have come up with.
+C. We'll compare the definitions you have written together with [definitions we prepared before coming to the class](#suggested-definitions) - we'll discuss together any ways in which these pre-prepared definitions differ with the ones you have come up with.
 
 D. (If you quickly finish part A. of the exercise) Repeat the above steps, this time selecting two or more terms from the list below.
 
