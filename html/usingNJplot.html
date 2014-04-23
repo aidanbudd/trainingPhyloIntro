@@ -1,0 +1,62 @@
+<h1 id="using-njplot">Using NJplot</h1>
+<h2 id="introduction">Introduction</h2>
+<p>NJplot was written to view and investigate rooted phylogenetic trees estimated using the neighbor-joining (NJ) algorithm, described in <a href="http://www.ncbi.nlm.nih.gov/pubmed/8905155">this article</a> and distributed by the University of Lyon 1 under <a href="http://doua.prabi.fr/software/njplot">this link</a></p>
+<p>NJplot is ideal for examining the initial results of a phylogenetic analysis, as long as the method used to estimate the phylogeny yields a bifurcating tree (as old versions of NJplot can not represent non-bifurcating trees - although newer versions e.g. 2.3 are able to display such trees). NJplot is ideal for this as it makes it both quick and easy to rotate subtrees around internal branches, basic but key features needed when exploring and comparing a tree with expectations/other trees.</p>
+<p>There are many software packages available for viewing trees, many of which offer more features and options than NJplot (for example <a href="http://ab.inf.uni-tuebingen.de/software/dendroscope/welcome.html">Dendroscope</a> or <a href="http://tree.bio.ed.ac.uk/software/figtree/">FigTree</a>). These additional features can make these tools much more appropriate than NJplot as a starting place for preparing figures that include phylogenetic trees - however, the basic tasks of subtree rotation and rerooting are typically considerably quicker and easier to carry out in NJplot than more complex packages.</p>
+<p>Additionally, NJplot is fairly forgiving in the variety of input formats it accepts - allowing us to examine trees from most sources without manually editing the input files.</p>
+<h2 id="example-files">Example files</h2>
+<p>The following are the two example tree files provided with version 2.3 of NJplot</p>
+<ul class="incremental">
+<li><a href="./trees/bifurcatingNjplotExample.phb">Bifurcating tree</a></li>
+<li><a href="./trees/multiNjplotExample.phb">Multifurcating tree</a></li>
+</ul>
+<p>We can use these to see how to do the following in NJplot</p>
+<ul class="incremental">
+<li>load trees</li>
+<li>rotate subtree around internal branches</li>
+<li>re-root the tree</li>
+<li>display internal branch labels</li>
+</ul>
+<h2 id="opening-a-file-with-njplot">Opening a file with NJplot</h2>
+<p>File-&gt;Open from the menu bar to select a file containing a NEWICK format phylogenetic tree</p>
+<div class="figure">
+<img src="./images/njplotOpenFileCropped.jpg" />
+</div>
+<p>After opening the tree, your window should look something like this</p>
+<div class="figure">
+<img src="./images/njplotFullTreeMultiTree.jpg" />
+</div>
+<h2 id="rotate-subtree-around-internal-branch">Rotate subtree around internal branch</h2>
+<p>Firstly, you need to change the &quot;Operation&quot; from &quot;Full Tree&quot; (the default when opening the tree file, as shown in the above image) to &quot;Swap nodes&quot;. After changing the operation like this, the midpoint of each node is labeled with a &quot;#&quot; sign - nodes are represented by vertical lines in the rectangular representation of trees used by NJplot (see the image below).</p>
+<div class="figure">
+<img src="./images/njplotSwapNodesMultiTree.png" />
+</div>
+<p>Secondly, click on one of the # signs to swap the order of the two daughter branches associated with that node - see below for an example.</p>
+<div class="figure">
+<img src="./images/njplotSwapNodes.png" />
+</div>
+<p>To remove the # signs from the tree, choose the &quot;Full tree&quot; operation again.</p>
+<h2 id="rerooting-the-tree">Rerooting the tree</h2>
+<p>Firstly, change the operation to &quot;New outgroup&quot; as shown below.</p>
+<div class="figure">
+<img src="./images/njplotNewOutgroup.png" />
+</div>
+<p>As for the &quot;Swap nodes&quot; operation, this causes the tree to become decorated with # signs - however, there is no longer a # associated with the root node of the tree, and there are now # signs associated with all OTUs/taxa labels.</p>
+<p>To reroot the tree, simply click on the appropriate # symbol - for example, clicking on the # at the end of the &quot;TSV&quot;-labeled terminal branch yields the tree shown below.</p>
+<div class="figure">
+<img src="./images/njplotNewOutgroupRerootedTsv.png" />
+</div>
+<h2 id="saving-a-rooted-tree">Saving a rooted tree</h2>
+<p>NJplot accepts as input both rooted and unrooted trees.</p>
+<p>If you have input a rooted tree to NJplot, and have then rearranged and rerooted it into a convenient representation you would like to use in other software, you can save the tree in NEWICK format to represent the tree in a way that reflects how you have displayed and rooted it.</p>
+<p>While the tree output in this way should unambiguously specify the position of the root of the tree as shown in your representation, there is no guarantee that the rotated order of the branches will be the same if it is loaded into another tree viewer.</p>
+<p>To save the tree in this way do: File-&gt;Save Rooted Tree</p>
+<h2 id="displaying-internal-branch-labelsbootstrap-support-values">Displaying internal branch labels/bootstrap support values</h2>
+<p>NJplot can label internal branches of the tree using values/strings written after the parentheses describing an internal tree branch. For example, this excerpt from the multifurcating tree example file given at the top of this page will label the internal branch that defines the clan TEV and BaYMV with the label &quot;55&quot;</p>
+<p>(TEV:0.60499,BaYMV:0.49954)55:1.32670</p>
+<p>Labels provided in this way often describe the number of trees that contain the split specified by the branch in a set of trees estimated from non-parametric bootstrapped datasets - for example, bootstrapped trees estimated by CLUSTALX are labeled in this way.</p>
+<p>To show these labels, switch on the &quot;Bootstrap values&quot; display, as shown below.</p>
+<div class="figure">
+<img src="./images/njplotBootstrapValues.png" />
+</div>
+<p>Author: Aidan Budd</p>
