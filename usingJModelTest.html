@@ -1,0 +1,26 @@
+<h1 id="using-jmodeltest">Using jModelTest</h1>
+<p>These are written for use with jModelTest 2.1.4 running on a Mac</p>
+<h2 id="running-a-basic-quick-analysis">Running a basic quick analysis</h2>
+<h3 id="load-alignment-file">Load alignment file</h3>
+<p><em>File-&gt;Load DNA Alignment</em> and select alignment of interest</p>
+<p>You can try <a href="./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank">this example file</a>.</p>
+<h3 id="compute-likelihood-scores-for-different-models">Compute likelihood scores for different models</h3>
+<p><em>Analysis-&gt;Compute likelihood scores</em></p>
+<p>To run a very quick analysis, just choose</p>
+<p><em>Likelihood settings</em></p>
+<ul class="incremental">
+<li>Number of substitution schemes-&gt;5</li>
+<li>Base frequencies-&gt;uncheck</li>
+<li>Rate variation-&gt;uncheck both +I and +G</li>
+<li>Base tree for likelihood calculations-&gt;Fixed BIONJ-JC</li>
+</ul>
+<p>and then click &quot;Compute likelihoods&quot;</p>
+<p>To include the GTR model in the scheme you need to run as above but using <strong>Base frequencies-&gt;check</strong></p>
+<h3 id="calculate-selection-criteria">Calculate selection criteria</h3>
+<p>For now we'll just use AIC</p>
+<p><em>Analysis-&gt;Do AIC calculations...</em></p>
+<p>then click &quot;Do AIC calculations&quot;</p>
+<h3 id="view-results">View results</h3>
+<p><em>Results-&gt;Show results table</em></p>
+<p>Then choose the AIC tab.</p>
+<p>The preferred models are those with the lower AICs; used very naievely, one would assume that the best model to take is the one with the lowest AIC.</p>
