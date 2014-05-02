@@ -19,7 +19,7 @@ To run a very quick analysis, just choose
 *Likelihood settings*
 
 - Number of substitution schemes->3
-- Base frequencies->uncheck
+- Base frequencies->check
 - Rate variation->uncheck both +I and +G
 - Base tree for likelihood calculations->Fixed BIONJ-JC
 

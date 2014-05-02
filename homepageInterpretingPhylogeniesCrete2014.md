@@ -5,10 +5,13 @@
 ####Aidan Budd
 
 
-[Exercises](./interpretingPhylogeniesCrete2014.html)
+- [Exercises](./interpretingPhylogeniesCrete2014.html)
+- [Presentation](./presentations/phyloIntroBuddCrete2014.pdf)
 
-Instructions on using software tools:
+Instructions on:
 
-- [jModelTest](./usingJModelTest.html)
-- [NJplot](./usingNJplot.html)
-- [Dendroscope](./usingDendroscope.html)
+- [using jModelTest](./usingJModelTest.html)
+- [using NJplot](./usingNJplot.html)
+- [using Dendroscope](./usingDendroscope.html)
+- [using PhyML](./)
+- [building multiple sequence alignments](./buildingMSAs.html)

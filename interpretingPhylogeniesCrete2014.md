@@ -1,6 +1,6 @@
-##Phylogeny Terminology and Concepts
+## Phylogeny Terminology and Concepts
 
-###Notes
+### Notes
 
 This exercise focuses on how we understand vocabulary and concepts associated with phylogenies and molecular evolution. By asking you to write down and discuss you understanding of several fundamental concepts and terms used in the field, the aim is to help highlight:
 
@@ -9,9 +9,9 @@ This exercise focuses on how we understand vocabulary and concepts associated wi
 
 It has been shown that considering an issue in several different ways e.g. (i) silently on your own (ii) in direct discussion with others or (iii) in a larger group discussion) tends to reinforce our ability to benefit from a given learning experience. Hence the structure of the exercise provided below.
 
-###Exercise
+### Exercise
 
-A. Write down definitions/descriptions of the terms given in the list below (1-3).
+**A. Write down definitions/descriptions of the terms given in the list below (1-3).**
 
 Do this silently, on your own, and please actually write it down (on paper, or in a document on your computer) - formulating your ideas into words like this helps highlight aspects of the topic where your ideas are less clear (i.e. in this case, the parts of the definitions you find hardest to write are those which you feel less confident about)
 
@@ -23,36 +23,38 @@ Here are the terms:
 1. branch (of a phylogenetic tree)
 1. root (of a rooted phylogenetic tree)
 
-B. Once you've finished, compare your definitions with those of your neighbours.
+**B. Once you've finished, compare your definitions with those of your neighbours.**
 
 Make notes on how your definitions differ, and write together a definition that agrees with both your ideas of the meaning of these terms.
 
-C. We'll compare the definitions you have written together with [definitions we prepared before coming to the class](#suggested-definitions) - we'll discuss together any ways in which these pre-prepared definitions differ with the ones you have come up with.
+**C. We'll compare the definitions you have written together with [definitions we prepared before coming to the class](#suggested-definitions) - we'll discuss together any ways in which these pre-prepared definitions differ with the ones you have come up with.**
 
-D. (If you quickly finish part A. of the exercise) Repeat the above steps, this time selecting two or more terms from the list below.
+**D. (If you quickly finish part A. of the exercise) Repeat the above steps, this time selecting two or more terms from the list below.**
 
-4. node (of a phylogenetic tree)
-4. polytomy
-4. sister group
-4. subtree
-4. taxonomic unit
+1. node (of a phylogenetic tree)
+1. polytomy
+1. sister group
+1. subtree
+1. taxonomic unit
 
 If you're interested, you could consult these [definitions/explanations Alexis and I have written for these terms](./documents/phyloTerminologyTakenFromWileyDictionary.pdf).
 
-###<a name="SuggestedPhylogenyDefinitions"></a>Suggested Definitions
+### <a name="SuggestedPhylogenyDefinitions"></a>Suggested Definitions
 
-**phylogenetic tree**: A description of a path of transmission of genetic information between a set of taxo.  
+**phylogenetic tree**: A description of a path of transmission of genetic information between a set of taxa.
+  
 **branch** (of a phylogenetic tree): Lineages of taxonomic units that link nodes within a phylogenetic tree.  
+
 **root** (of a rooted phylogenetic tree): In a rooted tree, the node that represents the most recent common ancestor taxon of all other taxa in the tree.  
 
 
-##Visualising Trees with NJplot
+## Visualising Trees with NJplot
 
-###Learning Objectives
+### Learning Objectives
 
 After completing this section, you will hopefully be able to use NJplot to change the way a phylogenetic tree is visualised/drawn by the software by changing the root and rotating subtrees around internal branches to reach a specified/desired representation of a tree.
 
-###Notes
+### Notes
 
 Many applications of phylogenies involve using them to check whether a given set of taxa/organisms/OTUs are related to each other in a particular way i.e. whether the topology of the estimated phylogeny supports a particular set of relationships between OTUs. As a tree with a given topology can be drawn/represented/visualised in many different ways, it can sometimes be tricky to tell whether a given representation of a phylogenetic tree indeed contains the relationship of interest. Thus, working with and changing between different representations of a tree is a useful skill when interpreting the results of phylogenetic analyses.
 
@@ -60,7 +62,7 @@ NJplot does not have many features and options, however it carries out the simpl
 
 This page describes how to carry out these kinds of manipulations using NJplot - we will also demo them for you.
 
-###Exercise
+### Exercise
 
 Load the following NEWICK/PHYLIP format [unscaled phylogenetic file](./trees/eightTaxaUnscaledNjplotExercise.ph) into NJplot and use the software to try and reproduce as closely as possible the following image:
 
@@ -95,9 +97,9 @@ In the case of this analysis of the epidemiology of rabies virus in North Africa
 
 Clearly the first three questions are substantive; we would of course be very interested, and certainly able to publish, any information that helped inform the answers to these questions. This would have the potential to decrease suffering, and the financial cost, of such infections, so is of interest from medical, welfare, and economic points of view.
 
-The fourth question is less strongly linked such "interesting" issues; however, it is useful for us, as phylogeneticists, as it is a question that can help address the other, clearly substantive, questions described before it **and** for which it suggests a model (a molecular phylogenetic one), parameter (the topology of a rooted phylogenetic tree), and dataset (a multiple sequence alignment of North African rabies virus samples) for which an estimate of this parameter would make some answers more or less likely.
+The fourth question is less strongly linked to such "interesting" issues; however, it is useful for us, as phylogeneticists, as it is a question that can help address the other, clearly substantive, questions described before it **and** for which it suggests a model (a molecular phylogenetic one), parameter (the topology of a rooted phylogenetic tree), and dataset (a multiple sequence alignment of North African rabies virus samples) for which an estimate of this parameter would make some answers more or less likely.
 
-Understanding and recognising the link between questions of these kinds can help the scientist doing the analysis by helping them focus on collecting an appropriate and useful dataset (i.e. one from which a parameter of interest can be estimated from); the more specific this question, the easier it is to decide which data to include/collect, and which to leave out (we can very rarely collect all possible data that could be relevant for our analysis, and it can be very useful to have criteria to help us decide what to leave in, what to leave out), and for communicating about their work to others (it's much easier to discuss and help someone with an analysis when you understand what the important questions are that it tries to address).
+Understanding and recognising the link between questions of these kinds can help us focus on collecting an appropriate and useful dataset (i.e. one from which a parameter of interest can be estimated); the more specific this question, the easier it is to decide which data to include/collect, and which to leave out (we can very rarely collect all possible data that could be relevant for our analysis, and it can be very useful to have criteria to help us decide what to leave in, what to leave out), and for communicating about their work to others (it's much easier to discuss and help someone with an analysis when you understand what the important questions are that it tries to address).
 
 After all of that discussion... for this demonstration, we're going to assume we have come up with the following substantive question:
 
@@ -109,14 +111,14 @@ In the context of this course, this will be a **probabilistic model of molecular
 
 - a tree topology (to be estimated)
 - branch lengths (to be estimated)
-- a substitution model (to be (partly) estimated)
+- a substitution model (to be [partly] estimated)
 - a distribution of site rates (to be estimated)
 
 In the case of the North African rabies virus analysis, the parameter whose value will allow us to address the substantive question is the tree topology.
 
 #### 3. Collect observations informative about the model parameter(s)
 
-In the context of this course, this will almost always be a multiple sequence alignment.
+In the context of this course, this will almost always be a set of molecular sequences.
 
 In the case of the North African rabies virus analysis, we will use a set of [nucleotide sequences of North African rabies virus phosphoprotein CDSs](./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.fasta), whose sequence identifiers have been modified so that its easy to tell which country they were sampled from (if the ID contains ALG it's Algeria, TUN, it's Tunisia, MAR it's Morocco) and to be compatible with the various software used in the analysis (in particular to contain only alphanumeric characters or underscores i.e. '_')
 
@@ -175,7 +177,7 @@ We can do that using, for example:
 - Dendroscope
 - FigTree
 
-### Easy exercise: from substantive question to an answer using "Louisiana Gastroenterologist" case as an example
+### Easy exercise: from substantive question to an answer using the "Louisiana Gastroenterologist" case as an example
 
 You can read [here](#LouisianaGastroenterologistDatsetDescription) a quick introduction to this dataset.
 
@@ -183,33 +185,66 @@ You can read [here](#LouisianaGastroenterologistDatsetDescription) a quick intro
 
 Write a question that relates the issue of the guilt or innocence of the accused in this trial to a phylogenetic analysis of relevant HIV sequences, that clearly highlights the parameters of interest for addressing this question.
 
+A suggested "answer" can be found [here](#A1EasyGastroenterologistExercise).
+
 #### 2. Build a model involving parameters that, if known, could answer the question
 
 This will be a phylogenetic probabilistic model of the evolution of a set of HIV sequences.
 
 #### 3. Collect observations informative about the model parameter(s)
 
+For very brief instructions on how to build alignments, follow [this link](./buildingMSAs.html)
+
 Align this set of [30 relevant HIV env/gp120 nucleotide sequences](./sequences/thirtySeqsLouisianaGastroUnaligned.fasta). The meaning of the sequence identifiers is described [here in the section on "Sequence/Data"](#LouisianaGastroenterologistDatsetDescription)
 
-Use either a local command-line tool (such as MUSCLE or PRANK) to align the sequences, or a web server such as [webPRANK](./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank) or [MUSCLE](./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.muscle).
+Use either a local command-line tool (such as MUSCLE or PRANK) to align the sequences, or a web server such as webPRANK or muscle.
 
-I'LL INCLUDE ALIGNMENTS OF THESE SEQUENCES USING BOTH METHODS HERE FOR REFERENCE/IN CASE THEY HAVE PROBLEMS RUNNING THE SOFTWARE
+For reference, here are alignments built using the web servers for:
 
-IF I HAVE TIME I'LL LINK TO A SHORT PAGE HERE DESCRIBING HOW TO RUN A QUICK MSA LOCALLY AND VIA A WEBSERVER OF EITHER NUCLEOTIDE OR PROTEIN SEQUENCES
+- <a =name"webPRANKthirtyLouisianGastroAlignment"></a>[webPRANK](./sequences/thirtySeqsLouisianaGastroAligned.webPRANK.fasta)
+- [MUSCLE](./sequences/thirtySeqsLouisianaGastroAligned.muscle.fasta).
 
 Clearly, if/when doing an analysis of this kind of your own, collecting an appropriate set of observations is likely to be much more effort that just clicking a link in a webpage and running  automatic alignment software over them
-
 
 #### 4. Find best estimate(s) of the parameter(s), conditioned on these observations AND 5. Estimate sampling/random error associated with parameter estimate
 
 Use jModelTest to choose a substitution model for your aligned sequences.
 
+Using the [webPRANK alignment in FASTA format](#webPRANKthirtyLouisianGastroAlignment) above, following these [instructions on running jModelTest](./usingJModelTest.html), we got the following [result page](./outputFiles/thirtySeqsLouisianaGastroAligned.webPRANK.fasta.jmodeltest.html), which chooses (using the default options described in the instruction file above) GTR as the best model.
+
 Use PhyML to estimate the topology, branch lengths (i.e. best estimates of relevant parameters), and branch support values (i.e. random error associated with topology parameter estimate), of a phylogenetic tree for these sequences.
 
+Using the [webPRANK alignment in FASTA format](#webPRANKthirtyLouisianGastroAlignment) above, using the GTR model chosen by jModelTest as the best model for this alignment, using [command-line PhyML as described here](./usingPhyML.html), using the [Phylogeny.fr data converter](http://www.phylogeny.fr/version2_cgi/data_converter.cgi) to change the format of the alignment from FASTA to Phylip interleaved ([here is the file converted to Phylip interleaved format](./sequences/thirtySeqsLouisianaGastroAligned.webPRANK.viaPhylogenyFr.phylipInterleaved)), gives the following [tree](./trees/thirtySeqsLouisianaGastroAligned.webPRANK.viaPhylogenyFr.phylipInterleaved_phyml_tree.txt) and the following [general output file](./outputFiles/thirtySeqsLouisianaGastroAligned.webPRANK.viaPhylogenyFr.phylipInterleaved_phyml_stats.txt)
 
 #### 6. Answer your question using these parameter estimates
 
-Visulaise the resulting tree using a tree viewer and assess the extent to which the results change your opinion about the guilt or innocence of the accused.
+Visualise the resulting tree using a tree viewer and assess the extent to which the results change your opinion about the guilt or innocence of the accused.
+
+Visualise the tree using one of these tools:
+
+- Dendroscope
+- NJplot
+- FigTree
+- PhyloWidget
+
+A suggested "answer" can be found [here](#A6EasyGastroenterologistExercise).
+
+#### Answers
+##### <a name="A1EasyGastroenterologistExercise"></a> 1. Pose a substantive question
+
+An obvious question to want to address for this case would be something like **"How likely is it that the defendant committed the crime they are accused of"**.
+
+A more specific question, that links the more general question above to a parameter of a phylogenetic model we could estimate that could inform a question of this kind, could be **"Are the sequences of HIV samples taken from the victim most closely related to (a) those taken from the patient, or (b) to some other sequences sampled from the local Louisiana population?"**.
+
+If the defendant were guilty of the crime, then given certain assumptions, then we would expect to get answer (a).
+
+##### <a name="A6EasyGastroenterologistExercise"></a>" 6. Answer your question using these parameter estimates
+
+We estimated this tree and visualised it using Dendroscope.
+
+![](./images/thirtySeqsLouisianaGastroAligned.webPRANK.viaPhylogenyFr.phylipInterleaved_phyml_tree.jpg)
+
+Looking at this tree, assuming it is correctly rooted and that the topology parameter has been correctly estimated, then the victim sequences are most closely related to the patient sequences, which is what we'd expect if the defendant is guilty. Thus, looking at the results of this analysis, I consider it now more probable that the defendant is guilty than before I did the analysis.
 
 ### Intermediate Demonstration
 
@@ -221,35 +256,50 @@ paper](http://www.ncbi.nlm.nih.gov/pubmed/21060816) (PubMed ID:
 
 #### Write down one or more substantive questions we want to address with the analysis
 
-Always need to begin with this! It's a big help in guiding decision-making while carrying out the analysis
+Always need to begin with this! It's a big help in guiding decision-making while carrying out the analysis.
+
+In this case, we'll use again:
+
+**"What is the topology of a phylogenetic tree of rabies viruses from North Africa with viruses sampled from several different North African countries?"**
 
 #### Collect an appropriate set of sequences
 
-There are many different places we could get them from:
+These could come from:
 
-- a collaborator
-- a sequencing machine
-- public databases that provide sequence data
+- public databases that contain sequence data
+- samples we send ourselves for sequencing
+- non-public sequences collected by others 
+  (collaborators/co-workers)
 
 We'll focus our example analysis on phosphoprotein complete CDS nucleic acid sequences
 
-**Looking for sequences first described in a particular publication?**
+**Obtaining sequences deposited in a public primary sequence database in association with a particular publication**
 
-Query PubMed with the PubMed ID, and link out to Nucleotide and/or
-Protein sequences, and export in an appropriate format (e.g. FASTA)
+We'll do this by querying PubMed with the PubMed ID (21060816) to identify the publication record in this database corresponding to the publication of interest, and then linking (within the NCBI's Entrez database system) to nucleotide and/or protein sequences records whose deposition is described in that article, finally exporting these sequences in an appropriate format (e.g. FASTA).
+
+To do this we will:
 
 - Search the Internet for PubMed
-- Copy and Paste the PubMed ID into the search box
-- Follow the appropriate link in the "Related Information" section on the right-side menu
-- Use the "Advanced" search options and the "Query Builder" to filter out unwanted sequences
- - [YouTube video](http://www.youtube.com/watch?v=dncRQ1cobdc) describing use of these tools
- - A [tutorial](http://www.lib.berkeley.edu/BIOS/pubquick.html) on using PubMed searches
-- Select appropriate sequence records, and follow the Send to link to download to a file in the appropriate format
+- Copy and Paste the PubMed ID into the PubMed search box
+- Follow the appropriate link in the "Related Information" 
+  section on the right-side menu
+- Use the "Advanced" search options and the "Query Builder" 
+  to filter out unwanted sequences
+   - [YouTube video](http://www.youtube.com/watch?v=dncRQ1cobdc) 
+     describing use of these tools
+    - A [tutorial](http://www.lib.berkeley.edu/BIOS/pubquick.html)
+    on using PubMed searches
+- Select appropriate sequence records, and follow the 'Send to' 
+  link to download to a file in the appropriate format
 
 **Using sequence similarity searching to identify similar sequences**
 
+Another common way to acquire sequences from public databases for a phylogenetic analysis is to use BLAST to identify sequences similar to a query sequence of interest, and which are likely to be related to this sequence of interest.   
+
 -  Take one of the query sequences from the file below
--  [BLAST](http://blast.ncbi.nlm.nih.gov/Blast.cgi) it at the NCBI choosing the appropriate program; perhaps filter e.g. using "Africa"
+-  [BLAST](http://blast.ncbi.nlm.nih.gov/Blast.cgi) it at the NCBI 
+    choosing the appropriate program; perhaps filter e.g. using
+    "Africa"
 
 **Pre-calculated alignments**
 

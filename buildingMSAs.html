@@ -1,0 +1,30 @@
+<h1 id="building-a-multiple-sequence-alignment">Building a Multiple Sequence Alignment</h1>
+<p>The aim of this page is just to give simple instructions of how to extract a multiple sequence alignment from a set of sequences, without explaining anything about how to interpret the resulting alignment, or how the respective software packages work.</p>
+<h2 id="example-sequences">Example sequences</h2>
+<h3 id="example-nucleotide-sequences">Example nucleotide sequences</h3>
+<h4 id="six-hiv-rt-polymerase-nucleotide-sequences"><a name="sixHIVRTPolNucleotideExampleSequences"></a>Six HIV RT polymerase nucleotide sequences</h4>
+<p><a href="./sequences/sixSeqsLouisianaGastroUnaligned.fasta">Six HIV RT polymerase nucleotide sequences</a> included in the analysis of Metzker et al. 2002 PMID 12388776 (The case of the Louisiana gastroenterologist).</p>
+<h2 id="online-webservers">Online webservers</h2>
+<h3 id="webprank">webPRANK</h3>
+<p>Visit the <a href="http://www.ebi.ac.uk/goldman-srv/webprank/">server's webpage</a></p>
+<p>Copy and paste FASTA format sequences into the &quot;Sequence data&quot; window.</p>
+<p>Click &quot;Start alignment&quot;</p>
+<p>Using the <a href="#sixHIVRTPolNucleotideExampleSequences">example nucleotide sequences</a> given above, we obtain this <a href="./sequences/sixSeqsLouisianaGastroAligned.webprank.fasta">sequence alignment</a>.</p>
+<h3 id="muscle">muscle</h3>
+<p>Visit the <a href="https://www.ebi.ac.uk/Tools/msa/muscle/">MUSCLE web server</a> hosted by the EMBL-EBI.</p>
+<p>Copy and paste FASTA format sequences into the &quot;Enter your input sequences&quot; window.</p>
+<p>To get the output alignment in FASTA format (which is understood by more software than the default ClustalW format), in &quot;STEP 2 - Set your Parameters OUTPUT FORMAT: &quot; set the format to &quot;Pearson/FASTA&quot;.</p>
+<p>Alternatively, to get the sequences in a form that they can be read by many phylogenetic software packages, choose instead &quot;Phylip interleaved&quot; or &quot;Phylip sequential&quot;</p>
+<p>Click &quot;Submit&quot;</p>
+<p>Using the <a href="#sixHIVRTPolNucleotideExampleSequences">example nucleotide sequences</a> given above, we obtain this <a href="./sequences/sixSeqsLouisianaGastroAligned.muscleWebserver.fasta">sequence alignment</a></p>
+<h2 id="commandline-software">Commandline software</h2>
+<h3 id="muscle-1">muscle</h3>
+<p>This example uses muscle3.8.31 for Mac OSX Intel i86 64 Bit, downloaded <a href="http://www.drive5.com/muscle/downloads.htm">from here</a>.</p>
+<p>To run muscle from the command line, we only need to specify the name of the input file (using the -in commandline option), and redirect stdout to a file which will then contain the output alignment</p>
+<p><code>$  muscle3.8.31_i86darwin64 -in sixSeqsLouisianaGastroUnaligned.fasta &gt; sixSeqsLouisianaGastroAligned.muscleCmdLine.fasta</code></p>
+<p>This resulted in <a href="./sequences/sixSeqsLouisianaGastroAligned.muscleCmdLine.fasta">this alignment</a></p>
+<h3 id="prank">prank</h3>
+<p>This example use the prank OSX 64 bit binary released 10.01.2014 (prank.osx64.140110) downloaded <a href="https://code.google.com/p/prank-msa/">from here</a></p>
+<p>To run prank from the command line, we only need to specify the name of the input file using the -d= commandline option</p>
+<p><code>$ prank -d=./sixSeqsLouisianaGastroUnaligned.fasta</code></p>
+<p>This resulted in <a href="./sequences/sixSeqsLouisianaGastro.prank.fasta">this alignment</a></p>

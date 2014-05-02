@@ -1,0 +1,55 @@
+
+ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+                                  ---  PhyML 20120412  ---                                             
+                            http://www.atgc-montpellier.fr/phyml                                          
+                         Copyright CNRS - Universite Montpellier II                                 
+ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+. Sequence filename: 			thirtySeqsLouisianaGastroAligned.webPRANK.viaPhylogenyFr.phylipInterleaved
+. Data set: 				#1
+. Tree topology: 			fixed
+. Initial tree: 			BioNJ
+. Model of nucleotides substitution: 	GTR
+. Number of taxa: 			30
+. Log-likelihood: 			-5164.97017
+. Unconstrained likelihood: 		-6115.82403
+. Parsimony: 				711
+. Tree size: 				0.82171
+. Nucleotides frequencies:
+  - f(A)= 0.42009
+  - f(C)= 0.15569
+  - f(G)= 0.20613
+  - f(T)= 0.21809
+. GTR relative rate parameters : 
+  A <-> C    1.95913
+  A <-> G    3.43446
+  A <-> T    0.66111
+  C <-> G    0.76344
+  C <-> T    4.59843
+  G <-> T    1.00000
+
+. Instantaneous rate matrix : 
+  [A---------C---------G---------T------]
+  -0.81294   0.21429   0.49736   0.10129  
+   0.57820  -1.39332   0.11056   0.70457  
+   1.01362   0.08351  -1.25034   0.15322  
+   0.19511   0.50298   0.14481  -0.84291  
+
+
+
+. Run ID:				none
+. Random seed:				1399043820
+. Subtree patterns aliasing:		no
+. Version:				20120412
+. Time used:				0h0m1s (1 seconds)
+
+ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ Suggested citations:
+ S. Guindon, JF. Dufayard, V. Lefort, M. Anisimova, W. Hordijk, O. Gascuel
+ "New algorithms and methods to estimate maximum-likelihood phylogenies: assessing the performance of PhyML 3.0."
+ Systematic Biology. 2010. 59(3):307-321.
+
+ S. Guindon & O. Gascuel
+ "A simple, fast, and accurate algorithm to estimate large phylogenies by maximum likelihood"
+ Systematic Biology. 2003. 52(5):696-704.
+ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
