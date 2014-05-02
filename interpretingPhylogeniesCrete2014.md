@@ -296,10 +296,8 @@ To do this we will:
 
 Another common way to acquire sequences from public databases for a phylogenetic analysis is to use BLAST to identify sequences similar to a query sequence of interest, and which are likely to be related to this sequence of interest.   
 
--  Take one of the query sequences from the file below
--  [BLAST](http://blast.ncbi.nlm.nih.gov/Blast.cgi) it at the NCBI 
-    choosing the appropriate program; perhaps filter e.g. using
-    "Africa"
+- Take one of the sequences from [this file](./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.fasta)
+- Use this sequences to query one of the nucleotide sequence databases at the NCBI using [BLAST](http://blast.ncbi.nlm.nih.gov/Blast.cgi), making sure we choose the right program (in this case we want to search a nucleotide database with a nucleotide query sequence); we may want to filter our results if we get too many hits e.g. taking only records matching the string "Africa"
 
 **Pre-calculated alignments**
 
@@ -326,7 +324,7 @@ unrelated proteins called COX2 in humans (PGH2\_HUMAN and COX2\_HUMAN)!
 
 #### Edit sequence identifiers to be unique, compatible with analysis tools, and meaningful (in the context of allowing us to easily answer our question(s) of interest when examining resulting phylogneetic trees and other results)
 
-Here I've selected a set of sequences using the kinds of methods described above, in FASTA format, but [haven't changed the sequence identifiers at all.](http://www.embl.de/%7Eseqanal/courses/commonCourseContent/dataFiles/phosphoproteinCDSsNoLabelEd.txt)
+Here I've selected a set of sequences using the kinds of methods described above, in FASTA format, but [haven't changed the sequence identifiers at all.](./sequences/phosphoproteinCDSsNoLabelEd.txt)
 
 With these identifiers, there is plenty of phylogenetic software that will not accept them as input, even if they accept FASTA format alignment files.
 
@@ -338,25 +336,21 @@ Common problems could be that the identifiers:
 
 For example, the [RAxML BlackBox web server](http://embnet.vital-it.ch/raxml-bb/index.php) doesn't accept these sequences as input.
 
-However, after I edit the file, [changing it to this](http://www.embl.de/%7Eseqanal/courses/commonCourseContent/dataFiles/phosphoproteinCDSsLabelsEd.txt), so that the first 10 characters are unique (and at the same time making it easy to spot their country of sampling, making the final data visualisation/question answering part of the analysis easier), they are accepted 
+However, after I edit the file, [changing it to this](./sequences/phosphoproteinCDSsLabelsEd.txt), so that the first 10 characters are unique (and at the same time making it easy to spot their country of sampling, making the final data visualisation/question answering part of the analysis easier), they are accepted. 
 
 #### Align sequences
 
 Aligned FASTA sequences - google "MUSCLE EBI" or "WEBPRANK" to get links to MUSCLE and PRANK webservers: 
 
--   [MUSCLE aligned](http://www.embl.de/%7Eseqanal/courses/commonCourseContent/dataFiles/phosphoproteinCDSsLabelsEd.muscle)
--   [PRANK aligned](http://www.embl.de/%7Eseqanal/courses/commonCourseContent/dataFiles/phosphoproteinCDSsLabelsEd.prank)
+-   [MUSCLE aligned](./sequences/phosphoproteinCDSsLabelsEd.muscle)
+-   [PRANK aligned](./sequences/phosphoproteinCDSsLabelsEd.prank)
 
 There are many different tools available, and different tools are better suited for different "kinds" of sequence sets (length, whether DNA, RNA, or protein, number of sequences, how similar the sequences are to each other).
 
-One option (fairly good for fairly divergent protein sequences) would be the [MUSCLE webserver](http://www.ebi.ac.uk/Tools/msa/muscle/) at the EMBL-EBI.
+One option (fairly good for fairly divergent protein sequences; which isn't what we're working with here! however, it still gives us an alignment for nucleotide sequences, even if that's not what it's designed for) would be the [MUSCLE webserver](http://www.ebi.ac.uk/Tools/msa/muscle/) at the EMBL-EBI.
 
-Here they are as aligned by [MUSCLE](http://www.embl.de/%7Eseqanal/courses/commonCourseContent/dataFiles/phosphoproteinCDSsLabelsEd.muscle)
-
-Here is an example of the [same set of sequences
-aligned](http://www.embl.de/%7Eseqanal/courses/commonCourseContent/sequences/relativelyDivergentRabiesCDSsAlignedWithOthersMUSCLEEBI.fasta)
-together with some [more divergent
-ones](http://www.embl.de/%7Eseqanal/courses/commonCourseContent/sequences/relativelyDivergentRabiesCDSs.fasta).
+For [this alignment](./sequences/relativelyDivergentRabiesCDSsAlignedWithOthersMUSCLEEBI.fasta), we combined the same [set of unaligned sequences given above](./sequences/phosphoproteinCDSsLabelsEd.txt) with several additional [more divergent
+sequences](./sequences/relativelyDivergentRabiesCDSs.fasta), and aligned this combined set of sequences together using MUSCLE at the EMBL-EBI.
 
 #### Model Selection
 
@@ -365,42 +359,95 @@ For this we use jModelTest (for nucleotide sequences) or ProtTest (for protein s
 Modeltest results from PRANK alignment - use JModelTest on local
 machines:
 
--   [Console PDF](http://www.embl.de/%7Eseqanal/courses/commonCourseContent/dataFiles/phosphoproteinCDSsLabelsEd.modeltest.pdf)
--   [AIC results TIFF](http://www.embl.de/%7Eseqanal/courses/commonCourseContent/dataFiles/phosphoproteinCDSsLabelsEd.modeltest.AICresults.tiff)
--   [BIC results TIFF](http://www.embl.de/%7Eseqanal/courses/commonCourseContent/dataFiles/phosphoproteinCDSsLabelsEd.modeltest.BICresults.tiff)
+-   [Console PDF](./outputFiles/phosphoproteinCDSsLabelsEd.modeltest.pdf)
+-   ![AIC results TIFF](./images/phosphoproteinCDSsLabelsEd.modeltest.AICresults.tiff)
+-   ![BIC results TIFF](./images/phosphoproteinCDSsLabelsEd.modeltest.BICresults.tiff)
+
+Both AIC and BIC choose **GTR+G** as the best model.
 
 #### Phylogeny estimation
 
-Tools typically used to estimate phylogenies for publication are mostly command-line based, and we don't have time to teach how to use these today. Instead we'll try using some webservers that have wrapped some of these programs up in a relatively easy-to-use interface that offer some, but not all, of the functionality of the tools.
+Tools typically used to estimate phylogenies for publication are mostly used via a command-line interface.
+
+If you don't want to learn how to use tools in that way, there are however some webservers available that have wrapped some of these programs up in a relatively easy-to-use interface that offer some, but not all, of the functionality of the tools.
 
 -   [Phylemon](http://phylemon.bioinfo.cipf.es/)
 -   [Phylogeny.fr](http://www.phylogeny.fr/)
 
-Phylogeny.fr result (HKY + Gamma) - use phylogeny.fr a la carte mode to run analysis, and view NEWICK tree using a tree viewer locally on your machines
+For example, I used Phylogeny.fr with HKY + Gamma, in *a la carte* mode to run analysis, to get the [following tree in NEWICK format](./trees/phosphoproteinCDSsLabelsEd.HKYgamma.phylogeny.fr.ph), which I could then view locally on my machine with Dendroscope, NJPlot, or FigTree, or remotely via [PhyloWidget](http://www.phylowidget.org/).
 
-[NEWICK tree from Phylogeny.fr](http://www.embl.de/%7Eseqanal/courses/commonCourseContent/dataFiles/phosphoproteinCDSsLabelsEd.HKYgamma.phylogeny.fr.ph)
+Below, I've analysed the [initial dataset together with several more divergent sequences, aligned by the EMBL-EBI muscle web server, as given above](./sequences/relativelyDivergentRabiesCDSsAlignedWithOthersMUSCLEEBI.fasta), using PhyML from the command line as [described here](./usingPhyML.html).
+
+Firstly, I changed the format to Phylip (interleaved) using the [Phylogeny.fr Data Converter](http://www.phylogeny.fr/version2_cgi/data_converter.cgi), to give [this alignment](./sequences/relativelyDivergentRabiesCDSsAlignedWithOthersMUSCLEEBI.PhylogenyFrFormatChange.phylipInterleaved)
+
+This used the same options as described above, apart from:
+
+- in the "Substitution Model" menu, using:
+    - One category of substitution rate (yes/no)  **no**
+    - Number of substitution rate categories  **4**
+    - Gamma distributed rates across sites  **yes**
+    - Gamma distribution parameter (fixed/estimated) **estimated**
+    
+These changes were needed to run with the GTR+gamma substitution model, rather than the GTR substitution model.
+
+This gave the following files:
+
+- [Newick format tree file with SH-like branch supports](./trees/relativelyDivergentRabiesCDSsAlignedWithOthersMUSCLEEBI.PhylogenyFrFormatChange.phylipInterleaved_phyml_tree.txt)
+- [general output file](./outputFiles/relativelyDivergentRabiesCDSsAlignedWithOthersMUSCLEEBI.PhylogenyFrFormatChange.phylipInterleaved_phyml_stats.txt)
 
 #### Algorithm Diagnosis
 
-Try the analysis using several different substitution models, different starting trees
+Before drawing strong conclusions from the results of the phylogeny estimation, for example before publishing them, we should explore a range of different possible sources of error that could have led to inaccurate parameter estimation.
+
+Here we will just explore one of these i.e. the impact of using different substitution models for the analysis.
+
+Using command line phyml, as above, I re-ran the analysis using the GTR model (i.e. without gamma), and using the JC + gamma model.
+
+Here are the result files:
+
+- GTR (without gamma)
+    - [Newick format tree](./trees/relativelyDivergentRabiesCDSsAlignedWithOthersMUSCLEEBI.PhylogenyFrFormatChange.phylipInterleaved_phyml_tree.txt.gtrNoGamma)
+    - [general result file](./outputFiles/relativelyDivergentRabiesCDSsAlignedWithOthersMUSCLEEBI.PhylogenyFrFormatChange.phylipInterleaved_phyml_stats.txt.gtrNoGamma)
+- JC + gamma
+    - [Newick format tree](./trees/relativelyDivergentRabiesCDSsAlignedWithOthersMUSCLEEBI.PhylogenyFrFormatChange.phylipInterleaved_phyml_tree.txt.JCGamma)
+    - [general result file](./outputFiles/relativelyDivergentRabiesCDSsAlignedWithOthersMUSCLEEBI.PhylogenyFrFormatChange.phylipInterleaved_phyml_stats.txt.JCGamma)
+
+Other simple things we could have tried would be to change the details of way PhyML does its tree search (in the **Tree Searching** menu), or to check to see which result you get when running an analysis using another maximum likelihood tree estimator such as RAxML.
 
 #### Parameter estimation
 
-Look at the tree and decide on how it informs the answer to your question of interest
+Look at the tree and decide on how it informs the answer to your question of interest.
 
+Here, using the tree estimated by PhyML using theGTR plus gamma model, is the image of the tree shown in Dendroscope.
+
+![](./images/relativelyDivergentRabiesCDSsAlignedWithOthersMUSCLEEBI.PhylogenyFrFormatChange.phylipInterleaved_phyml_tree.jpg)
+
+You'll see that I made the mistake of running through the analysis without changing the sequence identifiers to contain the information about the country from which the samples were obtained! I'll leave the image here as an example of why it's so important to edit the sequence identifiers in a way that makes answering your substantive question easy...
+
+Here is another tree estimated from these sequences where the identifiers have been edited to indicate the country from which the sequences were sampled:
+
+![](./images/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank.phylip_phyml_tree.jpg)
+
+The Tunisian sequence all cluster together on one end of a branch that separates them from all other sequences in the tree (using 'unrooted tree' language, they form a 'clan').
+
+The same is true for the Algerian sequences.
+
+However this is not true for the Moroccan sequences; there is one branch that separates all but one of the Moroccan sequences into a clan, but there is one sequence (08064MAR_2) that is excluded from the is clan.
+
+Thus, in general, sequences tend to cluster according to country, but they don't form three separate clans; the placement of the 08064MAR_2 sequence could be accurate, indicating, that the history of evolution of the sequences is more complex than one in which the virus was never transmitted across national borders. Alternatively, this estimate of the tree topology parameter could  be wrong, due to errors in data collection or analysis.
 
 ### Intermediate Exercise
 
 Try a similar analysis as used for the phosphoprotein complete CDS nucleic acid sequences shown above, using the sequences for glycoprotein partial CDS and intergenic spacer given below
 
-- [Sequence labels unedited](http://www.embl.de/~seqanal/courses/commonCourseContent/dataFiles/glycoproteinPartialAndIntergenicSpacerNoLabelEd.txt)
-- [Sequence labels edited to easily identify country of origin](http://www.embl.de/~seqanal/courses/commonCourseContent/dataFiles/glycoproteinPartialAndIntergenicSpacerLabelsEd.txt)
+- [Sequence labels unedited](./sequences/glycoproteinPartialAndIntergenicSpacerNoLabelEd.txt)
+- [Sequence labels edited to easily identify country of origin](./sequences/glycoproteinPartialAndIntergenicSpacerLabelsEd.txt)
 
 1. Write down one or more substantive questions we want to address with the analysis
 
 2. Collect an appropriate set of sequences
 
-3. Edit sequence identifiers to be unique, compatible with analysis tools, and meaningful (in the context of allowing us to easily answer our question(s) of interest when examining resulting phylogneetic trees and other results)
+3. Edit sequence identifiers to be unique, compatible with analysis tools, and meaningful (in the context of allowing us to easily answer our question(s) of interest when examining resulting phylogenetic trees and other results)
 
 4. Align sequences
 
@@ -435,27 +482,26 @@ You might also be interested to read the following documents, which are the deci
 - [2nd appeal](http://www.denverda.org/DNA_Documents/schmidt2000.PDF)
 
 Ideally, just use your previous experience to decide how to do this - however, if you need help/suggestions, you could look at the ["Phylogeny analysis workflow" section of this
-presentation](http://www.embl.de/%7Eseqanal/courses/watcCompMolEvolPhyloIntroBuddFridayApr2011/phyloPres_watcCompMolEvolPhyloIntroBuddFridayApr2011.pdf)
-for ideas, and/or look at [this link which makes some more explicit
-suggestions on what you could try in this particular
-case](http://www.embl.de/%7Eseqanal/courses/commonCourseContent/phylogenyAnswers.html#Louisiana_gastroenterologist)\
+presentation](./presentations/phyloIntroBuddCrete2014.pdf)
+for ideas, and/or look at [these suggestions on what you could try in this particular
+case](#suggestedApproachToAdvancedLouisianGastroenterologistExercise)
 
 While doing the analysis, you may find it useful to consider the
 following issues/questions:
 
--   did you remove any sequences and/or columns from the alignment    before running the analysis? How/why did you choose these? What    influence would you expect this choice to have on the result of your analysis?
--   are there any unusual characters in the data set? how could/did you deal with these? What effects would you expect these different approaches to addressing this problem have on the result?
--   which substitution model(s) do you think are the most appropriate to use when analysing this data set?
--   to what extent do different estimates of the phylogeny usin different methods agree with each other i.e. how similar are the trees you get from different analyses?
--   what do you feel is the right way of thinking about the relationship between branch support (e.g. posterior probabilities) and whether the data supports particular conclusions "beyond reasonable doubt"? For example, bipartition/clade/internal branch posterior probabilities are estimates of the probability that the branch is correct **given** the data and the model (and there may be issues with both of these things that we're conditioning the analysis on). To think about it differently, what do you feel is the relationship between "reality" (i.e. the true description of the processes of evolution that yielded the sequences we use in the analysis) and "branch support"?
+- did you remove any sequences and/or columns from the alignment    before running the analysis? How/why did you choose these? What    influence would you expect this choice to have on the result of your analysis?
+- are there any unusual characters in the data set? how could/did you deal with these? What effects would you expect these different approaches to addressing this problem have on the result?
+- which substitution model(s) do you think are the most appropriate to use when analysing this data set?
+- to what extent do different estimates of the phylogeny usin different methods agree with each other i.e. how similar are the trees you get from different analyses?
+- what do you feel is the right way of thinking about the relationship between branch support (e.g. posterior probabilities) and whether the data supports particular conclusions "beyond reasonable doubt"? For example, bipartition/clade/internal branch posterior probabilities are estimates of the probability that the branch is correct **given** the data and the model (and there may be issues with both of these things that we're conditioning the analysis on). To think about it differently, what do you feel is the relationship between "reality" (i.e. the true description of the processes of evolution that yielded the sequences we use in the analysis) and "branch support"?
 
 For the sake of completeness, here are files containing
 
 1. [the full set of env/gp120 nucleotide sequences used in the study](./sequences/pmid_12388776_MetzkerEtAl2002_only_env_gp120s_cloneNamesOnly.fasta)
 2. [the full set of RT-pol sequences described in the study](./sequences/pmid_12388776_MetzkerEtAl2002_only_RT_pol_cloneNamesOnly.fasta)
-3. [the trimmed-down set of these sequences described above](./pmid_12388776_MetzkerEtAl2002_only_env_gp120s_cloneNamesOnly_trimmedForSize.fa)
+3. [the trimmed-down set of these sequences described above](./sequences/pmid_12388776_MetzkerEtAl2002_only_env_gp120s_cloneNamesOnly_trimmedForSize.fa)
 
-Here is a short desription of how I might go about doing the analysis described above:
+Here is a short description of how I might go about doing the analysis described above:
 
 aligning sequences:  
 - [webPRANK](http://www.ebi.ac.uk/goldman-srv/webprank/)  
@@ -466,7 +512,7 @@ removing sequences/columns from the analysis:
 - [JalView](http://www.jalview.org/)  
 
 substitution model testing:  
-- [PAML](http://abacus.gene.ucl.ac.uk/software/paml.html) (you could also use modeltest, however)  
+- [PAML](http://abacus.gene.ucl.ac.uk/software/paml.html) (you could also use jModelTest, however)  
 
 visualising trees:  
 - [NJplot](http://pbil.univ-lyon1.fr/software/njplot.html)  
@@ -486,35 +532,24 @@ maximum likelihood phylogeny estimation:
 checking for agreement between estimated trees:  
 - [CONSENSE](http://evolution.genetics.washington.edu/phylip/doc/consense.html) (part of the PHYLIP package), or [SplitsTrees](http://www.splitstree.org/), or [clann](http://bioinf.may.ie/software/clann/)
 
-One way of linking these together would be to:
+<a name="suggestedApproachToAdvancedLouisianGastroenterologistExercise"></a>One way of linking these together would be to:
 
-1 Align the initial set of **nucleotide** (ignoring the fact that they're coding, or at least contain some coding regions) sequences using [webPRANK](http://www.ebi.ac.uk/goldman-srv/webprank/), asking webPRANK to estimate its own tree  
+1. Align the initial set of **nucleotide** (ignoring the fact that they're coding, or at least contain some coding regions) sequences using [webPRANK](http://www.ebi.ac.uk/goldman-srv/webprank/), asking webPRANK to estimate its own tree  
+2. for the sake of keeping data processing/formatting issues at a    minimum I'd for now focus on nucleotide models rather than codon or protein models - the fact that they're not perhaps only coding sequences, and might contain some stop codons make it tricky to quickly go with these alternatives
+3. remove some sequences from the analysis using JalView
+4. realign the sequences automatically using webPRANK
+5. estimate the phylogeny using one of the following software, beginning with a GTR + gamma substitution model (which is usually/often a good choice)
+    - RAxML
+    - PhyML
+    - MrBayes
+6. re-align the sequences using webPRANK, providing it with the estimated tree to guide the analysis
+7. estimate, from the new alignment (perhaps removing more sequences, removing some columns from the analysis) using several different tools, estimating also "support values" i.e. non-parametric bootstraps, aLRTs, posterior probabilities, running each tool more than once with different runs using different start trees/random seeds - again, tools you could use might be:
+    - RAxML
+    - PhyML
+    - MrBayes
+8. using the tree, if the reported tree topologies are very similar (I could use CONSENSE in the PHYLIP package to build consensus trees to check how well they agree), I could use jModeltest or PAML or modeltest to test alternative substitution models (e.g. whether HKY plus gamma is a better choice of model for the analysis than GTR plus gamma). jModeltest is easier to use. PAML gives you more control over which tree is used as the context in which to compare the models, and which order and which models to include in the testing.
+9. If I ended up preferring a different model, I'd run the analyses above again i.e. estimate the tree again using different methods, different starting trees, different parameters, checking for "good" MCMC behaviour, etc. I'd also use SOWH to test explicit hypotheses of interest concerning branching patterns/bipartitions associated with the question of interest
 
-2 for the sake of keeping data processing/formatting issues at a    minimum I'd for now focus on nucleotide models rather than codon or protein models - the fact that they're not perhaps only coding sequences, and might contain some stop codons make it tricky to quickly go with these alternatives
-
-3 remove some sequences from the analysis using JalView
-
-4 realign the sequences automatically using webPRANK
-
-5 estimate the phylogeny using one of the following software, beginning with a GTR + gamma substitution model (which is usually/often a good choice)
-- RAxML
-- PhyML
-- MrBayes
-
-6 re-align the sequences using webPRANK, providing it with the estimated tree to guide the analysis
-
-7 estimate, from the new alignment (perhaps removing more sequences, removing some columns from the analysis) using several different tools, estimating also "support values" i.e. non-parametric bootstraps, aLRTs, posterior probabilities, running each tool more than once with different runs using different start trees/random seeds - again, tools you could use might be:
-- RAxML
-- PhyML
-- MrBayes
-
-8 using the tree, if the reported tree topologies are very similar (I could use CONSENSE in the PHYLIP package to build consensus trees to check how well they agree), I could use jModeltest or PAML or modeltest to test alternative substitution models (e.g. whether HKY plus gamma is a better choice of model for the analysis than GTR plus gamma). jModeltest is easier to use. PAML gives you more control over which tree is used as the context in which to compare the models, and which order and which models to include in the testing.
-
-9 If I ended up preferring a different model, I'd run the analyses above again i.e. estimate the tree again using different methods, different starting trees, different parameters, checking for "good" MCMC behaviour, etc. I'd also use SOWH to test explicit hypotheses of interest concerning branching patterns/bipartitions associated with the question of interest
-
-Visualise you alignment using [JalView](http://www.jalview.org/)
-
-Do you expect this is likely to give a precise estimate of the topology parameter?
 
 ## <a name="LouisianaGastroenterologistDatsetDescription"></a>Example Dataset: the case of the "Louisiana Gastroenterologist"
 

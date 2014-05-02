@@ -1,0 +1,55 @@
+
+ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+                                  ---  PhyML 20120412  ---                                             
+                            http://www.atgc-montpellier.fr/phyml                                          
+                         Copyright CNRS - Universite Montpellier II                                 
+ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+. Sequence filename: 			relativelyDivergentRabiesCDSsAlignedWithOthersMUSCLEEBI.PhylogenyFrFormatChange.phylipInterleaved
+. Data set: 				#1
+. Tree topology: 			fixed
+. Initial tree: 			BioNJ
+. Model of nucleotides substitution: 	GTR
+. Number of taxa: 			33
+. Log-likelihood: 			-4254.77959
+. Unconstrained likelihood: 		-4726.82768
+. Parsimony: 				554
+. Tree size: 				0.83983
+. Nucleotides frequencies:
+  - f(A)= 0.31491
+  - f(C)= 0.23032
+  - f(G)= 0.23248
+  - f(T)= 0.22229
+. GTR relative rate parameters : 
+  A <-> C    3.20816
+  A <-> G   17.46696
+  A <-> T    1.76697
+  C <-> G    0.87798
+  C <-> T   24.30975
+  G <-> T    1.00000
+
+. Instantaneous rate matrix : 
+  [A---------C---------G---------T------]
+  -0.87166   0.12404   0.68168   0.06594  
+   0.16960  -1.11104   0.03426   0.90717  
+   0.92338   0.03395  -0.99465   0.03732  
+   0.09341   0.93993   0.03903  -1.07237  
+
+
+
+. Run ID:				none
+. Random seed:				1399050189
+. Subtree patterns aliasing:		no
+. Version:				20120412
+. Time used:				0h0m0s (0 seconds)
+
+ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ Suggested citations:
+ S. Guindon, JF. Dufayard, V. Lefort, M. Anisimova, W. Hordijk, O. Gascuel
+ "New algorithms and methods to estimate maximum-likelihood phylogenies: assessing the performance of PhyML 3.0."
+ Systematic Biology. 2010. 59(3):307-321.
+
+ S. Guindon & O. Gascuel
+ "A simple, fast, and accurate algorithm to estimate large phylogenies by maximum likelihood"
+ Systematic Biology. 2003. 52(5):696-704.
+ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo

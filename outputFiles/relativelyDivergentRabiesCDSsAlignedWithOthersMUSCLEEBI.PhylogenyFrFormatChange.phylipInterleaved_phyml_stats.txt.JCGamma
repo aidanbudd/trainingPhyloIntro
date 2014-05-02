@@ -1,0 +1,42 @@
+
+ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+                                  ---  PhyML 20120412  ---                                             
+                            http://www.atgc-montpellier.fr/phyml                                          
+                         Copyright CNRS - Universite Montpellier II                                 
+ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+. Sequence filename: 			relativelyDivergentRabiesCDSsAlignedWithOthersMUSCLEEBI.PhylogenyFrFormatChange.phylipInterleaved
+. Data set: 				#1
+. Tree topology: 			fixed
+. Initial tree: 			BioNJ
+. Model of nucleotides substitution: 	JC69
+. Number of taxa: 			33
+. Log-likelihood: 			-4524.11421
+. Unconstrained likelihood: 		-4726.82768
+. Parsimony: 				554
+. Tree size: 				0.84114
+. Discrete gamma model: 		Yes
+  - Number of categories: 		4
+  - Gamma shape parameter: 		0.530
+. Nucleotides frequencies:
+  - f(A)= 0.25000
+  - f(C)= 0.25000
+  - f(G)= 0.25000
+  - f(T)= 0.25000
+
+. Run ID:				none
+. Random seed:				1399050370
+. Subtree patterns aliasing:		no
+. Version:				20120412
+. Time used:				0h0m0s (0 seconds)
+
+ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ Suggested citations:
+ S. Guindon, JF. Dufayard, V. Lefort, M. Anisimova, W. Hordijk, O. Gascuel
+ "New algorithms and methods to estimate maximum-likelihood phylogenies: assessing the performance of PhyML 3.0."
+ Systematic Biology. 2010. 59(3):307-321.
+
+ S. Guindon & O. Gascuel
+ "A simple, fast, and accurate algorithm to estimate large phylogenies by maximum likelihood"
+ Systematic Biology. 2003. 52(5):696-704.
+ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
