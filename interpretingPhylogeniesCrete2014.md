@@ -1,4 +1,19 @@
-## Phylogeny Terminology and Concepts
+# Interpreting Molecular Phylogenetic Trees
+
+## Table of contents  
+
+- [Phylogeny terminology and concepts "definition" exercise](#definitionExercise)  
+- [Visualising trees with NJplot](#NJplotExercise) (we probably won't use this exercise)
+- Phylogeny from initial sequences to answering a question
+    - ["Conceptual" demonstration with North African dog rabies viruses](#fromPhylogenyQuestionToAnswerConceptDemoDogRabies)
+    - ["Conceptual" exercise with Louisiana gastroenterologist example](#fromPhylogenyQuestionToAnswerConceptExerciseLouisianaGastroenterologist)
+    - ["Pragmatic" demonstration with North African dog rabies viruses](#fromPhylogenyQuestionToAnswerPragmaticDemoRabies)
+    - ["Pragmatic" exercise with North African dog rabies viruses](#fromPhylogenyQuestionToAnswerPragmaticExerciseRabies)
+    - [Advanced exercise using Louisiana gastroenterologist data](#fromPhylogenyQuestionToAnswerAdvancedExerciseLouisianaGastroenterologist)
+- [Description of Louisiana gastroenterologist dataset](#LouisianaGastroenterologistDatsetDescription)
+
+
+## <a name="definitionExercise"></a>Phylogeny Terminology and Concepts
 
 ### Notes
 
@@ -48,7 +63,7 @@ If you're interested, you could consult these [definitions/explanations Alexis a
 **root** (of a rooted phylogenetic tree): In a rooted tree, the node that represents the most recent common ancestor taxon of all other taxa in the tree.  
 
 
-## Visualising Trees with NJplot
+##<a name="NJplotExercise"></a> Visualising Trees with NJplot
 
 ### Learning Objectives
 
@@ -73,9 +88,9 @@ If the previous exercise was easy, try the same thing with the following [tree f
 ![](./images/twentyTaxaNjplotExercise.gif "Twenty OTU unscaled tree shown in NJplot")
 
 
-## Phylogeny from initial sequences to answering a question
+## <a name="fromPhylogenyQuestionToAnswer"></a>Phylogeny from initial sequences to answering a question
 
-### Easy demonstration: from substantive question to an answer using North African dog rabies viruses
+### <a name="fromPhylogenyQuestionToAnswerConceptDemoDogRabies"></a>"Concept" demonstration: from substantive question to an answer using North African dog rabies viruses
 
 Sequences are taken from [this paper](http://www.ncbi.nlm.nih.gov/pubmed/21060816) (PubMed ID:21060816), which analyses the possible influence of human activity on spread of rabies virus amongst endemic dog populations in North Africa.
 
@@ -177,7 +192,7 @@ We can do that using, for example:
 - Dendroscope
 - FigTree
 
-### Easy exercise: from substantive question to an answer using the "Louisiana Gastroenterologist" case as an example
+### <a name="fromPhylogenyQuestionToAnswerConceptExerciseLouisianaGastroenterologist"></a>"Concept"" exercise: from substantive question to an answer using the "Louisiana Gastroenterologist" case as an example
 
 You can read [here](#LouisianaGastroenterologistDatsetDescription) a quick introduction to this dataset.
 
@@ -185,7 +200,7 @@ You can read [here](#LouisianaGastroenterologistDatsetDescription) a quick intro
 
 Write a question that relates the issue of the guilt or innocence of the accused in this trial to a phylogenetic analysis of relevant HIV sequences, that clearly highlights the parameters of interest for addressing this question.
 
-A suggested "answer" can be found [here](#A1EasyGastroenterologistExercise).
+A suggested "answer" can be found [here](#A1ConceptGastroenterologistExercise).
 
 #### 2. Build a model involving parameters that, if known, could answer the question
 
@@ -227,10 +242,10 @@ Visualise the tree using one of these tools:
 - FigTree
 - PhyloWidget
 
-A suggested "answer" can be found [here](#A6EasyGastroenterologistExercise).
+A suggested "answer" can be found [here](#A6ConceptGastroenterologistExercise).
 
 #### Answers
-##### <a name="A1EasyGastroenterologistExercise"></a> 1. Pose a substantive question
+##### <a name="A1ConceptGastroenterologistExercise"></a> 1. Pose a substantive question
 
 An obvious question to want to address for this case would be something like **"How likely is it that the defendant committed the crime they are accused of"**.
 
@@ -238,7 +253,7 @@ A more specific question, that links the more general question above to a parame
 
 If the defendant were guilty of the crime, then given certain assumptions, then we would expect to get answer (a).
 
-##### <a name="A6EasyGastroenterologistExercise"></a>" 6. Answer your question using these parameter estimates
+##### <a name="A6ConceptGastroenterologistExercise"></a>" 6. Answer your question using these parameter estimates
 
 We estimated this tree and visualised it using Dendroscope.
 
@@ -246,7 +261,7 @@ We estimated this tree and visualised it using Dendroscope.
 
 Looking at this tree, assuming it is correctly rooted and that the topology parameter has been correctly estimated, then the victim sequences are most closely related to the patient sequences, which is what we'd expect if the defendant is guilty. Thus, looking at the results of this analysis, I consider it now more probable that the defendant is guilty than before I did the analysis.
 
-### Intermediate Demonstration
+### <a name="fromPhylogenyQuestionToAnswerPragmaticDemoRabies"></a>"Pragmatic" Demonstration using North African rabies dataset
 
 Here we will work again with the North African rabies dataset, and will run again through the process of going from a question to an answer. The earlier demonstration of this kind was done to emphasise the conceptual steps we take while doing such an analysis; here, however, we'll focus more on the practicalities of how to carry out the different stages of the analysis.
 
@@ -436,7 +451,7 @@ However this is not true for the Moroccan sequences; there is one branch that se
 
 Thus, in general, sequences tend to cluster according to country, but they don't form three separate clans; the placement of the 08064MAR_2 sequence could be accurate, indicating, that the history of evolution of the sequences is more complex than one in which the virus was never transmitted across national borders. Alternatively, this estimate of the tree topology parameter could  be wrong, due to errors in data collection or analysis.
 
-### Intermediate Exercise
+### <a name="fromPhylogenyQuestionToAnswerPragmaticExerciseRabies"></a>"Pragmatic" Exercise using North African rabies viruses
 
 Try a similar analysis as used for the phosphoprotein complete CDS nucleic acid sequences shown above, using the sequences for glycoprotein partial CDS and intergenic spacer given below
 
@@ -459,7 +474,7 @@ Try a similar analysis as used for the phosphoprotein complete CDS nucleic acid 
 
 8. Parameter estimation
 
-### Advanced Exercise (where you decide yourself which tools to run etc.): the case of the "Louisiana gastroenterologist"
+### <a name="fromPhylogenyQuestionToAnswerAdvancedExerciseLouisianaGastroenterologist"></a>Advanced Exercise (where you decide yourself which tools to run etc.): the case of the "Louisiana gastroenterologist"
 
 [Metzker et al. PNAS 2002](http://www.ncbi.nlm.nih.gov/pubmed/12388776) describe a phylogenetic analysis of HIV env/gp120 sequences that was used as evidence in the trial of a Louisiana gastroenterologist accused of deliberately infecting someone (the "victim") with HIV-infected blood from one of the gastroenterologist's patients.
 
