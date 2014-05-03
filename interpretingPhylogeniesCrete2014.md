@@ -503,33 +503,41 @@ For the sake of completeness, here are files containing
 
 Here is a short description of how I might go about doing the analysis described above:
 
-aligning sequences:  
+aligning sequences:
+
 - [webPRANK](http://www.ebi.ac.uk/goldman-srv/webprank/)  
 - [MUSCLE](http://www.ebi.ac.uk/Tools/msa/muscle/)  
 - [MAFFT](http://www.ebi.ac.uk/Tools/msa/mafft/)  
 
-removing sequences/columns from the analysis:  
+removing sequences/columns from the analysis:
+
 - [JalView](http://www.jalview.org/)  
 
 substitution model testing:  
+
 - [PAML](http://abacus.gene.ucl.ac.uk/software/paml.html) (you could also use jModelTest, however)  
 
 visualising trees:  
+
 - [NJplot](http://pbil.univ-lyon1.fr/software/njplot.html)  
 - [Dendroscope](http://ab.inf.uni-tuebingen.de/software/dendroscope/)  
 - [FigTree](http://tree.bio.ed.ac.uk/software/figtree/)  
 - [PhyloWidget](http://www.phylowidget.org/)  
 
 Bayesian phylogeny estimation:  
+
 - [MrBayes](http://mrbayes.csit.fsu.edu/)  
 
 examining features of MrBayes runs:  
+
 - [Tracer](http://tree.bio.ed.ac.uk/software/tracer/)  
 
 maximum likelihood phylogeny estimation:  
+
 - [RAxML](http://icwww.epfl.ch/%7Estamatak/index-Dateien/Page443.htm) or [PhyML](http://www.atgc-montpellier.fr/phyml/)  
 
 checking for agreement between estimated trees:  
+
 - [CONSENSE](http://evolution.genetics.washington.edu/phylip/doc/consense.html) (part of the PHYLIP package), or [SplitsTrees](http://www.splitstree.org/), or [clann](http://bioinf.may.ie/software/clann/)
 
 <a name="suggestedApproachToAdvancedLouisianGastroenterologistExercise"></a>One way of linking these together would be to:
