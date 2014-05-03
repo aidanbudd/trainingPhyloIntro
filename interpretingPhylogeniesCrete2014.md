@@ -38,7 +38,7 @@ Here are the terms:
 1. branch (of a phylogenetic tree)
 1. root (of a rooted phylogenetic tree)
 
-**B. Once you've finished, compare your definitions with those of your neighbours.**
+**B. Once you've finished, compare your definitions with those of your neighbours, and write together consensus definitions of these terms.**
 
 Make notes on how your definitions differ, and write together a definition that agrees with both your ideas of the meaning of these terms.
 
@@ -269,15 +269,15 @@ To remind you, the relevant analysis is described in [this
 paper](http://www.ncbi.nlm.nih.gov/pubmed/21060816) (PubMed ID:
 21060816), which analyses the possible influence of human activity on spread of rabies virus amongst endemic dog populations in North Africa.
 
-#### Write down one or more substantive questions we want to address with the analysis
+#### 1. Write down one or more substantive questions we want to address with the analysis
 
 Always need to begin with this! It's a big help in guiding decision-making while carrying out the analysis.
 
 In this case, we'll use again:
 
-**"What is the topology of a phylogenetic tree of rabies viruses from North Africa with viruses sampled from several different North African countries?"**
+*"What is the topology of a phylogenetic tree of rabies viruses from North Africa with viruses sampled from several different North African countries?"*
 
-#### Collect an appropriate set of sequences
+#### 2. Collect an appropriate set of sequences
 
 These could come from:
 
@@ -288,7 +288,7 @@ These could come from:
 
 We'll focus our example analysis on phosphoprotein complete CDS nucleic acid sequences
 
-**Obtaining sequences deposited in a public primary sequence database in association with a particular publication**
+##### Obtaining sequences deposited in a public primary sequence database in association with a particular publication
 
 We'll do this by querying PubMed with the PubMed ID (21060816) to identify the publication record in this database corresponding to the publication of interest, and then linking (within the NCBI's Entrez database system) to nucleotide and/or protein sequences records whose deposition is described in that article, finally exporting these sequences in an appropriate format (e.g. FASTA).
 
@@ -307,14 +307,14 @@ To do this we will:
 - Select appropriate sequence records, and follow the 'Send to' 
   link to download to a file in the appropriate format
 
-**Using sequence similarity searching to identify similar sequences**
+##### Using sequence similarity searching to identify similar sequences
 
 Another common way to acquire sequences from public databases for a phylogenetic analysis is to use BLAST to identify sequences similar to a query sequence of interest, and which are likely to be related to this sequence of interest.   
 
 - Take one of the sequences from [this file](./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.fasta)
 - Use this sequences to query one of the nucleotide sequence databases at the NCBI using [BLAST](http://blast.ncbi.nlm.nih.gov/Blast.cgi), making sure we choose the right program (in this case we want to search a nucleotide database with a nucleotide query sequence); we may want to filter our results if we get too many hits e.g. taking only records matching the string "Africa"
 
-**Pre-calculated alignments**
+##### Pre-calculated alignments
 
 For rabies phosphoprotein CDSs, there's no resource I can find that provides pre-aligned sets of sequences. Thus, we'll try instead looking for alignments of vertebrate COX2 protein sequences.
 
@@ -337,7 +337,7 @@ Note that there are two, completely different and almost certainly
 unrelated proteins called COX2 in humans (PGH2\_HUMAN and COX2\_HUMAN)!
 
 
-#### Edit sequence identifiers to be unique, compatible with analysis tools, and meaningful (in the context of allowing us to easily answer our question(s) of interest when examining resulting phylogneetic trees and other results)
+#### 3. Edit sequence identifiers to be unique, compatible with analysis tools, and meaningful (in the context of allowing us to easily answer our question(s) of interest when examining resulting phylogneetic trees and other results)
 
 Here I've selected a set of sequences using the kinds of methods described above, in FASTA format, but [haven't changed the sequence identifiers at all.](./sequences/phosphoproteinCDSsNoLabelEd.txt)
 
@@ -353,7 +353,7 @@ For example, the [RAxML BlackBox web server](http://embnet.vital-it.ch/raxml-bb/
 
 However, after I edit the file, [changing it to this](./sequences/phosphoproteinCDSsLabelsEd.txt), so that the first 10 characters are unique (and at the same time making it easy to spot their country of sampling, making the final data visualisation/question answering part of the analysis easier), they are accepted. 
 
-#### Align sequences
+#### 4. Align sequences
 
 Aligned FASTA sequences - google "MUSCLE EBI" or "WEBPRANK" to get links to MUSCLE and PRANK webservers: 
 
@@ -367,7 +367,7 @@ One option (fairly good for fairly divergent protein sequences; which isn't what
 For [this alignment](./sequences/relativelyDivergentRabiesCDSsAlignedWithOthersMUSCLEEBI.fasta), we combined the same [set of unaligned sequences given above](./sequences/phosphoproteinCDSsLabelsEd.txt) with several additional [more divergent
 sequences](./sequences/relativelyDivergentRabiesCDSs.fasta), and aligned this combined set of sequences together using MUSCLE at the EMBL-EBI.
 
-#### Model Selection
+#### 5. Model Selection
 
 For this we use jModelTest (for nucleotide sequences) or ProtTest (for protein sequences) as appropriate.
 
@@ -380,7 +380,7 @@ machines:
 
 Both AIC and BIC choose **GTR+G** as the best model.
 
-#### Phylogeny estimation
+#### 6. Phylogeny estimation
 
 Tools typically used to estimate phylogenies for publication are mostly used via a command-line interface.
 
@@ -410,7 +410,7 @@ This gave the following files:
 - [Newick format tree file with SH-like branch supports](./trees/relativelyDivergentRabiesCDSsAlignedWithOthersMUSCLEEBI.PhylogenyFrFormatChange.phylipInterleaved_phyml_tree.txt)
 - [general output file](./outputFiles/relativelyDivergentRabiesCDSsAlignedWithOthersMUSCLEEBI.PhylogenyFrFormatChange.phylipInterleaved_phyml_stats.txt)
 
-#### Algorithm Diagnosis
+#### 7. Algorithm Diagnosis
 
 Before drawing strong conclusions from the results of the phylogeny estimation, for example before publishing them, we should explore a range of different possible sources of error that could have led to inaccurate parameter estimation.
 
@@ -429,7 +429,7 @@ Here are the result files:
 
 Other simple things we could have tried would be to change the details of way PhyML does its tree search (in the **Tree Searching** menu), or to check to see which result you get when running an analysis using another maximum likelihood tree estimator such as RAxML.
 
-#### Parameter estimation
+#### 8. Examine the results of your analyses and address your substantial question of interest
 
 Look at the tree and decide on how it informs the answer to your question of interest.
 
