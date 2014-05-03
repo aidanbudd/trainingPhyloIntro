@@ -1,4 +1,19 @@
-<h2 id="phylogeny-terminology-and-concepts">Phylogeny Terminology and Concepts</h2>
+<h1 id="interpreting-molecular-phylogenetic-trees">Interpreting Molecular Phylogenetic Trees</h1>
+<h2 id="table-of-contents">Table of contents</h2>
+<ul class="incremental">
+<li><a href="#definitionExercise">Phylogeny terminology and concepts &quot;definition&quot; exercise</a><br /></li>
+<li><a href="#NJplotExercise">Visualising trees with NJplot</a> (we probably won't use this exercise)</li>
+<li>Phylogeny from initial sequences to answering a question
+<ul class="incremental">
+<li><a href="#fromPhylogenyQuestionToAnswerConceptDemoDogRabies">&quot;Conceptual&quot; demonstration with North African dog rabies viruses</a></li>
+<li><a href="#fromPhylogenyQuestionToAnswerConceptExerciseLouisianaGastroenterologist">&quot;Conceptual&quot; exercise with Louisiana gastroenterologist example</a></li>
+<li><a href="#fromPhylogenyQuestionToAnswerPragmaticDemoRabies">&quot;Pragmatic&quot; demonstration with North African dog rabies viruses</a></li>
+<li><a href="#fromPhylogenyQuestionToAnswerPragmaticExerciseRabies">&quot;Pragmatic&quot; exercise with North African dog rabies viruses</a></li>
+<li><a href="#fromPhylogenyQuestionToAnswerAdvancedExerciseLouisianaGastroenterologist">Advanced exercise using Louisiana gastroenterologist data</a></li>
+</ul></li>
+<li><a href="#LouisianaGastroenterologistDatsetDescription">Description of Louisiana gastroenterologist dataset</a></li>
+</ul>
+<h2 id="phylogeny-terminology-and-concepts"><a name="definitionExercise"></a>Phylogeny Terminology and Concepts</h2>
 <h3 id="notes">Notes</h3>
 <p>This exercise focuses on how we understand vocabulary and concepts associated with phylogenies and molecular evolution. By asking you to write down and discuss you understanding of several fundamental concepts and terms used in the field, the aim is to help highlight:</p>
 <ul class="incremental">
@@ -16,7 +31,7 @@
 <li>branch (of a phylogenetic tree)</li>
 <li>root (of a rooted phylogenetic tree)</li>
 </ol>
-<p><strong>B. Once you've finished, compare your definitions with those of your neighbours.</strong></p>
+<p><strong>B. Once you've finished, compare your definitions with those of your neighbours, and write together consensus definitions of these terms.</strong></p>
 <p>Make notes on how your definitions differ, and write together a definition that agrees with both your ideas of the meaning of these terms.</p>
 <p><strong>C. We'll compare the definitions you have written together with <a href="#suggested-definitions">definitions we prepared before coming to the class</a> - we'll discuss together any ways in which these pre-prepared definitions differ with the ones you have come up with.</strong></p>
 <p><strong>D. (If you quickly finish part A. of the exercise) Repeat the above steps, this time selecting two or more terms from the list below.</strong></p>
@@ -32,7 +47,7 @@
 <p><strong>phylogenetic tree</strong>: A description of a path of transmission of genetic information between a set of taxa.</p>
 <p><strong>branch</strong> (of a phylogenetic tree): Lineages of taxonomic units that link nodes within a phylogenetic tree.</p>
 <p><strong>root</strong> (of a rooted phylogenetic tree): In a rooted tree, the node that represents the most recent common ancestor taxon of all other taxa in the tree.</p>
-<h2 id="visualising-trees-with-njplot">Visualising Trees with NJplot</h2>
+<h2 id="visualising-trees-with-njplot"><a name="NJplotExercise"></a> Visualising Trees with NJplot</h2>
 <h3 id="learning-objectives">Learning Objectives</h3>
 <p>After completing this section, you will hopefully be able to use NJplot to change the way a phylogenetic tree is visualised/drawn by the software by changing the root and rotating subtrees around internal branches to reach a specified/desired representation of a tree.</p>
 <h3 id="notes-1">Notes</h3>
@@ -48,8 +63,8 @@
 <div class="figure">
 <img src="./images/twentyTaxaNjplotExercise.gif" title="Twenty OTU unscaled tree shown in NJplot" />
 </div>
-<h2 id="phylogeny-from-initial-sequences-to-answering-a-question">Phylogeny from initial sequences to answering a question</h2>
-<h3 id="easy-demonstration-from-substantive-question-to-an-answer-using-north-african-dog-rabies-viruses">Easy demonstration: from substantive question to an answer using North African dog rabies viruses</h3>
+<h2 id="phylogeny-from-initial-sequences-to-answering-a-question"><a name="fromPhylogenyQuestionToAnswer"></a>Phylogeny from initial sequences to answering a question</h2>
+<h3 id="concept-demonstration-from-substantive-question-to-an-answer-using-north-african-dog-rabies-viruses"><a name="fromPhylogenyQuestionToAnswerConceptDemoDogRabies"></a>&quot;Concept&quot; demonstration: from substantive question to an answer using North African dog rabies viruses</h3>
 <p>Sequences are taken from <a href="http://www.ncbi.nlm.nih.gov/pubmed/21060816">this paper</a> (PubMed ID:21060816), which analyses the possible influence of human activity on spread of rabies virus amongst endemic dog populations in North Africa.</p>
 <h4 id="pose-a-substantive-question">1. Pose a substantive question</h4>
 <p><a href="http://www.oxforddictionaries.com/definition/english/substantive"><strong>Substantive</strong></a> means important, meaningful, considerable (in terms of numbers). Used in our context here, it simply means &quot;a question which there is significant interest or utility in finding an answer to it&quot;.</p>
@@ -117,11 +132,11 @@
 <li>Dendroscope</li>
 <li>FigTree</li>
 </ul>
-<h3 id="easy-exercise-from-substantive-question-to-an-answer-using-the-louisiana-gastroenterologist-case-as-an-example">Easy exercise: from substantive question to an answer using the &quot;Louisiana Gastroenterologist&quot; case as an example</h3>
+<h3 id="concept-exercise-from-substantive-question-to-an-answer-using-the-louisiana-gastroenterologist-case-as-an-example"><a name="fromPhylogenyQuestionToAnswerConceptExerciseLouisianaGastroenterologist"></a>&quot;Concept&quot;&quot; exercise: from substantive question to an answer using the &quot;Louisiana Gastroenterologist&quot; case as an example</h3>
 <p>You can read <a href="#LouisianaGastroenterologistDatsetDescription">here</a> a quick introduction to this dataset.</p>
 <h4 id="pose-a-substantive-question-1">1. Pose a substantive question</h4>
 <p>Write a question that relates the issue of the guilt or innocence of the accused in this trial to a phylogenetic analysis of relevant HIV sequences, that clearly highlights the parameters of interest for addressing this question.</p>
-<p>A suggested &quot;answer&quot; can be found <a href="#A1EasyGastroenterologistExercise">here</a>.</p>
+<p>A suggested &quot;answer&quot; can be found <a href="#A1ConceptGastroenterologistExercise">here</a>.</p>
 <h4 id="build-a-model-involving-parameters-that-if-known-could-answer-the-question-1">2. Build a model involving parameters that, if known, could answer the question</h4>
 <p>This will be a phylogenetic probabilistic model of the evolution of a set of HIV sequences.</p>
 <h4 id="collect-observations-informative-about-the-model-parameters-1">3. Collect observations informative about the model parameter(s)</h4>
@@ -148,26 +163,28 @@
 <li>FigTree</li>
 <li>PhyloWidget</li>
 </ul>
-<p>A suggested &quot;answer&quot; can be found <a href="#A6EasyGastroenterologistExercise">here</a>.</p>
+<p>A suggested &quot;answer&quot; can be found <a href="#A6ConceptGastroenterologistExercise">here</a>.</p>
 <h4 id="answers">Answers</h4>
-<h5 id="pose-a-substantive-question-2"><a name="A1EasyGastroenterologistExercise"></a> 1. Pose a substantive question</h5>
+<h5 id="pose-a-substantive-question-2"><a name="A1ConceptGastroenterologistExercise"></a> 1. Pose a substantive question</h5>
 <p>An obvious question to want to address for this case would be something like <strong>&quot;How likely is it that the defendant committed the crime they are accused of&quot;</strong>.</p>
 <p>A more specific question, that links the more general question above to a parameter of a phylogenetic model we could estimate that could inform a question of this kind, could be <strong>&quot;Are the sequences of HIV samples taken from the victim most closely related to (a) those taken from the patient, or (b) to some other sequences sampled from the local Louisiana population?&quot;</strong>.</p>
 <p>If the defendant were guilty of the crime, then given certain assumptions, then we would expect to get answer (a).</p>
-<h5 id="answer-your-question-using-these-parameter-estimates-2"><a name="A6EasyGastroenterologistExercise"></a>&quot; 6. Answer your question using these parameter estimates</h5>
+<h5 id="answer-your-question-using-these-parameter-estimates-2"><a name="A6ConceptGastroenterologistExercise"></a>&quot; 6. Answer your question using these parameter estimates</h5>
 <p>We estimated this tree and visualised it using Dendroscope.</p>
 <div class="figure">
 <img src="./images/thirtySeqsLouisianaGastroAligned.webPRANK.viaPhylogenyFr.phylipInterleaved_phyml_tree.jpg" />
 </div>
 <p>Looking at this tree, assuming it is correctly rooted and that the topology parameter has been correctly estimated, then the victim sequences are most closely related to the patient sequences, which is what we'd expect if the defendant is guilty. Thus, looking at the results of this analysis, I consider it now more probable that the defendant is guilty than before I did the analysis.</p>
-<h3 id="intermediate-demonstration">Intermediate Demonstration</h3>
+<h3 id="pragmatic-demonstration-using-north-african-rabies-dataset"><a name="fromPhylogenyQuestionToAnswerPragmaticDemoRabies"></a>&quot;Pragmatic&quot; Demonstration using North African rabies dataset</h3>
 <p>Here we will work again with the North African rabies dataset, and will run again through the process of going from a question to an answer. The earlier demonstration of this kind was done to emphasise the conceptual steps we take while doing such an analysis; here, however, we'll focus more on the practicalities of how to carry out the different stages of the analysis.</p>
 <p>To remind you, the relevant analysis is described in <a href="http://www.ncbi.nlm.nih.gov/pubmed/21060816">this paper</a> (PubMed ID: 21060816), which analyses the possible influence of human activity on spread of rabies virus amongst endemic dog populations in North Africa.</p>
-<h4 id="write-down-one-or-more-substantive-questions-we-want-to-address-with-the-analysis">Write down one or more substantive questions we want to address with the analysis</h4>
-<p>Always need to begin with this! It's a big help in guiding decision-making while carrying out the analysis.</p>
+<h4 id="choose-a-question">1. Choose a question</h4>
+<p>As discussed above, being aware of (ideally writing down) the specific, substantive questions you want to address with your analysis, is usually helpful for planning and carrying out your analysis. In particular, it can be a big help in guiding decision-making while carrying out the analysis (e.g. deciding which sequences to include, which to exclude, from your analysis.)</p>
+<p>In the context of a phylogenetic analysis, it is clearly useful if this question can be informed by estimation of parameter(s) of a phylogenetic model.</p>
 <p>In this case, we'll use again:</p>
-<p><strong>&quot;What is the topology of a phylogenetic tree of rabies viruses from North Africa with viruses sampled from several different North African countries?&quot;</strong></p>
-<h4 id="collect-an-appropriate-set-of-sequences">Collect an appropriate set of sequences</h4>
+<p><em>&quot;What is the topology of a phylogenetic tree of rabies viruses from North Africa with viruses sampled from several different North African countries?&quot;</em></p>
+<h4 id="collect-sequences">2. Collect sequences</h4>
+<p>Clearly, the sequences you collect should be relevant to your substantive question i.e. data which should provide information on your parameters of interest.</p>
 <p>These could come from:</p>
 <ul class="incremental">
 <li>public databases that contain sequence data</li>
@@ -175,7 +192,7 @@
 <li>non-public sequences collected by others (collaborators/co-workers)</li>
 </ul>
 <p>We'll focus our example analysis on phosphoprotein complete CDS nucleic acid sequences</p>
-<p><strong>Obtaining sequences deposited in a public primary sequence database in association with a particular publication</strong></p>
+<h5 id="obtaining-sequences-deposited-in-a-public-primary-sequence-database-in-association-with-a-particular-publication">Obtaining sequences deposited in a public primary sequence database in association with a particular publication</h5>
 <p>We'll do this by querying PubMed with the PubMed ID (21060816) to identify the publication record in this database corresponding to the publication of interest, and then linking (within the NCBI's Entrez database system) to nucleotide and/or protein sequences records whose deposition is described in that article, finally exporting these sequences in an appropriate format (e.g. FASTA).</p>
 <p>To do this we will:</p>
 <ul class="incremental">
@@ -189,13 +206,13 @@
 </ul></li>
 <li>Select appropriate sequence records, and follow the 'Send to' link to download to a file in the appropriate format</li>
 </ul>
-<p><strong>Using sequence similarity searching to identify similar sequences</strong></p>
+<h5 id="using-sequence-similarity-searching-to-identify-similar-sequences">Using sequence similarity searching to identify similar sequences</h5>
 <p>Another common way to acquire sequences from public databases for a phylogenetic analysis is to use BLAST to identify sequences similar to a query sequence of interest, and which are likely to be related to this sequence of interest.</p>
 <ul class="incremental">
 <li>Take one of the sequences from <a href="./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.fasta">this file</a></li>
 <li>Use this sequences to query one of the nucleotide sequence databases at the NCBI using <a href="http://blast.ncbi.nlm.nih.gov/Blast.cgi">BLAST</a>, making sure we choose the right program (in this case we want to search a nucleotide database with a nucleotide query sequence); we may want to filter our results if we get too many hits e.g. taking only records matching the string &quot;Africa&quot;</li>
 </ul>
-<p><strong>Pre-calculated alignments</strong></p>
+<h5 id="pre-calculated-alignments">Pre-calculated alignments</h5>
 <p>For rabies phosphoprotein CDSs, there's no resource I can find that provides pre-aligned sets of sequences. Thus, we'll try instead looking for alignments of vertebrate COX2 protein sequences.</p>
 <p>We can try this by searching the Internet directly with a generic search engine - trying this in December 2013 I hit these pages:</p>
 <ul class="incremental">
@@ -211,18 +228,23 @@
 <li><a href="http://www.ensembl.org/index.html">Ensembl</a></li>
 </ul>
 <p>Note that there are two, completely different and almost certainly unrelated proteins called COX2 in humans (PGH2_HUMAN and COX2_HUMAN)!</p>
-<h4 id="edit-sequence-identifiers-to-be-unique-compatible-with-analysis-tools-and-meaningful-in-the-context-of-allowing-us-to-easily-answer-our-questions-of-interest-when-examining-resulting-phylogneetic-trees-and-other-results">Edit sequence identifiers to be unique, compatible with analysis tools, and meaningful (in the context of allowing us to easily answer our question(s) of interest when examining resulting phylogneetic trees and other results)</h4>
+<h4 id="edit-sequence-identifiers">3. Edit sequence identifiers</h4>
+<p>In almost all analyses, the identifiers associated with the sequences you obtain will need to be changed, for two main reasons:</p>
+<ul class="incremental">
+<li>so that the identifiers encode <em>easy-to-read information about the sequences that is relevant for addressing your question of interest</em>; in this example, addressing the question requires that we know the country from which the viruses (whose sequence we are analysing) were sampled, thus we would want to encode this information in the identifiers for the sequences in the analysis</li>
+<li>so that the various different software tools used to analyse the sequences can read them; in general, this needs us to make sure the identifiers are:
+<ul class="incremental">
+<li>unique (i.e. each identifier used in the analysis should be different from each other)</li>
+<li>do not contain &quot;unusual&quot; characters, ideally restricting the characters used to A-Z, a-z, 0-9 and perhaps also _</li>
+<li>relatively short (some software requires identifiers that are 10 characters or less long; some other software requires all identifiers be exactly 10 characters long...)</li>
+</ul></li>
+</ul>
+<p>thus I usually choose identifiers that are 10 characters or less long, are unique from each other, and only contain characters A-Z, a-z, 0-9 and _</p>
 <p>Here I've selected a set of sequences using the kinds of methods described above, in FASTA format, but <a href="./sequences/phosphoproteinCDSsNoLabelEd.txt">haven't changed the sequence identifiers at all.</a></p>
 <p>With these identifiers, there is plenty of phylogenetic software that will not accept them as input, even if they accept FASTA format alignment files.</p>
-<p>Common problems could be that the identifiers:</p>
-<ul class="incremental">
-<li>are not unique in the first 10 characters of the string</li>
-<li>contain characters other than A-Z, a-z, 0-9, and _</li>
-<li>are too long</li>
-</ul>
 <p>For example, the <a href="http://embnet.vital-it.ch/raxml-bb/index.php">RAxML BlackBox web server</a> doesn't accept these sequences as input.</p>
-<p>However, after I edit the file, <a href="./sequences/phosphoproteinCDSsLabelsEd.txt">changing it to this</a>, so that the first 10 characters are unique (and at the same time making it easy to spot their country of sampling, making the final data visualisation/question answering part of the analysis easier), they are accepted.</p>
-<h4 id="align-sequences">Align sequences</h4>
+<p>However, after I edit the file, <a href="./sequences/phosphoproteinCDSsLabelsEd.txt">changing it to this</a>, so that the first 10 characters are unique (and at the same time making it easy to spot their country of sampling, making the final data visualisation/question answering part of the analysis easier), they are accepted by the RAxML BlackBox web server.</p>
+<h4 id="align-sequences">4. Align sequences</h4>
 <p>Aligned FASTA sequences - google &quot;MUSCLE EBI&quot; or &quot;WEBPRANK&quot; to get links to MUSCLE and PRANK webservers:</p>
 <ul class="incremental">
 <li><a href="./sequences/phosphoproteinCDSsLabelsEd.muscle">MUSCLE aligned</a></li>
@@ -231,7 +253,7 @@
 <p>There are many different tools available, and different tools are better suited for different &quot;kinds&quot; of sequence sets (length, whether DNA, RNA, or protein, number of sequences, how similar the sequences are to each other).</p>
 <p>One option (fairly good for fairly divergent protein sequences; which isn't what we're working with here! however, it still gives us an alignment for nucleotide sequences, even if that's not what it's designed for) would be the <a href="http://www.ebi.ac.uk/Tools/msa/muscle/">MUSCLE webserver</a> at the EMBL-EBI.</p>
 <p>For <a href="./sequences/relativelyDivergentRabiesCDSsAlignedWithOthersMUSCLEEBI.fasta">this alignment</a>, we combined the same <a href="./sequences/phosphoproteinCDSsLabelsEd.txt">set of unaligned sequences given above</a> with several additional <a href="./sequences/relativelyDivergentRabiesCDSs.fasta">more divergent sequences</a>, and aligned this combined set of sequences together using MUSCLE at the EMBL-EBI.</p>
-<h4 id="model-selection">Model Selection</h4>
+<h4 id="model-selection">5. Model Selection</h4>
 <p>For this we use jModelTest (for nucleotide sequences) or ProtTest (for protein sequences) as appropriate.</p>
 <p>Modeltest results from PRANK alignment - use JModelTest on local machines:</p>
 <ul class="incremental">
@@ -240,7 +262,7 @@
 <li><img src="./images/phosphoproteinCDSsLabelsEd.modeltest.BICresults.tiff" title="fig:" alt="BIC results TIFF" /></li>
 </ul>
 <p>Both AIC and BIC choose <strong>GTR+G</strong> as the best model.</p>
-<h4 id="phylogeny-estimation">Phylogeny estimation</h4>
+<h4 id="phylogeny-estimation">6. Phylogeny estimation</h4>
 <p>Tools typically used to estimate phylogenies for publication are mostly used via a command-line interface.</p>
 <p>If you don't want to learn how to use tools in that way, there are however some webservers available that have wrapped some of these programs up in a relatively easy-to-use interface that offer some, but not all, of the functionality of the tools.</p>
 <ul class="incremental">
@@ -266,7 +288,7 @@
 <li><a href="./trees/relativelyDivergentRabiesCDSsAlignedWithOthersMUSCLEEBI.PhylogenyFrFormatChange.phylipInterleaved_phyml_tree.txt">Newick format tree file with SH-like branch supports</a></li>
 <li><a href="./outputFiles/relativelyDivergentRabiesCDSsAlignedWithOthersMUSCLEEBI.PhylogenyFrFormatChange.phylipInterleaved_phyml_stats.txt">general output file</a></li>
 </ul>
-<h4 id="algorithm-diagnosis">Algorithm Diagnosis</h4>
+<h4 id="algorithm-diagnosis">7. Algorithm Diagnosis</h4>
 <p>Before drawing strong conclusions from the results of the phylogeny estimation, for example before publishing them, we should explore a range of different possible sources of error that could have led to inaccurate parameter estimation.</p>
 <p>Here we will just explore one of these i.e. the impact of using different substitution models for the analysis.</p>
 <p>Using command line phyml, as above, I re-ran the analysis using the GTR model (i.e. without gamma), and using the JC + gamma model.</p>
@@ -284,7 +306,7 @@
 </ul></li>
 </ul>
 <p>Other simple things we could have tried would be to change the details of way PhyML does its tree search (in the <strong>Tree Searching</strong> menu), or to check to see which result you get when running an analysis using another maximum likelihood tree estimator such as RAxML.</p>
-<h4 id="parameter-estimation">Parameter estimation</h4>
+<h4 id="examine-the-results-of-your-analyses-and-address-your-substantial-question-of-interest">8. Examine the results of your analyses and address your substantial question of interest</h4>
 <p>Look at the tree and decide on how it informs the answer to your question of interest.</p>
 <p>Here, using the tree estimated by PhyML using theGTR plus gamma model, is the image of the tree shown in Dendroscope.</p>
 <div class="figure">
@@ -299,7 +321,7 @@
 <p>The same is true for the Algerian sequences.</p>
 <p>However this is not true for the Moroccan sequences; there is one branch that separates all but one of the Moroccan sequences into a clan, but there is one sequence (08064MAR_2) that is excluded from the is clan.</p>
 <p>Thus, in general, sequences tend to cluster according to country, but they don't form three separate clans; the placement of the 08064MAR_2 sequence could be accurate, indicating, that the history of evolution of the sequences is more complex than one in which the virus was never transmitted across national borders. Alternatively, this estimate of the tree topology parameter could be wrong, due to errors in data collection or analysis.</p>
-<h3 id="intermediate-exercise">Intermediate Exercise</h3>
+<h3 id="pragmatic-exercise-using-north-african-rabies-viruses"><a name="fromPhylogenyQuestionToAnswerPragmaticExerciseRabies"></a>&quot;Pragmatic&quot; Exercise using North African rabies viruses</h3>
 <p>Try a similar analysis as used for the phosphoprotein complete CDS nucleic acid sequences shown above, using the sequences for glycoprotein partial CDS and intergenic spacer given below</p>
 <ul class="incremental">
 <li><a href="./sequences/glycoproteinPartialAndIntergenicSpacerNoLabelEd.txt">Sequence labels unedited</a></li>
@@ -315,7 +337,7 @@
 <li><p>Algorithm Diagnosis</p></li>
 <li><p>Parameter estimation</p></li>
 </ol>
-<h3 id="advanced-exercise-where-you-decide-yourself-which-tools-to-run-etc.-the-case-of-the-louisiana-gastroenterologist">Advanced Exercise (where you decide yourself which tools to run etc.): the case of the &quot;Louisiana gastroenterologist&quot;</h3>
+<h3 id="advanced-exercise-where-you-decide-yourself-which-tools-to-run-etc.-the-case-of-the-louisiana-gastroenterologist"><a name="fromPhylogenyQuestionToAnswerAdvancedExerciseLouisianaGastroenterologist"></a>Advanced Exercise (where you decide yourself which tools to run etc.): the case of the &quot;Louisiana gastroenterologist&quot;</h3>
 <p><a href="http://www.ncbi.nlm.nih.gov/pubmed/12388776">Metzker et al. PNAS 2002</a> describe a phylogenetic analysis of HIV env/gp120 sequences that was used as evidence in the trial of a Louisiana gastroenterologist accused of deliberately infecting someone (the &quot;victim&quot;) with HIV-infected blood from one of the gastroenterologist's patients.</p>
 <p>In this exercise, you are asked to try this analysis (or at least a similar one) to that carried out by Metzker et al., with the aim of deciding how well the data supports the hypothesis that the victim (whose sequence identifiers all begin with a &quot;V&quot;) was directly infected by blood taken from the patient (whose sequence identifiers all begin with a &quot;P&quot;).</p>
 <p>Carry out the analysis beginning with <a href="./sequences/thirtySeqsLouisianaGastroUnaligned.fasta">this file of 30 unaligned env/gp120 sequences</a>.</p>
@@ -346,14 +368,43 @@
 <li><a href="./sequences/pmid_12388776_MetzkerEtAl2002_only_env_gp120s_cloneNamesOnly_trimmedForSize.fa">the trimmed-down set of these sequences described above</a></li>
 </ol>
 <p>Here is a short description of how I might go about doing the analysis described above:</p>
-<p>aligning sequences:<br />- <a href="http://www.ebi.ac.uk/goldman-srv/webprank/">webPRANK</a><br />- <a href="http://www.ebi.ac.uk/Tools/msa/muscle/">MUSCLE</a><br />- <a href="http://www.ebi.ac.uk/Tools/msa/mafft/">MAFFT</a></p>
-<p>removing sequences/columns from the analysis:<br />- <a href="http://www.jalview.org/">JalView</a></p>
-<p>substitution model testing:<br />- <a href="http://abacus.gene.ucl.ac.uk/software/paml.html">PAML</a> (you could also use jModelTest, however)</p>
-<p>visualising trees:<br />- <a href="http://pbil.univ-lyon1.fr/software/njplot.html">NJplot</a><br />- <a href="http://ab.inf.uni-tuebingen.de/software/dendroscope/">Dendroscope</a><br />- <a href="http://tree.bio.ed.ac.uk/software/figtree/">FigTree</a><br />- <a href="http://www.phylowidget.org/">PhyloWidget</a></p>
-<p>Bayesian phylogeny estimation:<br />- <a href="http://mrbayes.csit.fsu.edu/">MrBayes</a></p>
-<p>examining features of MrBayes runs:<br />- <a href="http://tree.bio.ed.ac.uk/software/tracer/">Tracer</a></p>
-<p>maximum likelihood phylogeny estimation:<br />- <a href="http://icwww.epfl.ch/%7Estamatak/index-Dateien/Page443.htm">RAxML</a> or <a href="http://www.atgc-montpellier.fr/phyml/">PhyML</a></p>
-<p>checking for agreement between estimated trees:<br />- <a href="http://evolution.genetics.washington.edu/phylip/doc/consense.html">CONSENSE</a> (part of the PHYLIP package), or <a href="http://www.splitstree.org/">SplitsTrees</a>, or <a href="http://bioinf.may.ie/software/clann/">clann</a></p>
+<p>aligning sequences:</p>
+<ul class="incremental">
+<li><a href="http://www.ebi.ac.uk/goldman-srv/webprank/">webPRANK</a><br /></li>
+<li><a href="http://www.ebi.ac.uk/Tools/msa/muscle/">MUSCLE</a><br /></li>
+<li><a href="http://www.ebi.ac.uk/Tools/msa/mafft/">MAFFT</a></li>
+</ul>
+<p>removing sequences/columns from the analysis:</p>
+<ul class="incremental">
+<li><a href="http://www.jalview.org/">JalView</a></li>
+</ul>
+<p>substitution model testing:</p>
+<ul class="incremental">
+<li><a href="http://abacus.gene.ucl.ac.uk/software/paml.html">PAML</a> (you could also use jModelTest, however)</li>
+</ul>
+<p>visualising trees:</p>
+<ul class="incremental">
+<li><a href="http://pbil.univ-lyon1.fr/software/njplot.html">NJplot</a><br /></li>
+<li><a href="http://ab.inf.uni-tuebingen.de/software/dendroscope/">Dendroscope</a><br /></li>
+<li><a href="http://tree.bio.ed.ac.uk/software/figtree/">FigTree</a><br /></li>
+<li><a href="http://www.phylowidget.org/">PhyloWidget</a></li>
+</ul>
+<p>Bayesian phylogeny estimation:</p>
+<ul class="incremental">
+<li><a href="http://mrbayes.csit.fsu.edu/">MrBayes</a></li>
+</ul>
+<p>examining features of MrBayes runs:</p>
+<ul class="incremental">
+<li><a href="http://tree.bio.ed.ac.uk/software/tracer/">Tracer</a></li>
+</ul>
+<p>maximum likelihood phylogeny estimation:</p>
+<ul class="incremental">
+<li><a href="http://icwww.epfl.ch/%7Estamatak/index-Dateien/Page443.htm">RAxML</a> or <a href="http://www.atgc-montpellier.fr/phyml/">PhyML</a></li>
+</ul>
+<p>checking for agreement between estimated trees:</p>
+<ul class="incremental">
+<li><a href="http://evolution.genetics.washington.edu/phylip/doc/consense.html">CONSENSE</a> (part of the PHYLIP package), or <a href="http://www.splitstree.org/">SplitsTrees</a>, or <a href="http://bioinf.may.ie/software/clann/">clann</a></li>
+</ul>
 <p><a name="suggestedApproachToAdvancedLouisianGastroenterologistExercise"></a>One way of linking these together would be to:</p>
 <ol class="incremental" style="list-style-type: decimal">
 <li>Align the initial set of <strong>nucleotide</strong> (ignoring the fact that they're coding, or at least contain some coding regions) sequences using <a href="http://www.ebi.ac.uk/goldman-srv/webprank/">webPRANK</a>, asking webPRANK to estimate its own tree<br /></li>

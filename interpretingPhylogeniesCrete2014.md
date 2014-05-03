@@ -269,15 +269,19 @@ To remind you, the relevant analysis is described in [this
 paper](http://www.ncbi.nlm.nih.gov/pubmed/21060816) (PubMed ID:
 21060816), which analyses the possible influence of human activity on spread of rabies virus amongst endemic dog populations in North Africa.
 
-#### 1. Write down one or more substantive questions we want to address with the analysis
+#### 1. Choose a question
 
-Always need to begin with this! It's a big help in guiding decision-making while carrying out the analysis.
+As discussed above, being aware of (ideally writing down) the specific, substantive questions you want to address with your analysis, is usually helpful for planning and carrying out your analysis. In particular, it can be a big help in guiding decision-making while carrying out the analysis (e.g. deciding which sequences to include, which to exclude, from your analysis.)
+
+In the context of a phylogenetic analysis, it is clearly useful if this question can be informed by estimation of parameter(s) of a phylogenetic model.
 
 In this case, we'll use again:
 
 *"What is the topology of a phylogenetic tree of rabies viruses from North Africa with viruses sampled from several different North African countries?"*
 
-#### 2. Collect an appropriate set of sequences
+#### 2. Collect sequences
+
+Clearly, the sequences you collect should be relevant to your substantive question i.e. data which should provide information on your parameters of interest.
 
 These could come from:
 
@@ -337,21 +341,25 @@ Note that there are two, completely different and almost certainly
 unrelated proteins called COX2 in humans (PGH2\_HUMAN and COX2\_HUMAN)!
 
 
-#### 3. Edit sequence identifiers to be unique, compatible with analysis tools, and meaningful (in the context of allowing us to easily answer our question(s) of interest when examining resulting phylogneetic trees and other results)
+#### 3. Edit sequence identifiers
+
+In almost all analyses, the identifiers associated with the sequences you obtain will need to be changed, for two main reasons:
+
+- so that the identifiers encode *easy-to-read information about the sequences that is relevant for addressing your question of interest*; in this example, addressing the question requires that we know the country from which the viruses (whose sequence we are analysing) were sampled, thus we would want to encode this information in the identifiers for the sequences in the analysis
+- so that the various different software tools used to analyse the sequences can read them; in general, this needs us to make sure the identifiers are:
+    - unique (i.e. each identifier used in the analysis should be different from each other)
+    - do not contain "unusual" characters, ideally restricting the characters used to A-Z, a-z, 0-9 and perhaps also _
+    - relatively short (some software requires identifiers that are 10 characters or less long; some other software requires all identifiers be exactly 10 characters long...)
+
+thus I usually choose identifiers that are 10 characters or less long, are unique from each other, and only contain characters A-Z, a-z, 0-9 and _
 
 Here I've selected a set of sequences using the kinds of methods described above, in FASTA format, but [haven't changed the sequence identifiers at all.](./sequences/phosphoproteinCDSsNoLabelEd.txt)
 
 With these identifiers, there is plenty of phylogenetic software that will not accept them as input, even if they accept FASTA format alignment files.
 
-Common problems could be that the identifiers:
-
-- are not unique in the first 10 characters of the string
-- contain characters other than A-Z, a-z, 0-9, and _
-- are too long
-
 For example, the [RAxML BlackBox web server](http://embnet.vital-it.ch/raxml-bb/index.php) doesn't accept these sequences as input.
 
-However, after I edit the file, [changing it to this](./sequences/phosphoproteinCDSsLabelsEd.txt), so that the first 10 characters are unique (and at the same time making it easy to spot their country of sampling, making the final data visualisation/question answering part of the analysis easier), they are accepted. 
+However, after I edit the file, [changing it to this](./sequences/phosphoproteinCDSsLabelsEd.txt), so that the first 10 characters are unique (and at the same time making it easy to spot their country of sampling, making the final data visualisation/question answering part of the analysis easier), they are accepted by the RAxML BlackBox web server.
 
 #### 4. Align sequences
 
