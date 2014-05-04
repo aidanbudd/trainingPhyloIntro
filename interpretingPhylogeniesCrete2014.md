@@ -96,7 +96,7 @@ After having been shown the demonstrations, and carried out the exercises, liste
 
 ### <a name="fromPhylogenyQuestionToAnswerConceptDemoDogRabies"></a>"Concept" demonstration: from substantive question to an answer using North African dog rabies viruses
 
-Sequences are taken from [this paper](http://www.ncbi.nlm.nih.gov/pubmed/21060816) (PubMed ID:21060816), which analyses the possible influence of human activity on spread of rabies virus amongst endemic dog populations in North Africa.
+Sequences are taken from [this paper](http://www.plospathogens.org/article/info%3Adoi%2F10.1371%2Fjournal.ppat.1001166) published Open Access in [PLoS Pathogens](http://www.plospathogens.org/) (PubMed ID:[21060816](http://www.ncbi.nlm.nih.gov/pubmed/21060816)), which analyses the possible influence of human activity on spread of rabies virus amongst endemic dog populations in North Africa.
 
 #### 1. Pose a substantive question
 
