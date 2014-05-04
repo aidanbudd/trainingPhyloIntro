@@ -191,10 +191,10 @@ Finally we examine the resulting tree file to see which of the possible answers 
 
 We can do that using, for example:  
 
-- phylowidget  
-- NJplot
-- Dendroscope
-- FigTree
+- [PhyloWidget](http://www.phylowidget.org/), a web browser-based tree visualisation tool, which provides [this set of instructions](http://www.phylowidget.org/vignettes/index.html) to describe how to use it
+- [NJplot](http://doua.prabi.fr/software/njplot), which, like the other software described below, is run locally on your machine, and for which we've prepared this [set of basic instructions](./usingNJplot.html)
+- [Dendroscope](http://dendroscope.org/), for which we've prepared some [basic instructions](./usingDendroscope.html)
+- [FigTree](http://tree.bio.ed.ac.uk/software/figtree/), which I can't find a set of instruction pages for online.
 
 ### <a name="fromPhylogenyQuestionToAnswerConceptExerciseLouisianaGastroenterologist"></a>"Concept"" exercise: from substantive question to an answer using the "Louisiana Gastroenterologist" case as an example
 
