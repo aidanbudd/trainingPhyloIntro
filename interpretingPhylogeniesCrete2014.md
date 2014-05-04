@@ -75,7 +75,7 @@ Many applications of phylogenies involve using them to check whether a given set
 
 NJplot does not have many features and options, however it carries out the simple tasks of re-rooting and rotating branches - very useful when attempting to determine whether a given set of relationships exists in a tree, or when comparing to tree topologies - very quickly, which is often all you need when taking a first look at a phylogeny.
 
-This page describes how to carry out these kinds of manipulations using NJplot - we will also demo them for you.
+This page describes how to carry out these kinds of manipulations using NJplot - we will also demo them for you using the example files on this short ["how to use NJplot" page](./usingNJplot.html).
 
 ### Exercise
 
@@ -89,6 +89,10 @@ If the previous exercise was easy, try the same thing with the following [tree f
 
 
 ## <a name="fromPhylogenyQuestionToAnswer"></a>Phylogeny from initial sequences to answering a question
+
+### Learning Objectives
+
+After having been shown the demonstrations, and carried out the exercises, listed below, you will hopefully have a better idea about how different tools used in phylogenetic analysis can be linked together to go from having a question of interest, to addressing/informing an answer to that question.
 
 ### <a name="fromPhylogenyQuestionToAnswerConceptDemoDogRabies"></a>"Concept" demonstration: from substantive question to an answer using North African dog rabies viruses
 
