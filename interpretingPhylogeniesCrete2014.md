@@ -469,22 +469,17 @@ Try a similar analysis as used for the phosphoprotein complete CDS nucleic acid 
 - [Sequence labels edited to easily identify country of origin](./sequences/glycoproteinPartialAndIntergenicSpacerLabelsEd.txt)
 
 
-1. Choose a quesiton
+
+1. **Choose a question**  
     Write down one or more substantive questions we want to address with the analysis
-
-2. Collect an appropriate set of sequences
-
-3. Edit sequence identifiers to be unique, compatible with analysis tools, and meaningful (in the context of allowing us to easily answer our question(s) of interest when examining resulting phylogenetic trees and other results)
-
-4. Align sequences
-
-5. Model Selection
-
-6. Phylogeny estimation
-
-7. Algorithm Diagnosis
-
-8. Parameter estimation
+2. **Collect sequences**
+3. **Edit sequence identifiers**
+    Changing them to be unique, compatible with analysis tools, and meaningful (in the context of allowing us to easily answer our question(s) of interest when examining resulting phylogenetic trees and other results)
+4. **Align sequences**
+5. **Model Selection**
+6. **Phylogeny estimation**
+7. **Algorithm Diagnosis**
+8. **Answer question/hypothesis testing**
 
 ### <a name="fromPhylogenyQuestionToAnswerAdvancedExerciseLouisianaGastroenterologist"></a>Advanced Exercise (where you decide yourself which tools to run etc.): the case of the "Louisiana gastroenterologist"
 
