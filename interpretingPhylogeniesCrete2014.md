@@ -98,6 +98,8 @@ After having been shown the demonstrations, and carried out the exercises, liste
 
 Sequences are taken from [this paper](http://www.plospathogens.org/article/info%3Adoi%2F10.1371%2Fjournal.ppat.1001166) published Open Access in [PLoS Pathogens](http://www.plospathogens.org/) (PubMed ID:[21060816](http://www.ncbi.nlm.nih.gov/pubmed/21060816)), which analyses the possible influence of human activity on spread of rabies virus amongst endemic dog populations in North Africa.
 
+The World Health Organisation provides this [fact sheet](http://www.who.int/mediacentre/factsheets/fs099/en/) about the disease.
+
 #### 1. Pose a substantive question
 
 [**Substantive**](http://www.oxforddictionaries.com/definition/english/substantive) means important, meaningful, considerable (in terms of numbers). Used in our context here, it simply means "a question which there is significant interest or utility in finding an answer to it".
