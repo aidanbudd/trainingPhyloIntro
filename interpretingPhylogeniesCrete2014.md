@@ -102,7 +102,7 @@ Sequences are taken from [this paper](http://www.plospathogens.org/article/info%
 
 [**Substantive**](http://www.oxforddictionaries.com/definition/english/substantive) means important, meaningful, considerable (in terms of numbers). Used in our context here, it simply means "a question which there is significant interest or utility in finding an answer to it".
 
-More pragmatically, as scientists who need to publish to be able to continue to work as scientists, a **substantive question** could be considered one whose answer could be published (or would at least increase the publishability/impact of an article).
+More pragmatically, as scientists who need to publish to be able to continue to work as scientists, a *substantive question* could be considered one whose answer could be published (or would at least increase the publishability/impact of an article).
 
 For pragmatic scientists of this kind, it can be helpful to pose substantive questions where the estimation of a value of a parameter (that is part of a model of your system of interest) can help inform the answer (i.e. change our estimation of the probability that certain answers to the question more or less likely to be true, given the data and the model). This can be helpful, as it suggests an obvious way to begin addressing the substantive (i.e. hopefully publishable) question i.e. by collecting data to obtain an estimate of the parameter(s) of interest.
 
@@ -116,17 +116,17 @@ In the case of this analysis of the epidemiology of rabies virus in North Africa
 
 Clearly the first three questions are substantive; we would of course be very interested, and certainly able to publish, any information that helped inform the answers to these questions. This would have the potential to decrease suffering, and the financial cost, of such infections, so is of interest from medical, welfare, and economic points of view.
 
-The fourth question is less strongly linked to such "interesting" issues; however, it is useful for us, as phylogeneticists, as it is a question that can help address the other, clearly substantive, questions described before it **and** for which it suggests a model (a molecular phylogenetic one), parameter (the topology of a rooted phylogenetic tree), and dataset (a multiple sequence alignment of North African rabies virus samples) for which an estimate of this parameter would make some answers more or less likely.
+The fourth question is less strongly linked to such "interesting" issues; however, it is useful for us, as phylogeneticists, as it is a question that can help address the other, clearly substantive, questions described before it *and* for which it suggests a model (a molecular phylogenetic one), parameter (the topology of a rooted phylogenetic tree), and dataset (a multiple sequence alignment of North African rabies virus samples) for which an estimate of this parameter would make some answers more or less likely.
 
 Understanding and recognising the link between questions of these kinds can help us focus on collecting an appropriate and useful dataset (i.e. one from which a parameter of interest can be estimated); the more specific this question, the easier it is to decide which data to include/collect, and which to leave out (we can very rarely collect all possible data that could be relevant for our analysis, and it can be very useful to have criteria to help us decide what to leave in, what to leave out), and for communicating about their work to others (it's much easier to discuss and help someone with an analysis when you understand what the important questions are that it tries to address).
 
 After all of that discussion... for this demonstration, we're going to assume we have come up with the following substantive question:
 
-**What is the topology of a phylogenetic tree of rabies viruses from North Africa with viruses sampled from several different North African countries?**
+*What is the topology of a phylogenetic tree of rabies viruses from North Africa with viruses sampled from several different North African countries?*
 
 #### 2. Build a model involving parameters that, if known, could answer the question
 
-In the context of this course, this will be a **probabilistic model of molecular evolution**, including (for example, as taken from some of Olivier Gascuel's slides):
+In the context of this course, this will be a *probabilistic model of molecular evolution*, including (for example, as taken from some of Olivier Gascuel's slides):
 
 - a tree topology (to be estimated)
 - branch lengths (to be estimated)
@@ -165,7 +165,7 @@ We will run the analysis using the [webPRANK](./sequences/phosphoproteinCDSsLabe
 
 and comparing models using the AIC, to give [this output file](./outputFiles/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank.jmodeltest.html)
 
-which chooses **GTR** as the best substitution model.
+which chooses *GTR* as the best substitution model.
 
 ##### Estimating the best phylogeny topology and branch length parameters
 
@@ -251,9 +251,9 @@ A suggested "answer" can be found [here](#A6ConceptGastroenterologistExercise).
 #### Answers
 ##### <a name="A1ConceptGastroenterologistExercise"></a> 1. Pose a substantive question
 
-An obvious question to want to address for this case would be something like **"How likely is it that the defendant committed the crime they are accused of"**.
+An obvious question to want to address for this case would be something like *"How likely is it that the defendant committed the crime they are accused of"*.
 
-A more specific question, that links the more general question above to a parameter of a phylogenetic model we could estimate that could inform a question of this kind, could be **"Are the sequences of HIV samples taken from the victim most closely related to (a) those taken from the patient, or (b) to some other sequences sampled from the local Louisiana population?"**.
+A more specific question, that links the more general question above to a parameter of a phylogenetic model we could estimate that could inform a question of this kind, could be *"Are the sequences of HIV samples taken from the victim most closely related to (a) those taken from the patient, or (b) to some other sequences sampled from the local Louisiana population?"*.
 
 If the defendant were guilty of the crime, then given certain assumptions, then we would expect to get answer (a).
 
@@ -390,7 +390,7 @@ machines:
 -   ![AIC results TIFF](./images/phosphoproteinCDSsLabelsEd.modeltest.AICresults.tiff)
 -   ![BIC results TIFF](./images/phosphoproteinCDSsLabelsEd.modeltest.BICresults.tiff)
 
-Both AIC and BIC choose **GTR+G** as the best model.
+Both AIC and BIC choose *GTR+G* as the best model.
 
 #### 6. Phylogeny estimation
 
