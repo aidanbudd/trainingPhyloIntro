@@ -15,3 +15,4 @@ Instructions on:
 - [using Dendroscope](./usingDendroscope.html)
 - [using PhyML](./)
 - [building multiple sequence alignments](./buildingMSAs.html)
+- [changing alignment format](./changingAlignmentFormats.html)
