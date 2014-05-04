@@ -19,11 +19,13 @@ The south of France bioinformatics platform provides a [PhyML webserver](http://
 A simple, quick analysis can be run, on this test set of [nucleotide sequences of the phosphoprotein CDS from several North African rabies virus samples](./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank.phylip), using the following options:
 
 Input Data:  
+
 - Data type: "DNA""
 - Sequence file: "interleaved"
 - Number of data sets: "1"
 
 Substitution Model:  
+
 - Substitution model: "GTR"
 - Equilibrium frequencies: "empirical"
 - Transition / transversion ratio (DNA models): option not available under GTR model
@@ -31,13 +33,15 @@ Substitution Model:
 - Number of substitution rate categories: "1"
 - Gamma shape parameter: not relevant if using only 1 rate category
 
-Tree Searching:  
+Tree Searching: 
+ 
 - Starting tree(s): "BIONJ"
 - Type of tree improvement: "NNI"
 - Optimise topology: "No"
 - Optimise branch lengths: "No"
 
 Branch Support:  
+
 - Fast likelihood-based method: "aLRT SH-like" AND "yes"
 - Perform bootstrap: "no"
 
