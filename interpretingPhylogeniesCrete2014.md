@@ -269,9 +269,7 @@ Looking at this tree, assuming it is correctly rooted and that the topology para
 
 Here we will work again with the North African rabies dataset, and will run again through the process of going from a question to an answer. The earlier demonstration of this kind was done to emphasise the conceptual steps we take while doing such an analysis; here, however, we'll focus more on the practicalities of how to carry out the different stages of the analysis.
 
-To remind you, the relevant analysis is described in [this
-paper](http://www.ncbi.nlm.nih.gov/pubmed/21060816) (PubMed ID:
-21060816), which analyses the possible influence of human activity on spread of rabies virus amongst endemic dog populations in North Africa.
+To remind you, the relevant analysis is described in [this paper](http://www.plospathogens.org/article/info%3Adoi%2F10.1371%2Fjournal.ppat.1001166) published Open Access in [PLoS Pathogens](http://www.plospathogens.org/) (PubMed ID:[21060816](http://www.ncbi.nlm.nih.gov/pubmed/21060816)) which analyses the possible influence of human activity on spread of rabies virus amongst endemic dog populations in North Africa.
 
 #### 1. Choose a question
 
@@ -387,8 +385,8 @@ Modeltest results from PRANK alignment - use JModelTest on local
 machines:
 
 -   [Console PDF](./outputFiles/phosphoproteinCDSsLabelsEd.modeltest.pdf)
--   ![AIC results TIFF](./images/phosphoproteinCDSsLabelsEd.modeltest.AICresults.tiff)
--   ![BIC results TIFF](./images/phosphoproteinCDSsLabelsEd.modeltest.BICresults.tiff)
+-   ![AIC results TIFF](./images/phosphoproteinCDSsLabelsEd.modeltest.AICresults.jpg)
+-   ![BIC results TIFF](./images/phosphoproteinCDSsLabelsEd.modeltest.BICresults.jpg)
 
 Both AIC and BIC choose *GTR+G* as the best model.
 
@@ -470,7 +468,9 @@ Try a similar analysis as used for the phosphoprotein complete CDS nucleic acid 
 - [Sequence labels unedited](./sequences/glycoproteinPartialAndIntergenicSpacerNoLabelEd.txt)
 - [Sequence labels edited to easily identify country of origin](./sequences/glycoproteinPartialAndIntergenicSpacerLabelsEd.txt)
 
-1. Write down one or more substantive questions we want to address with the analysis
+
+1. Choose a quesiton
+    Write down one or more substantive questions we want to address with the analysis
 
 2. Collect an appropriate set of sequences
 
