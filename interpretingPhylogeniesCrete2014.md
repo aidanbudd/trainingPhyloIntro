@@ -560,7 +560,7 @@ maximum likelihood phylogeny estimation:
 
 checking for agreement between estimated trees:  
 
-- [CONSENSE](http://evolution.genetics.washington.edu/phylip/doc/consense.html) (part of the PHYLIP package), or [SplitsTrees](http://www.splitstree.org/), or [clann](http://bioinf.may.ie/software/clann/)
+- [CONSENSE](http://evolution.genetics.washington.edu/phylip/doc/consense.html) (part of the PHYLIP package), or [SplitsTrees](http://www.splitstree.org/), or [clann](http://bioinf.nuim.ie/clann/)
 
 <a name="suggestedApproachToAdvancedLouisianGastroenterologistExercise"></a>One way of linking these together would be to:
 
