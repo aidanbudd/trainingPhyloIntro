@@ -220,7 +220,7 @@ Use either a local command-line tool (such as MUSCLE or PRANK) to align the sequ
 
 For reference, here are alignments built using the web servers for:
 
-- <a =name"webPRANKthirtyLouisianGastroAlignment"></a>[webPRANK](./sequences/thirtySeqsLouisianaGastroAligned.webPRANK.fasta)
+- <a name="webPRANKthirtyLouisianGastroAlignment"></a>[webPRANK](./sequences/thirtySeqsLouisianaGastroAligned.webPRANK.fasta)
 - [MUSCLE](./sequences/thirtySeqsLouisianaGastroAligned.muscle.fasta).
 
 Clearly, if/when doing an analysis of this kind of your own, collecting an appropriate set of observations is likely to be much more effort that just clicking a link in a webpage and running  automatic alignment software over them
