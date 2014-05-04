@@ -171,7 +171,7 @@ which chooses *GTR* as the best substitution model.
 
 We'll use the [PhyML webserver](http://www.atgc-montpellier.fr/phyml/) to get an ML estimate of phylogeny topology and branch lengths.
 
-We use this [PHYLIP format alignment file](./outputFiles/phosphoproteincdsslabelsed_alphanumericunderscoreonly_webprank_phylip_phyml/phosphoproteincdsslabelsed_alphanumericunderscoreonly_webprank_phylip_phyml_tree.txt) as input for PhyML. We got this from the previous FASTA format alignment file using ClustalX.
+We use this [PHYLIP interleaved format alignment file](./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank.phylip) as input for PhyML. We got this from the previous FASTA format alignment file (that we got by aligning the sequences with webPRANK) using ClustalX.
 
 We'll follow [this very basic description of using PhyML webserver](./usingPhyML.html) to quickly estimate a phylogeny using the substitution model selected by jModelTest.
 
