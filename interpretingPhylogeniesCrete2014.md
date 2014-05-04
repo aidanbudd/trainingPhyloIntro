@@ -556,7 +556,7 @@ examining features of MrBayes runs:
 
 maximum likelihood phylogeny estimation:  
 
-- [RAxML](http://icwww.epfl.ch/%7Estamatak/index-Dateien/Page443.htm) or [PhyML](http://www.atgc-montpellier.fr/phyml/)  
+- [RAxML](http://www.exelixis-lab.org/) or [PhyML](http://www.atgc-montpellier.fr/phyml/)  
 
 checking for agreement between estimated trees:  
 
