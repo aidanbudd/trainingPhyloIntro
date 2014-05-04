@@ -473,7 +473,7 @@ Try a similar analysis as used for the phosphoprotein complete CDS nucleic acid 
 1. **Choose a question**  
     Write down one or more substantive questions we want to address with the analysis
 2. **Collect sequences**
-3. **Edit sequence identifiers**
+3. **Edit sequence identifiers**  
     Changing them to be unique, compatible with analysis tools, and meaningful (in the context of allowing us to easily answer our question(s) of interest when examining resulting phylogenetic trees and other results)
 4. **Align sequences**
 5. **Model Selection**
