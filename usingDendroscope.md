@@ -53,6 +53,8 @@ The graphical user interface (GUI) for Dendroscope should look similar to the im
  - edges
  - background (allows selection of all edges/nodes/labels)
 
+**Note: The above description was for a version before the November 2013 release; while similar, the November 2013 release doesn't include the side bar, but adds an additional "messages" window that provides information on the commands issued by us to Dendroscope**
+
 ![](./images/basicDendroscopeMainWindowScreenshot.jpg)
 
 ### Opening a File
@@ -63,6 +65,8 @@ There is more than one way to open a file\
 - Use the "Open Tree File" icon ![](./images/openTreeFileIcon.gif)
 
 and then select file to be opened using you operating system's menus
+
+**Note: in the November 2013 version, I am unable to open any tree file that does not have the name ending ".txt"; thus, if trying to load a tree from a file with a different name ending, rename (or make a new copy of) the file to add ".txt" to the end of it e.g. if your file is named "TF105137_seed_DendroscopeExample.ph" you could rename it to "TF105137_seed_DendroscopeExample.ph.txt" and Dendroscope should be able to load it** 
 
 ### Displaying Taxa Labels - IMPORTANT!
 
@@ -75,57 +79,60 @@ are looking for may have been hidden by Dendroscope.
 
 Therefore, you will often want to switch off this option by simply selecting the *View -> Sparse Labels* option (if there is a tick after the option, then labels are being hidden)
 
+**Note: Above instructions still work for November 2013 version**
+
 ### Switching Between Different Tree Representations
 
 There are two ways of doing this:
-- Choosing the appropriate "Tree Representation" icon from the toolbar ![](./images/treeRepresentationIcons.gif)
-- Use the Tree menu
+
+- Choosing the appropriate "Tree Representation" icon from the toolbar ![](./images/treeRepresentationIcons.gif)  
+    **Note: This still works for November 2013 version**
+- Use the Tree menu  
+    **Note: In November 2013 version, these are now in the "Layout" rather than the "Tree" menu**
 
 ##### Rooted, scaled tree representation
 
 To view a tree so that it is shown with a root, and with branch-length information **included** in the representation, do one of the following:
-- *Tree -> Draw Rectangular Phylogram*(i.e. using the "Tree" menu) 
+- *Tree -> Draw Rectangular Phylogram* (i.e. using the "Tree" menu) 
 - Choose the ![](./images/drawRectangularPhylogramIcon.gif) Toolbar icon
 
 ##### Rooted, unscaled tree representation
 
 This is the default representation on some versions of Dendroscope. To view a tree so that it is shown with a root, but with branch-length information ignored in the representation, do the following:
 
-- *Tree-\>Draw Rectangular Cladogram*(i.e. using the "Tree" menu)
+- *Tree -> Draw Rectangular Cladogram* (i.e. using the "Tree" menu)
 - Choose the ![](./images/drawRectangularCladogramIcon.gif) Toolbar icon
 
 ##### "Typical" unrooted representation
 
--   *Tree-\>Draw Radial Phylogram*(i.e. using the "Tree" menu)*\
-    *
--   Choose the ![](./images/drawRadialPhylogeramIcon.gif)
-    Toolbar icon
+-   *Tree -> Draw Radial Phylogram* (i.e. using the "Tree" menu)
+-   Choose the ![](./images/drawRadialPhylogeramIcon.gif) Toolbar icon
 
 ### Selecting Branches/Nodes
 
-Depending on the number of left mouse-clicks you give to a branch/node
-you can select
+Depending on the number of left mouse-clicks you give to a branch/node you can select
 
 -   one click - only the clicked-on branch
--   two clicks - the entire clan/subtree associated with one end of the
-    branch (including branches, nodes, and labels)\
--   three clicks - the entire clan/subtree associated with the other end
-    of the branch (including branches, nodes, and labels)
+-   two clicks - the entire clan/subtree associated with one end of the branch (including branches, nodes, and labels)
+-   three clicks - the entire clan/subtree associated with the other end of the branch (including branches, nodes, and labels)
 
 Multiple branches/nodes/labels can be selected/de-selected by left
 mouse-clicking while holding the SHIFT key. The image below shows
 several branches, nodes, and labels highlighted.
 
+**Note: In November 2013 version, these instructions are still valid, although they seem to be somewhat erratic i.e. I may have to try 10 times before the double or triple click does what I want**
+
 ![](./images/dendroscopeTreeWithSelectedBranchesNodesLabels.gif)
 
 ### Reroot Tree
 
-Left-click with the mouse on the **branch** you want to place the root
-on to select it and then either:
+Left-click with the mouse on the **branch** or **node** you want to place the root on to select it and then either:
 
--   Select the "Reroot tree" Toolbar icon
-    ![](./images/rerootTreeIcon.gif)
+-   Select the "Reroot tree" Toolbar icon ![](./images/rerootTreeIcon.gif)
 -   *Edit -> Reroot*
+-   *Shift - Control (or cmd on Mac) - R*
+
+**Note: This still works for November 2013 version**
 
 ### Rotate Branches Around a Node
 
@@ -133,15 +140,23 @@ To rotate branches (which does not change the topology of the tree, only the way
 
 Left-click with the mouse on the **node** (doesn't work i.e. won't let you choose to "Swap Subtree etc. if you select a branch instead of a node!) you want to rotate around to select it and then either:
 
--   Select the "Swap order of subtrees below node" Toolbar icon
+-   Select the "Swap order of subtrees below node" Toolbar icon ![](./images/swapOrderOfSubtreesIcon.jpg)
 -   *Edit -> Swap Subtree*
--   Right-click to obtain the node Context Menu and choose *"Swap
-    Subtree"*
+-   Right-click to obtain the node Context Menu and choose *"Swap Subtree"*
+-   *Control (or cmd on Mac) - T*
+
+**Note: This still works for November 2013 version**
 
 ### Formatting Branches and Nodes
 
 To change the colour/thickness/font etc. of selected
-nodes/branches/labels do: *Edit -> Format*. This brings up the "Format" window shown below
+nodes/branches/labels do:
+
+- *Edit -> Format*
+- *Control (or cmd on Mac) - J*
+
+This brings up the "Format" window shown below
+
 ![](./images/FormatWindow.gif)
 
 From here you can, for example:
@@ -151,7 +166,10 @@ From here you can, for example:
 - change the size of the text used for the labels using the middle-top menu-box (above this contains the number "10")
 
 See the image below for an example of such editing.
- ![](./images/formatChangesDendroscope.gif)
+
+**Note: This still works for November 2013 version**
+
+![](./images/formatChangesDendroscope.gif)
 
 ### Adding Labels to Branches
 
@@ -159,41 +177,56 @@ It is possible to add text-labels to branches - for example to supply the name o
 
 -   Select branch(es) of interest
 -   Right-click to get access to the Branch Context Menu
+    - **Note: In November 2013 version this this also works with left-click and Ctrl**
 -   Choose "Edit Edge Label" to provide a text-label for the branch - any gaps in your text will be substituted by "_" characters on the label
 
 For example, the image below has a label added to the thick yellow
 branch.
- ![](./images/dendroscopeTreeForStudentsToCopy.gif)\
+
+![](./images/dendroscopeTreeForStudentsToCopy.gif)
 
 ### Adjusting Positions of Labels
 
 By simply left-clicking with the mouse and dragging it is possible to change the position of any of the labels (either branch labels as above, or the taxa labels at the end of branches. These labels remain attached to their branches and will move accordingly following rearrangements of the tree.
 
+**Note: This still works for November 2013 version**
+
 ### Adding a scale bar
 
-Window -> Execute Command
+Using a "text" command:
 
-Type "set scalebar=true" and press Return
+- Window -> Execute Command
+    - **Note: in November 2013 version this is Window -> Command input**
+- Type "set scalebar=true" and press Return
+- Click "Apply"
 
-Click "Apply""
+Using a menu item:
+
+- *View -> Show scale bar*
+    - **Note: This seems to be an addition for November 2013 or some other version more recent than the one these instructions were originally written for**
+
 
 ### Saving a Tree Representation
 
 You can save the representation of your tree in a format that is read only by Dendroscope - this file can be reloaded into Dendroscope at a later date, and will have exactly the same set of rearrangements and formating as the trees in Dendroscope when the file was saved. You can do this using either of:
 
--   *File-\>Save*
--   *File-\>Save As...*
+-   *File -> Save*
+-   *File -> Save As...*
 
 If you are looking to save the image for use in preparing a figure, then use *File -> Export Image* and save the file in either EPS  or SVG format (to maintain it as a set of vectors rather than reducing it to a set of pixels as the other formats do)
  
 The resulting file can then be loaded into a range of different
 software such as Adobe Illustrator to prepare a file version of a figure for publication/presentation.
 
+**Note: This still works for November 2013 version**
+
 ### Hiding Branch/Edge Annotations/Labels
 
 Trees obtained from some sources, such as [TreeFam](http://www.treefam.org/), have information annotated/associated with tree branches that can sometimes make the shape, and other features, of the tree difficult to read/interpret. Thus, if we're not interested in reading this information, we usually turn off the representation of this information using the "View" menu:
 
 -   View -> Hide Edge Labels
+
+**Note: for November 2013 version, you need to firstly select (e.g. with *Ctrl (or cmd on mac) - A* or *Select -> Select all*) the branches/edges you want to remove labels from, and then uncheck ***View -> Show edge labels*** **
 
 Below is an example of a tree with edge labels shown
 
@@ -205,6 +238,9 @@ other features of the tree much easier to read/identify
 ![Dendroscope with edge labels hidden](./images/treeFamTreeWithEdgeLabelsHidden.gif "Dendroscope with edge labels hidden")
 
 ### Changing angle of branches in unrooted tree representation
+
+**Note: This ***does not seem to work*** for November 2013 version**
+
 
 To change the angle at which branches are drawn in the typical unrooted tree representation:
 
@@ -222,6 +258,8 @@ To change the angle at which branches are drawn in the typical unrooted tree rep
 
 ### Using the Magnifier to Examine Large Trees
 
+**Note: This still works for November 2013 version**
+
 -   Switch on the magnifier by clicking on this icon ![Magnifier
 icon](./images/magnifierIcon.gif "Magnifier icon")
 -   Drag the green diamond, top right of the magnifier, to use the  magnifier over only a small region of the tree
@@ -229,7 +267,7 @@ icon](./images/magnifierIcon.gif "Magnifier icon")
 
 ### Finding and Highlighting Labels Matching a String
 
--   *Edit-\>Find/Replace*
+-   *Edit -> Find/Replace*
 -   Add substring to search with to "Text to Find" box
 -   Choose "Find All"
 -   Without doing any other action in Dendroscope, do *Edit -> Format* to [change the representation of the labels matching the search term](#Formating_Branches_and_Nodes), e.g. make the text a different colour and size

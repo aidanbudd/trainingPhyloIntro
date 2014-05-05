@@ -8,10 +8,33 @@
 <h2 id="phyml-webserver">PhyML webserver</h2>
 <p>The south of France bioinformatics platform provides a <a href="http://www.atgc-montpellier.fr/phyml/">PhyML webserver</a>. The following insturctions are for using the server running a version 20120412 of PhyML (i.e. a version released in April 2012), on April 23rd 2014; note that the webserver may well have changed details of its interface when you try it out.</p>
 <p>A simple, quick analysis can be run, on this test set of <a href="./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank.phylip">nucleotide sequences of the phosphoprotein CDS from several North African rabies virus samples</a>, using the following options:</p>
-<p>Input Data:<br />- Data type: &quot;DNA&quot;&quot; - Sequence file: &quot;interleaved&quot; - Number of data sets: &quot;1&quot;</p>
-<p>Substitution Model:<br />- Substitution model: &quot;GTR&quot; - Equilibrium frequencies: &quot;empirical&quot; - Transition / transversion ratio (DNA models): option not available under GTR model - Proportion of invariable sites: &quot;0.0&quot; - Number of substitution rate categories: &quot;1&quot; - Gamma shape parameter: not relevant if using only 1 rate category</p>
-<p>Tree Searching:<br />- Starting tree(s): &quot;BIONJ&quot; - Type of tree improvement: &quot;NNI&quot; - Optimise topology: &quot;No&quot; - Optimise branch lengths: &quot;No&quot;</p>
-<p>Branch Support:<br />- Fast likelihood-based method: &quot;aLRT SH-like&quot; AND &quot;yes&quot; - Perform bootstrap: &quot;no&quot;</p>
+<p>Input Data:</p>
+<ul class="incremental">
+<li>Data type: &quot;DNA&quot;&quot;</li>
+<li>Sequence file: &quot;interleaved&quot;</li>
+<li>Number of data sets: &quot;1&quot;</li>
+</ul>
+<p>Substitution Model:</p>
+<ul class="incremental">
+<li>Substitution model: &quot;GTR&quot;</li>
+<li>Equilibrium frequencies: &quot;empirical&quot;</li>
+<li>Transition / transversion ratio (DNA models): option not available under GTR model</li>
+<li>Proportion of invariable sites: &quot;0.0&quot;</li>
+<li>Number of substitution rate categories: &quot;1&quot;</li>
+<li>Gamma shape parameter: not relevant if using only 1 rate category</li>
+</ul>
+<p>Tree Searching:</p>
+<ul class="incremental">
+<li>Starting tree(s): &quot;BIONJ&quot;</li>
+<li>Type of tree improvement: &quot;NNI&quot;</li>
+<li>Optimise topology: &quot;No&quot;</li>
+<li>Optimise branch lengths: &quot;No&quot;</li>
+</ul>
+<p>Branch Support:</p>
+<ul class="incremental">
+<li>Fast likelihood-based method: &quot;aLRT SH-like&quot; AND &quot;yes&quot;</li>
+<li>Perform bootstrap: &quot;no&quot;</li>
+</ul>
 <p>and give a name and an email address</p>
 <p>A ziped result file, <a href="./outputFiles/phosphoproteincdsslabelsed_alphanumericunderscoreonly_webprank_phylip_phyml.zip">such as this one</a>, is emailed to you once the analysis is over.</p>
 <p>One of the files in the directory, once you have unzipped it, contains the PhyML's <a href="./outputFiles/phosphoproteincdsslabelsed_alphanumericunderscoreonly_webprank_phylip_phyml/phosphoproteincdsslabelsed_alphanumericunderscoreonly_webprank_phylip_phyml_tree.txt">ML estimate of the phylogenetic tree</a></p>

@@ -1,0 +1,55 @@
+
+
+
+
+
+
+                                 ..........................                                      
+ ooooooooooooooooooooooooooooo        CURRENT SETTINGS        ooooooooooooooooooooooooooooooooooo
+                                 ..........................                                      
+
+                . Sequence filename:				 phosphoproteincdsslabelsed_alphanumericunderscoreonly_webprank_phylip
+                . Data type:					 dna
+                . Alphabet size:				 4
+                . Sequence format:				 interleaved
+                . Number of data sets:				 1
+                . Nb of bootstrapped data sets:			 0
+                . Compute approximate likelihood ratio test:	 yes (SH-like branch supports)
+                . Model name:					 GTR
+                . Proportion of invariable sites:		 0.000000
+                . Number of subst. rate categs:			 1
+                . Nucleotide equilibrium frequencies:		 empirical
+                . Optimise tree topology:			 no
+                . Evaluated tree:				 file "BioNJ"
+                . Optimise branch lengths:			 no
+                . Optimise substitution model parameters:	 yes
+                . Run ID:					 none
+                . Random seed:					 1398265073
+                . Subtree patterns aliasing:			 no
+                . Version:					 20120412
+
+ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+
+
+. 111 patterns found (out of a total of 1074 sites). 
+
+. 936 sites without polymorphism (87.15%).
+
+. Computing pairwise distances...
+
+. Building BioNJ tree...
+. (    0 sec) [     -2669.2964] [GTR parameters     ]
+. (    0 sec) [     -2601.2791] [GTR parameters     ]
+. (    0 sec) [     -2601.2791] [GTR parameters     ]
+. (    0 sec) [     -2601.2791] [GTR parameters     ]
+
+. Log likelihood of the current tree: -2601.279069.
+
+. Compute fast branch supports on the most likely tree...
+
+. Printing the most likely tree in file 'phosphoproteincdsslabelsed_alphanumericunderscoreonly_webprank_phylip_phyml_tree.txt'...
+
+. Time used 0h0m0s
+
+oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo

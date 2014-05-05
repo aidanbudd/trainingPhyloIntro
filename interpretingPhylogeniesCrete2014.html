@@ -53,7 +53,7 @@
 <h3 id="notes-1">Notes</h3>
 <p>Many applications of phylogenies involve using them to check whether a given set of taxa/organisms/OTUs are related to each other in a particular way i.e. whether the topology of the estimated phylogeny supports a particular set of relationships between OTUs. As a tree with a given topology can be drawn/represented/visualised in many different ways, it can sometimes be tricky to tell whether a given representation of a phylogenetic tree indeed contains the relationship of interest. Thus, working with and changing between different representations of a tree is a useful skill when interpreting the results of phylogenetic analyses.</p>
 <p>NJplot does not have many features and options, however it carries out the simple tasks of re-rooting and rotating branches - very useful when attempting to determine whether a given set of relationships exists in a tree, or when comparing to tree topologies - very quickly, which is often all you need when taking a first look at a phylogeny.</p>
-<p>This page describes how to carry out these kinds of manipulations using NJplot - we will also demo them for you.</p>
+<p>This page describes how to carry out these kinds of manipulations using NJplot - we will also demo them for you using the example files on this short <a href="./usingNJplot.html">&quot;how to use NJplot&quot; page</a>.</p>
 <h3 id="exercise-1">Exercise</h3>
 <p>Load the following NEWICK/PHYLIP format <a href="./trees/eightTaxaUnscaledNjplotExercise.ph">unscaled phylogenetic file</a> into NJplot and use the software to try and reproduce as closely as possible the following image:</p>
 <div class="figure">
@@ -64,11 +64,13 @@
 <img src="./images/twentyTaxaNjplotExercise.gif" title="Twenty OTU unscaled tree shown in NJplot" />
 </div>
 <h2 id="phylogeny-from-initial-sequences-to-answering-a-question"><a name="fromPhylogenyQuestionToAnswer"></a>Phylogeny from initial sequences to answering a question</h2>
+<h3 id="learning-objectives-1">Learning Objectives</h3>
+<p>After having been shown the demonstrations, and carried out the exercises, listed below, you will hopefully have a better idea about how different tools used in phylogenetic analysis can be linked together to go from having a question of interest, to addressing/informing an answer to that question.</p>
 <h3 id="concept-demonstration-from-substantive-question-to-an-answer-using-north-african-dog-rabies-viruses"><a name="fromPhylogenyQuestionToAnswerConceptDemoDogRabies"></a>&quot;Concept&quot; demonstration: from substantive question to an answer using North African dog rabies viruses</h3>
-<p>Sequences are taken from <a href="http://www.ncbi.nlm.nih.gov/pubmed/21060816">this paper</a> (PubMed ID:21060816), which analyses the possible influence of human activity on spread of rabies virus amongst endemic dog populations in North Africa.</p>
+<p>Sequences are taken from <a href="http://www.plospathogens.org/article/info%3Adoi%2F10.1371%2Fjournal.ppat.1001166">this paper</a> published Open Access in <a href="http://www.plospathogens.org/">PLoS Pathogens</a> (PubMed ID:<a href="http://www.ncbi.nlm.nih.gov/pubmed/21060816">21060816</a>), which analyses the possible influence of human activity on spread of rabies virus amongst endemic dog populations in North Africa.</p>
 <h4 id="pose-a-substantive-question">1. Pose a substantive question</h4>
 <p><a href="http://www.oxforddictionaries.com/definition/english/substantive"><strong>Substantive</strong></a> means important, meaningful, considerable (in terms of numbers). Used in our context here, it simply means &quot;a question which there is significant interest or utility in finding an answer to it&quot;.</p>
-<p>More pragmatically, as scientists who need to publish to be able to continue to work as scientists, a <strong>substantive question</strong> could be considered one whose answer could be published (or would at least increase the publishability/impact of an article).</p>
+<p>More pragmatically, as scientists who need to publish to be able to continue to work as scientists, a <em>substantive question</em> could be considered one whose answer could be published (or would at least increase the publishability/impact of an article).</p>
 <p>For pragmatic scientists of this kind, it can be helpful to pose substantive questions where the estimation of a value of a parameter (that is part of a model of your system of interest) can help inform the answer (i.e. change our estimation of the probability that certain answers to the question more or less likely to be true, given the data and the model). This can be helpful, as it suggests an obvious way to begin addressing the substantive (i.e. hopefully publishable) question i.e. by collecting data to obtain an estimate of the parameter(s) of interest.</p>
 <p>In the case of this analysis of the epidemiology of rabies virus in North Africa, there are many different substantive questions one could formulate related to this topic e.g.:</p>
 <ol class="incremental" style="list-style-type: decimal">
@@ -79,12 +81,12 @@
 <li>&quot;What is the topology of a phylogenetic tree of North African rabies viruses?&quot;</li>
 </ol>
 <p>Clearly the first three questions are substantive; we would of course be very interested, and certainly able to publish, any information that helped inform the answers to these questions. This would have the potential to decrease suffering, and the financial cost, of such infections, so is of interest from medical, welfare, and economic points of view.</p>
-<p>The fourth question is less strongly linked to such &quot;interesting&quot; issues; however, it is useful for us, as phylogeneticists, as it is a question that can help address the other, clearly substantive, questions described before it <strong>and</strong> for which it suggests a model (a molecular phylogenetic one), parameter (the topology of a rooted phylogenetic tree), and dataset (a multiple sequence alignment of North African rabies virus samples) for which an estimate of this parameter would make some answers more or less likely.</p>
+<p>The fourth question is less strongly linked to such &quot;interesting&quot; issues; however, it is useful for us, as phylogeneticists, as it is a question that can help address the other, clearly substantive, questions described before it <em>and</em> for which it suggests a model (a molecular phylogenetic one), parameter (the topology of a rooted phylogenetic tree), and dataset (a multiple sequence alignment of North African rabies virus samples) for which an estimate of this parameter would make some answers more or less likely.</p>
 <p>Understanding and recognising the link between questions of these kinds can help us focus on collecting an appropriate and useful dataset (i.e. one from which a parameter of interest can be estimated); the more specific this question, the easier it is to decide which data to include/collect, and which to leave out (we can very rarely collect all possible data that could be relevant for our analysis, and it can be very useful to have criteria to help us decide what to leave in, what to leave out), and for communicating about their work to others (it's much easier to discuss and help someone with an analysis when you understand what the important questions are that it tries to address).</p>
 <p>After all of that discussion... for this demonstration, we're going to assume we have come up with the following substantive question:</p>
-<p><strong>What is the topology of a phylogenetic tree of rabies viruses from North Africa with viruses sampled from several different North African countries?</strong></p>
+<p><em>What is the topology of a phylogenetic tree of rabies viruses from North Africa with viruses sampled from several different North African countries?</em></p>
 <h4 id="build-a-model-involving-parameters-that-if-known-could-answer-the-question">2. Build a model involving parameters that, if known, could answer the question</h4>
-<p>In the context of this course, this will be a <strong>probabilistic model of molecular evolution</strong>, including (for example, as taken from some of Olivier Gascuel's slides):</p>
+<p>In the context of this course, this will be a <em>probabilistic model of molecular evolution</em>, including (for example, as taken from some of Olivier Gascuel's slides):</p>
 <ul class="incremental">
 <li>a tree topology (to be estimated)</li>
 <li>branch lengths (to be estimated)</li>
@@ -113,10 +115,10 @@
 <li>Base tree for likelihood calculations-&gt;Fixed BIONJ-JC</li>
 </ul>
 <p>and comparing models using the AIC, to give <a href="./outputFiles/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank.jmodeltest.html">this output file</a></p>
-<p>which chooses <strong>GTR</strong> as the best substitution model.</p>
+<p>which chooses <em>GTR</em> as the best substitution model.</p>
 <h5 id="estimating-the-best-phylogeny-topology-and-branch-length-parameters">Estimating the best phylogeny topology and branch length parameters</h5>
 <p>We'll use the <a href="http://www.atgc-montpellier.fr/phyml/">PhyML webserver</a> to get an ML estimate of phylogeny topology and branch lengths.</p>
-<p>We use this <a href="./outputFiles/phosphoproteincdsslabelsed_alphanumericunderscoreonly_webprank_phylip_phyml/phosphoproteincdsslabelsed_alphanumericunderscoreonly_webprank_phylip_phyml_tree.txt">PHYLIP format alignment file</a> as input for PhyML. We got this from the previous FASTA format alignment file using ClustalX.</p>
+<p>We use this <a href="./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank.phylip">PHYLIP interleaved format alignment file</a> as input for PhyML. We got this from the previous FASTA format alignment file (that we got by aligning the sequences with webPRANK) using ClustalX.</p>
 <p>We'll follow <a href="./usingPhyML.html">this very basic description of using PhyML webserver</a> to quickly estimate a phylogeny using the substitution model selected by jModelTest.</p>
 <p>This gives us the following <a href="./outputFiles/phosphoproteincdsslabelsed_alphanumericunderscoreonly_webprank_phylip_phyml/phosphoproteincdsslabelsed_alphanumericunderscoreonly_webprank_phylip_phyml_tree.txt">phylogenetic tree</a></p>
 <h4 id="estimate-samplingrandom-error-associated-with-parameter-estimate">5. Estimate sampling/random error associated with parameter estimate</h4>
@@ -127,10 +129,10 @@
 <p>Finally we examine the resulting tree file to see which of the possible answers to our substantive question it provides most support for.</p>
 <p>We can do that using, for example:</p>
 <ul class="incremental">
-<li>phylowidget<br /></li>
-<li>NJplot</li>
-<li>Dendroscope</li>
-<li>FigTree</li>
+<li><a href="http://www.phylowidget.org/">PhyloWidget</a>, a web browser-based tree visualisation tool, which provides <a href="http://www.phylowidget.org/vignettes/index.html">this set of instructions</a> to describe how to use it</li>
+<li><a href="http://doua.prabi.fr/software/njplot">NJplot</a>, which, like the other software described below, is run locally on your machine, and for which we've prepared this <a href="./usingNJplot.html">set of basic instructions</a></li>
+<li><a href="http://dendroscope.org/">Dendroscope</a>, for which we've prepared some <a href="./usingDendroscope.html">basic instructions</a></li>
+<li><a href="http://tree.bio.ed.ac.uk/software/figtree/">FigTree</a>, which I can't find a set of instruction pages for online.</li>
 </ul>
 <h3 id="concept-exercise-from-substantive-question-to-an-answer-using-the-louisiana-gastroenterologist-case-as-an-example"><a name="fromPhylogenyQuestionToAnswerConceptExerciseLouisianaGastroenterologist"></a>&quot;Concept&quot;&quot; exercise: from substantive question to an answer using the &quot;Louisiana Gastroenterologist&quot; case as an example</h3>
 <p>You can read <a href="#LouisianaGastroenterologistDatsetDescription">here</a> a quick introduction to this dataset.</p>
@@ -145,7 +147,7 @@
 <p>Use either a local command-line tool (such as MUSCLE or PRANK) to align the sequences, or a web server such as webPRANK or muscle.</p>
 <p>For reference, here are alignments built using the web servers for:</p>
 <ul class="incremental">
-<li><a =name"webPRANKthirtyLouisianGastroAlignment"></a><a href="./sequences/thirtySeqsLouisianaGastroAligned.webPRANK.fasta">webPRANK</a></li>
+<li><a name="webPRANKthirtyLouisianGastroAlignment"></a><a href="./sequences/thirtySeqsLouisianaGastroAligned.webPRANK.fasta">webPRANK</a></li>
 <li><a href="./sequences/thirtySeqsLouisianaGastroAligned.muscle.fasta">MUSCLE</a>.</li>
 </ul>
 <p>Clearly, if/when doing an analysis of this kind of your own, collecting an appropriate set of observations is likely to be much more effort that just clicking a link in a webpage and running automatic alignment software over them</p>
@@ -166,8 +168,8 @@
 <p>A suggested &quot;answer&quot; can be found <a href="#A6ConceptGastroenterologistExercise">here</a>.</p>
 <h4 id="answers">Answers</h4>
 <h5 id="pose-a-substantive-question-2"><a name="A1ConceptGastroenterologistExercise"></a> 1. Pose a substantive question</h5>
-<p>An obvious question to want to address for this case would be something like <strong>&quot;How likely is it that the defendant committed the crime they are accused of&quot;</strong>.</p>
-<p>A more specific question, that links the more general question above to a parameter of a phylogenetic model we could estimate that could inform a question of this kind, could be <strong>&quot;Are the sequences of HIV samples taken from the victim most closely related to (a) those taken from the patient, or (b) to some other sequences sampled from the local Louisiana population?&quot;</strong>.</p>
+<p>An obvious question to want to address for this case would be something like <em>&quot;How likely is it that the defendant committed the crime they are accused of&quot;</em>.</p>
+<p>A more specific question, that links the more general question above to a parameter of a phylogenetic model we could estimate that could inform a question of this kind, could be <em>&quot;Are the sequences of HIV samples taken from the victim most closely related to (a) those taken from the patient, or (b) to some other sequences sampled from the local Louisiana population?&quot;</em>.</p>
 <p>If the defendant were guilty of the crime, then given certain assumptions, then we would expect to get answer (a).</p>
 <h5 id="answer-your-question-using-these-parameter-estimates-2"><a name="A6ConceptGastroenterologistExercise"></a>&quot; 6. Answer your question using these parameter estimates</h5>
 <p>We estimated this tree and visualised it using Dendroscope.</p>
@@ -177,7 +179,7 @@
 <p>Looking at this tree, assuming it is correctly rooted and that the topology parameter has been correctly estimated, then the victim sequences are most closely related to the patient sequences, which is what we'd expect if the defendant is guilty. Thus, looking at the results of this analysis, I consider it now more probable that the defendant is guilty than before I did the analysis.</p>
 <h3 id="pragmatic-demonstration-using-north-african-rabies-dataset"><a name="fromPhylogenyQuestionToAnswerPragmaticDemoRabies"></a>&quot;Pragmatic&quot; Demonstration using North African rabies dataset</h3>
 <p>Here we will work again with the North African rabies dataset, and will run again through the process of going from a question to an answer. The earlier demonstration of this kind was done to emphasise the conceptual steps we take while doing such an analysis; here, however, we'll focus more on the practicalities of how to carry out the different stages of the analysis.</p>
-<p>To remind you, the relevant analysis is described in <a href="http://www.ncbi.nlm.nih.gov/pubmed/21060816">this paper</a> (PubMed ID: 21060816), which analyses the possible influence of human activity on spread of rabies virus amongst endemic dog populations in North Africa.</p>
+<p>To remind you, the relevant analysis is described in <a href="http://www.plospathogens.org/article/info%3Adoi%2F10.1371%2Fjournal.ppat.1001166">this paper</a> published Open Access in <a href="http://www.plospathogens.org/">PLoS Pathogens</a> (PubMed ID:<a href="http://www.ncbi.nlm.nih.gov/pubmed/21060816">21060816</a>) which analyses the possible influence of human activity on spread of rabies virus amongst endemic dog populations in North Africa.</p>
 <h4 id="choose-a-question">1. Choose a question</h4>
 <p>As discussed above, being aware of (ideally writing down) the specific, substantive questions you want to address with your analysis, is usually helpful for planning and carrying out your analysis. In particular, it can be a big help in guiding decision-making while carrying out the analysis (e.g. deciding which sequences to include, which to exclude, from your analysis.)</p>
 <p>In the context of a phylogenetic analysis, it is clearly useful if this question can be informed by estimation of parameter(s) of a phylogenetic model.</p>
@@ -258,10 +260,10 @@
 <p>Modeltest results from PRANK alignment - use JModelTest on local machines:</p>
 <ul class="incremental">
 <li><a href="./outputFiles/phosphoproteinCDSsLabelsEd.modeltest.pdf">Console PDF</a></li>
-<li><img src="./images/phosphoproteinCDSsLabelsEd.modeltest.AICresults.tiff" alt="AIC results TIFF" /></li>
-<li><img src="./images/phosphoproteinCDSsLabelsEd.modeltest.BICresults.tiff" title="fig:" alt="BIC results TIFF" /></li>
+<li><img src="./images/phosphoproteinCDSsLabelsEd.modeltest.AICresults.jpg" alt="AIC results TIFF" /></li>
+<li><img src="./images/phosphoproteinCDSsLabelsEd.modeltest.BICresults.jpg" title="fig:" alt="BIC results TIFF" /></li>
 </ul>
-<p>Both AIC and BIC choose <strong>GTR+G</strong> as the best model.</p>
+<p>Both AIC and BIC choose <em>GTR+G</em> as the best model.</p>
 <h4 id="phylogeny-estimation">6. Phylogeny estimation</h4>
 <p>Tools typically used to estimate phylogenies for publication are mostly used via a command-line interface.</p>
 <p>If you don't want to learn how to use tools in that way, there are however some webservers available that have wrapped some of these programs up in a relatively easy-to-use interface that offer some, but not all, of the functionality of the tools.</p>
@@ -328,14 +330,14 @@
 <li><a href="./sequences/glycoproteinPartialAndIntergenicSpacerLabelsEd.txt">Sequence labels edited to easily identify country of origin</a></li>
 </ul>
 <ol class="incremental" style="list-style-type: decimal">
-<li><p>Write down one or more substantive questions we want to address with the analysis</p></li>
-<li><p>Collect an appropriate set of sequences</p></li>
-<li><p>Edit sequence identifiers to be unique, compatible with analysis tools, and meaningful (in the context of allowing us to easily answer our question(s) of interest when examining resulting phylogenetic trees and other results)</p></li>
-<li><p>Align sequences</p></li>
-<li><p>Model Selection</p></li>
-<li><p>Phylogeny estimation</p></li>
-<li><p>Algorithm Diagnosis</p></li>
-<li><p>Parameter estimation</p></li>
+<li><strong>Choose a question</strong><br /> Write down one or more substantive questions we want to address with the analysis</li>
+<li><strong>Collect sequences</strong></li>
+<li><strong>Edit sequence identifiers</strong> Changing them to be unique, compatible with analysis tools, and meaningful (in the context of allowing us to easily answer our question(s) of interest when examining resulting phylogenetic trees and other results)</li>
+<li><strong>Align sequences</strong></li>
+<li><strong>Model Selection</strong></li>
+<li><strong>Phylogeny estimation</strong></li>
+<li><strong>Algorithm Diagnosis</strong></li>
+<li><strong>Answer question/hypothesis testing</strong></li>
 </ol>
 <h3 id="advanced-exercise-where-you-decide-yourself-which-tools-to-run-etc.-the-case-of-the-louisiana-gastroenterologist"><a name="fromPhylogenyQuestionToAnswerAdvancedExerciseLouisianaGastroenterologist"></a>Advanced Exercise (where you decide yourself which tools to run etc.): the case of the &quot;Louisiana gastroenterologist&quot;</h3>
 <p><a href="http://www.ncbi.nlm.nih.gov/pubmed/12388776">Metzker et al. PNAS 2002</a> describe a phylogenetic analysis of HIV env/gp120 sequences that was used as evidence in the trial of a Louisiana gastroenterologist accused of deliberately infecting someone (the &quot;victim&quot;) with HIV-infected blood from one of the gastroenterologist's patients.</p>
