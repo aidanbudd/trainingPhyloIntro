@@ -1,6 +1,6 @@
 # Building a Multiple Sequence Alignment
 
-The aim of this page is just to give simple instructions of how to extract a multiple sequence alignment from a set of sequences, without explaining anything about how to interpret the resulting alignment, or how the respective software packages work.
+The aim of this page is just to give simple instructions of how to extract a multiple sequence alignment from a set of sequences, without explaining anything about how to interpret the resulting alignment, or how the respective software packages work.  
 
 ## Example sequences
 
