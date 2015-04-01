@@ -276,7 +276,7 @@ Looking at this tree, assuming it is correctly rooted and that the topology para
 
 After having been shown the demonstration, and carried out the exercise, listed below, you will hopefully have a better idea of common tools used in many phylogenetic analysis, and how they can be linked together to go from having a question of interest, to addressing/informing an answer to that question.
 
-### <a name="fromPhylogenyQuestionToAnswerCommonToolsConceptsDemoRabies"></a>"Demonstration using North African rabies dataset
+### <a name="fromPhylogenyQuestionToAnswerCommonToolsConceptsDemoRabies"></a>Demonstration using North African rabies dataset
 
 Here we will work again with the North African rabies dataset, and will run again through the process of going from a question to an answer. The earlier demonstration of this kind was done to emphasise the conceptual steps we take while doing such an analysis; here, however, we'll focus more on the practicalities of how to carry out the different stages of the analysis.
 
@@ -479,7 +479,7 @@ Try a similar analysis as used for the phosphoprotein complete CDS nucleic acid 
 - [Sequence labels unedited](./sequences/glycoproteinPartialAndIntergenicSpacerNoLabelEd.txt)
 - [Sequence labels edited to easily identify country of origin](./sequences/glycoproteinPartialAndIntergenicSpacerLabelsEd.txt)
 
-
+  
 
 1. **Choose a question**  
     Write down one or more substantive questions we want to address with the analysis
