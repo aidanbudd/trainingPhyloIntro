@@ -1,12 +1,12 @@
 #Interpreting Molecular Phylogenetic Trees  
-####EMBO Practical Course on Computational Molecular Evolution  
-####Institute of Marine Biology, Biotechnology and Aquaculture (IMBBC) - Hellenic Centre for Marine Research (HCMR), Heraklion, Greece  
-####Monday May 5th 2014
+####Wellcome Trust/EMBL-EBI Advanced Course on Computational Molecular Evolution 
+####EMBL-EBI, Wellcome Trust Genome Campus, Hinxton, UK
+####Monday 13th - Tuesday 14th 2015
 ####Aidan Budd
 
 
-- [Exercises](./interpretingPhylogeniesCrete2014.html)
-- [Presentation](./presentations/phyloIntroBuddCrete2014.pdf)
+- [Exercises](./interpretingPhylogenies.html)
+- [Presentation](./presentations/phyloIntroBudd.pdf)
 
 Instructions on:
 
