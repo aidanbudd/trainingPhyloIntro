@@ -5,10 +5,12 @@
 - [Phylogeny terminology and concepts "definition" exercise](#definitionExercise)  
 - [Visualising trees with NJplot](#NJplotExercise) (we probably won't use this exercise)
 - Phylogeny from initial sequences to answering a question
-    - ["Conceptual" demonstration with North African dog rabies viruses](#fromPhylogenyQuestionToAnswerConceptDemoDogRabies)
-    - ["Conceptual" exercise with Louisiana gastroenterologist example](#fromPhylogenyQuestionToAnswerConceptExerciseLouisianaGastroenterologist)
-    - ["Pragmatic" demonstration with North African dog rabies viruses](#fromPhylogenyQuestionToAnswerPragmaticDemoRabies)
-    - ["Pragmatic" exercise with North African dog rabies viruses](#fromPhylogenyQuestionToAnswerPragmaticExerciseRabies)
+    - Drawing comparisions between phylogenetic analyses and 'standard' statistical analysies
+        - [Demonstration with North African dog rabies viruses (statistical analysis comparison)](#fromPhylogenyQuestionToAnswerStandardStatFocusDemoDogRabies)
+        - [Exercise with Louisiana gastroenterologist example](#fromPhylogenyQuestionToAnswerStandardStatFocustExerciseLouisianaGastroenterologist)
+    - Highlighting common tools and tasks from typical phylogenetic analysis
+        - [Demonstration with North African dog rabies viruses (common tools and concepts)](#fromPhylogenyQuestionToAnswerCommonToolsConceptsDemoRabies)
+        - [Exercise with North African dog rabies viruses](#fromPhylogenyQuestionToAnswerCommonToolsConceptsExerciseRabies)
     - [Advanced exercise using Louisiana gastroenterologist data](#fromPhylogenyQuestionToAnswerAdvancedExerciseLouisianaGastroenterologist)
 - [Description of Louisiana gastroenterologist dataset](#LouisianaGastroenterologistDatsetDescription)
 
@@ -94,7 +96,7 @@ If the previous exercise was easy, try the same thing with the following [tree f
 
 After having been shown the demonstration, and carried out the exercise, listed below, you will hopefully have a better idea about how common parts of a 'typical' phylogenetic analysis have parallels to common features of a general, typical, statistical analysis.
 
-### <a name="fromPhylogenyQuestionToAnswerConceptDemoDogRabies"></a>Demonstration: from substantive question to an answer using North African dog rabies viruses
+### <a name="fromPhylogenyQuestionToAnswerStandardStatFocusDemoDogRabies"></a>Demonstration: from substantive question to an answer using North African dog rabies viruses
 
 Sequences are taken from [this paper](http://www.plospathogens.org/article/info%3Adoi%2F10.1371%2Fjournal.ppat.1001166) published Open Access in [PLoS Pathogens](http://www.plospathogens.org/) (PubMed ID:[21060816](http://www.ncbi.nlm.nih.gov/pubmed/21060816)), which analyses the possible influence of human activity on spread of rabies virus amongst endemic dog populations in North Africa.
 
@@ -198,7 +200,7 @@ We can do that using, for example:
 - [Dendroscope](http://dendroscope.org/), for which we've prepared some [basic instructions](./usingDendroscope.html)
 - [FigTree](http://tree.bio.ed.ac.uk/software/figtree/), which I can't find a set of instruction pages for online.
 
-### <a name="fromPhylogenyQuestionToAnswerConceptExerciseLouisianaGastroenterologist"></a>Exercise: from substantive question to an answer using the "Louisiana Gastroenterologist" case as an example
+### <a name="fromPhylogenyQuestionToAnswerStandardStatFocustExerciseLouisianaGastroenterologist"></a>Exercise: from substantive question to an answer using the "Louisiana Gastroenterologist" case as an example
 
 You can read [here](#LouisianaGastroenterologistDatsetDescription) a quick introduction to this dataset.
 
@@ -274,7 +276,7 @@ Looking at this tree, assuming it is correctly rooted and that the topology para
 
 After having been shown the demonstration, and carried out the exercise, listed below, you will hopefully have a better idea of common tools used in many phylogenetic analysis, and how they can be linked together to go from having a question of interest, to addressing/informing an answer to that question.
 
-### <a name="fromPhylogenyQuestionToAnswerPragmaticDemoRabies"></a>"Demonstration using North African rabies dataset
+### <a name="fromPhylogenyQuestionToAnswerCommonToolsConceptsDemoRabies"></a>"Demonstration using North African rabies dataset
 
 Here we will work again with the North African rabies dataset, and will run again through the process of going from a question to an answer. The earlier demonstration of this kind was done to emphasise the conceptual steps we take while doing such an analysis; here, however, we'll focus more on the practicalities of how to carry out the different stages of the analysis.
 
@@ -470,7 +472,7 @@ However this is not true for the Moroccan sequences; there is one branch that se
 
 Thus, in general, sequences tend to cluster according to country, but they don't form three separate clans; the placement of the 08064MAR_2 sequence could be accurate, indicating, that the history of evolution of the sequences is more complex than one in which the virus was never transmitted across national borders. Alternatively, this estimate of the tree topology parameter could  be wrong, due to errors in data collection or analysis.
 
-### <a name="fromPhylogenyQuestionToAnswerPragmaticExerciseRabies"></a>Exercise using North African rabies viruses
+### <a name="fromPhylogenyQuestionToAnswerCommonToolsConceptsExerciseRabies"></a>Exercise using North African rabies viruses
 
 Try a similar analysis as used for the phosphoprotein complete CDS nucleic acid sequences shown above, using the sequences for glycoprotein partial CDS and intergenic spacer given below
 
