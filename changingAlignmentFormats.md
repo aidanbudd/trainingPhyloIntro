@@ -10,5 +10,5 @@ Formats that can be read by many (but not all) phylogenetic software include:
 
 To convert from fasta to phylip format you could use:
 
-- [Phylogeny.fr data converter](http://www.phylogeny.fr/version2_cgi/data_converter.cgi) (works going from fast to phylip interleaved for use by PhyML)
+- [Phylogeny.fr data converter](http://www.phylogeny.fr/version2_cgi/data_converter.cgi) (works going from fasta to phylip interleaved for use by PhyML)
 - [ClustalX](http://www.clustal.org/download/clustalx_help.html)

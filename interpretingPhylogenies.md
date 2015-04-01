@@ -14,6 +14,36 @@
     - [Advanced exercise using Louisiana gastroenterologist data](#fromPhylogenyQuestionToAnswerAdvancedExerciseLouisianaGastroenterologist)
 - [Description of Louisiana gastroenterologist dataset](#LouisianaGastroenterologistDatsetDescription)
 
+## Specific tips on using training computers for Hinxton April 2015 teaching
+
+### Firefox (and other windows)
+
+#### Copy selected text
+
+Leftclick at the point you want to start the copy, shift-leftclick where you want to end, rightclick to get a menu and there choose 
+
+#### Copy all text
+
+If you put the pointer in a window and do rightclick immediately, you'll get an option in the resulting menu to "copy all"
+
+#### Paste text
+
+Rightclick in a field and choose the "paste" option
+
+### Running tools from the commandline
+
+The following commands can be run from the terminal to execute the tools needed to run the exercises below:
+
+    njplot &
+    jModelTest &
+    clustalx &
+    muscle -in filename -out filename
+    prank filename
+    jalview &
+    seaview &
+    dendroscope &
+    figtree &
+    consense
 
 ## <a name="definitionExercise"></a>Phylogeny Terminology and Concepts
 
@@ -79,6 +109,16 @@ NJplot does not have many features and options, however it carries out the simpl
 
 This page describes how to carry out these kinds of manipulations using NJplot - we will also demo them for you using the example files on this short ["how to use NJplot" page](./usingNJplot.html).
 
+### Hinxton Apr 2015-specific instructions
+
+These instructions are specfic for the course we're running in April 2015 in Hinxton.
+
+To start njplot, open a terminal, and type "njplot &" in the terminal.
+
+To download the files below, right-click on the link to the file, viewing the html version of the file in Firefox, and choose to "Save as". When "Saving as", choose to save it somewhere easy-to-find (e.g. Desktop).
+
+Use the File menu in njplot to open the file in the njplot tree viewer.
+
 ### Exercise
 
 Load the following NEWICK/PHYLIP format [unscaled phylogenetic file](./trees/eightTaxaUnscaledNjplotExercise.ph) into NJplot and use the software to try and reproduce as closely as possible the following image:
@@ -89,6 +129,9 @@ If the previous exercise was easy, try the same thing with the following [tree f
 
 ![](./images/twentyTaxaNjplotExercise.gif "Twenty OTU unscaled tree shown in NJplot")
 
+### Tips and hints
+
+When re-arranging the way a tree is shown in a tree visualisation tool, if you're trying (as above) to make the tree look the same as in some other representation, it's helpful to ***firstly*** re-root the tree you are visualising, to have the same root as in the representation you are looking at, and ***secondly***, beginning at the base of the tree i.e. first with the root, then with the branches nearest to the root, start rotating around internal branches to reach the desired representation.
 
 ## <a name="fromPhylogenyQuestionToAnswer"></a>Phylogeny from initial sequences to answering a question: considering phylogenetic analysis as a standard statistical analysis
 
@@ -98,7 +141,7 @@ After having been shown the demonstration, and carried out the exercise, listed 
 
 ### <a name="fromPhylogenyQuestionToAnswerStandardStatFocusDemoDogRabies"></a>Demonstration: from substantive question to an answer using North African dog rabies viruses
 
-Sequences are taken from [this paper](http://www.plospathogens.org/article/info%3Adoi%2F10.1371%2Fjournal.ppat.1001166) published Open Access in [PLoS Pathogens](http://www.plospathogens.org/) (PubMed ID:[21060816](http://www.ncbi.nlm.nih.gov/pubmed/21060816)), which analyses the possible influence of human activity on spread of rabies virus amongst endemic dog populations in North Africa.
+Sequences are taken from [this paper](http://www.plospathogens.org/article/info%3Adoi%2F10.1371%2Fjournal.ppat.1001166) published Open Access in [PLoS Pathogens](http://www.plospathogens.org/) (PubMed ID:[21060816](http://www.ncbi.nlm.nih.gov/pubmed/21060816)), which analyses the possible influence of human activity on spread of rabies virus amongst endemic dog populations in North Africa. In case you're having Internet problems while running the demo, here is a link to a [local version of the article.](./documents/talbiEtAl2010PLoSPathogens_journal.ppat.1001166.pdf)
 
 The World Health Organisation provides this [fact sheet](http://www.who.int/mediacentre/factsheets/fs099/en/) about the disease; survival of humans after starting to show symptoms of the disease is [extremely rare](http://cid.oxfordjournals.org/content/36/1/60.full).
 
@@ -154,11 +197,15 @@ We align the sequences using either [webPRANK webserver](http://www.ebi.ac.uk/go
 
 The parameter of interest is the topology of the phylogenetic tree of these sequences.
 
-We will only carry out a quick analysis here, using maximum likelihood to estimate topology and branch lengths using PhyML, and jModelTest to estimate an appropriate substitution model to use with PhyML.
+We will only carry out a quick analysis here, using jModelTest to estimate an appropriate substitution model to use with PhyML, and then using PhyML to estimate topology and branch lengths using maximum likelihood.
 
-##### Estimating best substitution model
+##### Estimating best substitution model (with jModelTest)
 
 Some simple instructions on using jModelTest can be found [here](./usingJModelTest.html).
+
+##### Hinxton Apr 2015-specific instructions
+
+When navigating to a file to open in jModelTest, remember that ".." means "up one level in the directory heiracy" and to choose the filter to show "all files".
 
 We will run the analysis using the [webPRANK](./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank) alignment of the sequences, calculating likelihood scores using the following parameters:
 
@@ -175,7 +222,7 @@ which chooses *GTR* as the best substitution model.
 
 We'll use the [PhyML webserver](http://www.atgc-montpellier.fr/phyml/) to get an ML estimate of phylogeny topology and branch lengths.
 
-We use this [PHYLIP interleaved format alignment file](./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank.phylip) as input for PhyML. We got this from the previous FASTA format alignment file (that we got by aligning the sequences with webPRANK) using ClustalX.
+We use this [PHYLIP interleaved format alignment file](./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank.phylip) as input for PhyML. We got this from the previous FASTA format alignment file (that we got by aligning the sequences with webPRANK) using ClustalX. Here are links to some [information on different ways of changing the format of alignment/sequence files](./changingAlignmentFormats.html).
 
 We'll follow [this very basic description of using PhyML webserver](./usingPhyML.html) to quickly estimate a phylogeny using the substitution model selected by jModelTest.
 
