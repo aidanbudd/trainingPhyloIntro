@@ -88,13 +88,13 @@ If the previous exercise was easy, try the same thing with the following [tree f
 ![](./images/twentyTaxaNjplotExercise.gif "Twenty OTU unscaled tree shown in NJplot")
 
 
-## <a name="fromPhylogenyQuestionToAnswer"></a>Phylogeny from initial sequences to answering a question
+## <a name="fromPhylogenyQuestionToAnswer"></a>Phylogeny from initial sequences to answering a question: considering phylogenetic analysis as a standard statistical analysis
 
 ### Learning Objectives
 
-After having been shown the demonstrations, and carried out the exercises, listed below, you will hopefully have a better idea about how different tools used in phylogenetic analysis can be linked together to go from having a question of interest, to addressing/informing an answer to that question.
+After having been shown the demonstration, and carried out the exercise, listed below, you will hopefully have a better idea about how common parts of a 'typical' phylogenetic analysis have parallels to common features of a general, typical, statistical analysis.
 
-### <a name="fromPhylogenyQuestionToAnswerConceptDemoDogRabies"></a>"Concept" demonstration: from substantive question to an answer using North African dog rabies viruses
+### <a name="fromPhylogenyQuestionToAnswerConceptDemoDogRabies"></a>Demonstration: from substantive question to an answer using North African dog rabies viruses
 
 Sequences are taken from [this paper](http://www.plospathogens.org/article/info%3Adoi%2F10.1371%2Fjournal.ppat.1001166) published Open Access in [PLoS Pathogens](http://www.plospathogens.org/) (PubMed ID:[21060816](http://www.ncbi.nlm.nih.gov/pubmed/21060816)), which analyses the possible influence of human activity on spread of rabies virus amongst endemic dog populations in North Africa.
 
@@ -198,7 +198,7 @@ We can do that using, for example:
 - [Dendroscope](http://dendroscope.org/), for which we've prepared some [basic instructions](./usingDendroscope.html)
 - [FigTree](http://tree.bio.ed.ac.uk/software/figtree/), which I can't find a set of instruction pages for online.
 
-### <a name="fromPhylogenyQuestionToAnswerConceptExerciseLouisianaGastroenterologist"></a>"Concept"" exercise: from substantive question to an answer using the "Louisiana Gastroenterologist" case as an example
+### <a name="fromPhylogenyQuestionToAnswerConceptExerciseLouisianaGastroenterologist"></a>Exercise: from substantive question to an answer using the "Louisiana Gastroenterologist" case as an example
 
 You can read [here](#LouisianaGastroenterologistDatsetDescription) a quick introduction to this dataset.
 
@@ -250,8 +250,8 @@ Visualise the tree using one of these tools:
 
 A suggested "answer" can be found [here](#A6ConceptGastroenterologistExercise).
 
-#### Answers
-##### <a name="A1ConceptGastroenterologistExercise"></a> 1. Pose a substantive question
+### Answers
+#### <a name="A1ConceptGastroenterologistExercise"></a> 1. Pose a substantive question
 
 An obvious question to want to address for this case would be something like *"How likely is it that the defendant committed the crime they are accused of"*.
 
@@ -259,7 +259,7 @@ A more specific question, that links the more general question above to a parame
 
 If the defendant were guilty of the crime, then given certain assumptions, then we would expect to get answer (a).
 
-##### <a name="A6ConceptGastroenterologistExercise"></a>" 6. Answer your question using these parameter estimates
+#### <a name="A6ConceptGastroenterologistExercise"></a>" 6. Answer your question using these parameter estimates
 
 We estimated this tree and visualised it using Dendroscope.
 
@@ -267,7 +267,14 @@ We estimated this tree and visualised it using Dendroscope.
 
 Looking at this tree, assuming it is correctly rooted and that the topology parameter has been correctly estimated, then the victim sequences are most closely related to the patient sequences, which is what we'd expect if the defendant is guilty. Thus, looking at the results of this analysis, I consider it now more probable that the defendant is guilty than before I did the analysis.
 
-### <a name="fromPhylogenyQuestionToAnswerPragmaticDemoRabies"></a>"Pragmatic" Demonstration using North African rabies dataset
+
+## <a name="fromPhylogenyQuestionToAnswer"></a>Phylogeny from initial sequences to answering a question: common tasks and concepts found in many phylogenetic analyses
+
+### Learning Objectives
+
+After having been shown the demonstration, and carried out the exercise, listed below, you will hopefully have a better idea of common tools used in many phylogenetic analysis, and how they can be linked together to go from having a question of interest, to addressing/informing an answer to that question.
+
+### <a name="fromPhylogenyQuestionToAnswerPragmaticDemoRabies"></a>"Demonstration using North African rabies dataset
 
 Here we will work again with the North African rabies dataset, and will run again through the process of going from a question to an answer. The earlier demonstration of this kind was done to emphasise the conceptual steps we take while doing such an analysis; here, however, we'll focus more on the practicalities of how to carry out the different stages of the analysis.
 
@@ -296,7 +303,7 @@ These could come from:
 
 We'll focus our example analysis on phosphoprotein complete CDS nucleic acid sequences
 
-##### Obtaining sequences deposited in a public primary sequence database in association with a particular publication
+#### Obtaining sequences deposited in a public primary sequence database in association with a particular publication
 
 We'll do this by querying PubMed with the PubMed ID (21060816) to identify the publication record in this database corresponding to the publication of interest, and then linking (within the NCBI's Entrez database system) to nucleotide and/or protein sequences records whose deposition is described in that article, finally exporting these sequences in an appropriate format (e.g. FASTA).
 
@@ -315,14 +322,14 @@ To do this we will:
 - Select appropriate sequence records, and follow the 'Send to' 
   link to download to a file in the appropriate format
 
-##### Using sequence similarity searching to identify similar sequences
+#### Using sequence similarity searching to identify similar sequences
 
 Another common way to acquire sequences from public databases for a phylogenetic analysis is to use BLAST to identify sequences similar to a query sequence of interest, and which are likely to be related to this sequence of interest.   
 
 - Take one of the sequences from [this file](./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.fasta)
 - Use this sequences to query one of the nucleotide sequence databases at the NCBI using [BLAST](http://blast.ncbi.nlm.nih.gov/Blast.cgi), making sure we choose the right program (in this case we want to search a nucleotide database with a nucleotide query sequence); we may want to filter our results if we get too many hits e.g. taking only records matching the string "Africa"
 
-##### Pre-calculated alignments
+#### Pre-calculated alignments
 
 For rabies phosphoprotein CDSs, there's no resource I can find that provides pre-aligned sets of sequences. Thus, we'll try instead looking for alignments of vertebrate COX2 protein sequences.
 
@@ -463,7 +470,7 @@ However this is not true for the Moroccan sequences; there is one branch that se
 
 Thus, in general, sequences tend to cluster according to country, but they don't form three separate clans; the placement of the 08064MAR_2 sequence could be accurate, indicating, that the history of evolution of the sequences is more complex than one in which the virus was never transmitted across national borders. Alternatively, this estimate of the tree topology parameter could  be wrong, due to errors in data collection or analysis.
 
-### <a name="fromPhylogenyQuestionToAnswerPragmaticExerciseRabies"></a>"Pragmatic" Exercise using North African rabies viruses
+### <a name="fromPhylogenyQuestionToAnswerPragmaticExerciseRabies"></a>Exercise using North African rabies viruses
 
 Try a similar analysis as used for the phosphoprotein complete CDS nucleic acid sequences shown above, using the sequences for glycoprotein partial CDS and intergenic spacer given below
 
