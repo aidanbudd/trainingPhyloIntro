@@ -19,6 +19,26 @@
 </ul></li>
 <li><a href="#LouisianaGastroenterologistDatsetDescription">Description of Louisiana gastroenterologist dataset</a></li>
 </ul>
+<h2 id="specific-tips-on-using-training-computers-for-hinxton-april-2015-teaching">Specific tips on using training computers for Hinxton April 2015 teaching</h2>
+<h3 id="firefox-and-other-windows">Firefox (and other windows)</h3>
+<h4 id="copy-selected-text">Copy selected text</h4>
+<p>Leftclick at the point you want to start the copy, shift-leftclick where you want to end, rightclick to get a menu and there choose</p>
+<h4 id="copy-all-text">Copy all text</h4>
+<p>If you put the pointer in a window and do rightclick immediately, you'll get an option in the resulting menu to &quot;copy all&quot;</p>
+<h4 id="paste-text">Paste text</h4>
+<p>Rightclick in a field and choose the &quot;paste&quot; option</p>
+<h3 id="running-tools-from-the-commandline">Running tools from the commandline</h3>
+<p>The following commands can be run from the terminal to execute the tools needed to run the exercises below:</p>
+<pre><code>njplot &amp;
+jModelTest &amp;
+clustalx &amp;
+muscle -in filename -out filename
+prank filename
+jalview &amp;
+seaview &amp;
+dendroscope &amp;
+figtree &amp;
+consense</code></pre>
 <h2 id="phylogeny-terminology-and-concepts"><a name="definitionExercise"></a>Phylogeny Terminology and Concepts</h2>
 <h3 id="notes">Notes</h3>
 <p>This exercise focuses on how we understand vocabulary and concepts associated with phylogenies and molecular evolution. By asking you to write down and discuss you understanding of several fundamental concepts and terms used in the field, the aim is to help highlight:</p>
@@ -60,6 +80,11 @@
 <p>Many applications of phylogenies involve using them to check whether a given set of taxa/organisms/OTUs are related to each other in a particular way i.e. whether the topology of the estimated phylogeny supports a particular set of relationships between OTUs. As a tree with a given topology can be drawn/represented/visualised in many different ways, it can sometimes be tricky to tell whether a given representation of a phylogenetic tree indeed contains the relationship of interest. Thus, working with and changing between different representations of a tree is a useful skill when interpreting the results of phylogenetic analyses.</p>
 <p>NJplot does not have many features and options, however it carries out the simple tasks of re-rooting and rotating branches - very useful when attempting to determine whether a given set of relationships exists in a tree, or when comparing to tree topologies - very quickly, which is often all you need when taking a first look at a phylogeny.</p>
 <p>This page describes how to carry out these kinds of manipulations using NJplot - we will also demo them for you using the example files on this short <a href="./usingNJplot.html">&quot;how to use NJplot&quot; page</a>.</p>
+<h3 id="hinxton-apr-2015-specific-instructions">Hinxton Apr 2015-specific instructions</h3>
+<p>These instructions are specfic for the course we're running in April 2015 in Hinxton.</p>
+<p>To start njplot, open a terminal, and type &quot;njplot &amp;&quot; in the terminal.</p>
+<p>To download the files below, right-click on the link to the file, viewing the html version of the file in Firefox, and choose to &quot;Save as&quot;. When &quot;Saving as&quot;, choose to save it somewhere easy-to-find (e.g. Desktop).</p>
+<p>Use the File menu in njplot to open the file in the njplot tree viewer.</p>
 <h3 id="exercise-1">Exercise</h3>
 <p>Load the following NEWICK/PHYLIP format <a href="./trees/eightTaxaUnscaledNjplotExercise.ph">unscaled phylogenetic file</a> into NJplot and use the software to try and reproduce as closely as possible the following image:</p>
 <div class="figure">
@@ -69,11 +94,13 @@
 <div class="figure">
 <img src="./images/twentyTaxaNjplotExercise.gif" title="Twenty OTU unscaled tree shown in NJplot" />
 </div>
+<h3 id="tips-and-hints">Tips and hints</h3>
+<p>When re-arranging the way a tree is shown in a tree visualisation tool, if you're trying (as above) to make the tree look the same as in some other representation, it's helpful to <strong><em>firstly</em></strong> re-root the tree you are visualising, to have the same root as in the representation you are looking at, and <strong><em>secondly</em></strong>, beginning at the base of the tree i.e. first with the root, then with the branches nearest to the root, start rotating around internal branches to reach the desired representation.</p>
 <h2 id="phylogeny-from-initial-sequences-to-answering-a-question-considering-phylogenetic-analysis-as-a-standard-statistical-analysis"><a name="fromPhylogenyQuestionToAnswer"></a>Phylogeny from initial sequences to answering a question: considering phylogenetic analysis as a standard statistical analysis</h2>
 <h3 id="learning-objectives-1">Learning Objectives</h3>
 <p>After having been shown the demonstration, and carried out the exercise, listed below, you will hopefully have a better idea about how common parts of a 'typical' phylogenetic analysis have parallels to common features of a general, typical, statistical analysis.</p>
 <h3 id="demonstration-from-substantive-question-to-an-answer-using-north-african-dog-rabies-viruses"><a name="fromPhylogenyQuestionToAnswerStandardStatFocusDemoDogRabies"></a>Demonstration: from substantive question to an answer using North African dog rabies viruses</h3>
-<p>Sequences are taken from <a href="http://www.plospathogens.org/article/info%3Adoi%2F10.1371%2Fjournal.ppat.1001166">this paper</a> published Open Access in <a href="http://www.plospathogens.org/">PLoS Pathogens</a> (PubMed ID:<a href="http://www.ncbi.nlm.nih.gov/pubmed/21060816">21060816</a>), which analyses the possible influence of human activity on spread of rabies virus amongst endemic dog populations in North Africa.</p>
+<p>Sequences are taken from <a href="http://www.plospathogens.org/article/info%3Adoi%2F10.1371%2Fjournal.ppat.1001166">this paper</a> published Open Access in <a href="http://www.plospathogens.org/">PLoS Pathogens</a> (PubMed ID:<a href="http://www.ncbi.nlm.nih.gov/pubmed/21060816">21060816</a>), which analyses the possible influence of human activity on spread of rabies virus amongst endemic dog populations in North Africa. In case you're having Internet problems while running the demo, here is a link to a <a href="./documents/talbiEtAl2010PLoSPathogens_journal.ppat.1001166.pdf">local version of the article.</a></p>
 <p>The World Health Organisation provides this <a href="http://www.who.int/mediacentre/factsheets/fs099/en/">fact sheet</a> about the disease; survival of humans after starting to show symptoms of the disease is <a href="http://cid.oxfordjournals.org/content/36/1/60.full">extremely rare</a>.</p>
 <h4 id="pose-a-substantive-question">1. Pose a substantive question</h4>
 <p><a href="http://www.oxforddictionaries.com/definition/english/substantive"><strong>Substantive</strong></a> means important, meaningful, considerable (in terms of numbers). Used in our context here, it simply means &quot;a question which there is significant interest or utility in finding an answer to it&quot;.</p>
@@ -111,9 +138,11 @@
 </ul>
 <h4 id="find-best-estimates-of-the-parameters-conditioned-on-these-observations">4. Find best estimate(s) of the parameter(s), conditioned on these observations</h4>
 <p>The parameter of interest is the topology of the phylogenetic tree of these sequences.</p>
-<p>We will only carry out a quick analysis here, using maximum likelihood to estimate topology and branch lengths using PhyML, and jModelTest to estimate an appropriate substitution model to use with PhyML.</p>
-<h5 id="estimating-best-substitution-model">Estimating best substitution model</h5>
+<p>We will only carry out a quick analysis here, using jModelTest to estimate an appropriate substitution model to use with PhyML, and then using PhyML to estimate topology and branch lengths using maximum likelihood.</p>
+<h5 id="estimating-best-substitution-model-with-jmodeltest">Estimating best substitution model (with jModelTest)</h5>
 <p>Some simple instructions on using jModelTest can be found <a href="./usingJModelTest.html">here</a>.</p>
+<h5 id="hinxton-apr-2015-specific-instructions-1">Hinxton Apr 2015-specific instructions</h5>
+<p>When navigating to a file to open in jModelTest, remember that &quot;..&quot; means &quot;up one level in the directory heiracy&quot; and to choose the filter to show &quot;all files&quot;.</p>
 <p>We will run the analysis using the <a href="./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank">webPRANK</a> alignment of the sequences, calculating likelihood scores using the following parameters:</p>
 <ul class="incremental">
 <li>Number of substitution schemes-&gt;3</li>
@@ -125,7 +154,7 @@
 <p>which chooses <em>GTR</em> as the best substitution model.</p>
 <h5 id="estimating-the-best-phylogeny-topology-and-branch-length-parameters">Estimating the best phylogeny topology and branch length parameters</h5>
 <p>We'll use the <a href="http://www.atgc-montpellier.fr/phyml/">PhyML webserver</a> to get an ML estimate of phylogeny topology and branch lengths.</p>
-<p>We use this <a href="./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank.phylip">PHYLIP interleaved format alignment file</a> as input for PhyML. We got this from the previous FASTA format alignment file (that we got by aligning the sequences with webPRANK) using ClustalX.</p>
+<p>We use this <a href="./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank.phylip">PHYLIP interleaved format alignment file</a> as input for PhyML. We got this from the previous FASTA format alignment file (that we got by aligning the sequences with webPRANK) using ClustalX. Here are links to some <a href="./changingAlignmentFormats.html">information on different ways of changing the format of alignment/sequence files</a>.</p>
 <p>We'll follow <a href="./usingPhyML.html">this very basic description of using PhyML webserver</a> to quickly estimate a phylogeny using the substitution model selected by jModelTest.</p>
 <p>This gives us the following <a href="./outputFiles/phosphoproteincdsslabelsed_alphanumericunderscoreonly_webprank_phylip_phyml/phosphoproteincdsslabelsed_alphanumericunderscoreonly_webprank_phylip_phyml_tree.txt">phylogenetic tree</a></p>
 <h4 id="estimate-samplingrandom-error-associated-with-parameter-estimate">5. Estimate sampling/random error associated with parameter estimate</h4>
