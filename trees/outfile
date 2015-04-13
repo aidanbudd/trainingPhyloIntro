@@ -1,0 +1,48 @@
+
+Consensus tree program, version 3.69
+
+Species in order: 
+
+  1. A
+  2. B
+  3. C
+  4. D
+  5. E
+
+
+Sets included in the consensus tree
+
+Set (species in order)     How many times out of    5.00
+
+..***                       5.00
+...**                       4.00
+
+
+Sets NOT included in consensus tree:
+
+Set (species in order)     How many times out of    5.00
+
+..*.*                       1.00
+
+
+Extended majority rule consensus tree
+
+CONSENSUS TREE:
+the numbers on the branches indicate the number
+of times the partition of the species into the two sets
+which are separated by that branch occurred
+among the trees, out of   5.00 trees
+
+          +-----------------------B
+  +-------|
+  |       |       +---------------C
+  |       +--5.00-|
+  |               |       +-------D
+  |               +--4.00-|
+  |                       +-------E
+  |
+  +-------------------------------A
+
+
+  remember: this is an unrooted tree!
+
