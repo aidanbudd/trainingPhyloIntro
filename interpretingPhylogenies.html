@@ -173,8 +173,25 @@ consense</code></pre>
 <p>which chooses <em>GTR</em> as the best substitution model.</p>
 <h5 id="estimating-the-best-phylogeny-topology-and-branch-length-parameters">Estimating the best phylogeny topology and branch length parameters</h5>
 <p>We'll use the <a href="http://www.atgc-montpellier.fr/phyml/">PhyML webserver</a> to get an ML estimate of phylogeny topology and branch lengths.</p>
-<p>We use this <a href="./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank.phylip">PHYLIP interleaved format alignment file</a> as input for PhyML. We got this from the previous FASTA format alignment file (that we got by aligning the sequences with webPRANK) using ClustalX. Here are links to some <a href="./changingAlignmentFormats.html">information on different ways of changing the format of alignment/sequence files</a>.</p>
+<p>We use this <a href="./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank.phylip">PHYLIP interleaved format alignment file</a> as input for PhyML. We got this from the previous FASTA format alignment file (that we got by aligning the sequences with webPRANK) using ClustalX, although to keep this all web-based, we'll use instead the <a href="http://phylogeny.lirmm.fr/phylo_cgi/data_converter.cgi">Phylogeny.fr sequence format converter</a> to do this . Here are links to some <a href="./changingAlignmentFormats.html">information on different ways of changing the format of alignment/sequence files</a>.</p>
 <p>We'll follow <a href="./usingPhyML.html">this very basic description of using PhyML webserver</a> to quickly estimate a phylogeny using the substitution model selected by jModelTest.</p>
+<p>In more detail, what we'll do is:</p>
+<ul class="incremental">
+<li>Open the <a href="http://phylogeny.lirmm.fr/phylo_cgi/data_converter.cgi">Phylogeny.fr sequence format converter</a> webpage</li>
+<li>Copy the contents of <a href="./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webpran">this file</a>k into the query window</li>
+<li>Select <strong><em>Output format-&gt;Phylip (sequential)</em></strong></li>
+<li>Press <strong><em>Convert</em></strong></li>
+<li><strong><em>File-&gt;Save file as</em></strong> in our browser with this output file</li>
+<li>Open the <a href="http://www.atgc-montpellier.fr/phyml/">Phylogeny.fr webserver</a></li>
+<li>Upload our <a href="./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank.phylip">PHYLIP interleaved format alignment file</a> via the <strong><em>Sequences</em></strong> option</li>
+<li>Choose <strong><em>Sequence file-&gt;sequential</em></strong></li>
+<li>Choose <strong><em>Substitution model-&gt;GTR</em></strong></li>
+<li>Choose <strong><em>Number of substitution rate categories-&gt;1</em></strong></li>
+<li>Give in our email address</li>
+<li>Click <strong><em>Execute &amp; email results</em></strong></li>
+<li>In the resulting email, download and unpack the resulting zip archive</li>
+<li>Examine the resulting tree in a tree viewer (e.g. FigTree) to check it is a correctly formatted result file</li>
+</ul>
 <p>This gives us the following <a href="./outputFiles/phosphoproteincdsslabelsed_alphanumericunderscoreonly_webprank_phylip_phyml/phosphoproteincdsslabelsed_alphanumericunderscoreonly_webprank_phylip_phyml_tree.txt">phylogenetic tree</a></p>
 <h4 id="estimate-samplingrandom-error-associated-with-parameter-estimate">5. Estimate sampling/random error associated with parameter estimate</h4>
 <p>In this analysis of North African rabies virus samples, to address our substantive question of interest, we are most interested in estimating the topology parameter of the phylogenetic tree for these samples.</p>

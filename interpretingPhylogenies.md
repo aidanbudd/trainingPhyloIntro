@@ -239,9 +239,26 @@ which chooses *GTR* as the best substitution model.
 
 We'll use the [PhyML webserver](http://www.atgc-montpellier.fr/phyml/) to get an ML estimate of phylogeny topology and branch lengths.
 
-We use this [PHYLIP interleaved format alignment file](./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank.phylip) as input for PhyML. We got this from the previous FASTA format alignment file (that we got by aligning the sequences with webPRANK) using ClustalX. Here are links to some [information on different ways of changing the format of alignment/sequence files](./changingAlignmentFormats.html).
+We use this [PHYLIP interleaved format alignment file](./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank.phylip) as input for PhyML. We got this from the previous FASTA format alignment file (that we got by aligning the sequences with webPRANK) using ClustalX, although to keep this all web-based, we'll use instead the [Phylogeny.fr sequence format converter](http://phylogeny.lirmm.fr/phylo_cgi/data_converter.cgi) to do this . Here are links to some [information on different ways of changing the format of alignment/sequence files](./changingAlignmentFormats.html).
 
 We'll follow [this very basic description of using PhyML webserver](./usingPhyML.html) to quickly estimate a phylogeny using the substitution model selected by jModelTest.
+
+In more detail, what we'll do is:
+
+- Open the [Phylogeny.fr sequence format converter](http://phylogeny.lirmm.fr/phylo_cgi/data_converter.cgi) webpage
+- Copy the contents of [this file](./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webpran)k into the query window
+- Select ***Output format->Phylip (sequential)***
+- Press ***Convert***
+- ***File->Save file as*** in our browser with this output file
+- Open the [Phylogeny.fr webserver](http://www.atgc-montpellier.fr/phyml/)
+- Upload our [PHYLIP interleaved format alignment file](./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank.phylip) via the ***Sequences*** option
+- Choose ***Sequence file->sequential***
+- Choose ***Substitution model->GTR***
+- Choose ***Number of substitution rate categories->1***
+- Give in our email address
+- Click ***Execute & email results***
+- In the resulting email, download and unpack the resulting zip archive
+- Examine the resulting tree in a tree viewer (e.g. FigTree) to check it is a correctly formatted result file
 
 This gives us the following [phylogenetic tree](./outputFiles/phosphoproteincdsslabelsed_alphanumericunderscoreonly_webprank_phylip_phyml/phosphoproteincdsslabelsed_alphanumericunderscoreonly_webprank_phylip_phyml_tree.txt)
 
