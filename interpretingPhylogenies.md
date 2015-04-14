@@ -207,6 +207,23 @@ Some simple instructions on using jModelTest can be found [here](./usingJModelTe
 
 When navigating to a file to open in jModelTest, remember that ".." means "up one level in the directory heiracy" and to choose the filter to show "all files".
 
+I'll use:
+
+- ***File->Load DNA Alignment*** to load sequences into jModelTest
+- ***Analysis->Compute likelihood scores*** to get the list of models to choose from
+- Choose the following small set of models to compare:
+    - Number of substitution schemes->3
+    - Base frequencies->check
+    - Rate variation->uncheck both +I and +G
+    - Base tree for likelihood calculations->Fixed BIONJ-JC
+- Click the ***Compute Likelihoods*** button to start the analysis going
+- Switch on the log so we can keep a record of what we do from here on ***Results->Build HTML log***
+- ***Analysis->Do AIC calculations*** to set up an analysis to compare the likelihood scores of the different models
+- ***Do AIC calculations*** to run the AIC analysis
+- ***Results->Show results table*** to show the results
+- Click the ***AIC*** tab to look at AIC results
+- Choose the model as 'best' that has the lowest AIC value (here it's GTR)
+
 We will run the analysis using the [webPRANK](./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank) alignment of the sequences, calculating likelihood scores using the following parameters:
 
 - Number of substitution schemes->3

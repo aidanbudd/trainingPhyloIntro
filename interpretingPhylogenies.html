@@ -143,6 +143,25 @@ consense</code></pre>
 <p>Some simple instructions on using jModelTest can be found <a href="./usingJModelTest.html">here</a>.</p>
 <h5 id="hinxton-apr-2015-specific-instructions-1">Hinxton Apr 2015-specific instructions</h5>
 <p>When navigating to a file to open in jModelTest, remember that &quot;..&quot; means &quot;up one level in the directory heiracy&quot; and to choose the filter to show &quot;all files&quot;.</p>
+<p>I'll use:</p>
+<ul class="incremental">
+<li><strong><em>File-&gt;Load DNA Alignment</em></strong> to load sequences into jModelTest</li>
+<li><strong><em>Analysis-&gt;Compute likelihood scores</em></strong> to get the list of models to choose from</li>
+<li>Choose the following small set of models to compare:
+<ul class="incremental">
+<li>Number of substitution schemes-&gt;3</li>
+<li>Base frequencies-&gt;check</li>
+<li>Rate variation-&gt;uncheck both +I and +G</li>
+<li>Base tree for likelihood calculations-&gt;Fixed BIONJ-JC</li>
+</ul></li>
+<li>Click the <strong><em>Compute Likelihoods</em></strong> button to start the analysis going</li>
+<li>Switch on the log so we can keep a record of what we do from here on <strong><em>Results-&gt;Build HTML log</em></strong></li>
+<li><strong><em>Analysis-&gt;Do AIC calculations</em></strong> to set up an analysis to compare the likelihood scores of the different models</li>
+<li><strong><em>Do AIC calculations</em></strong> to run the AIC analysis</li>
+<li><strong><em>Results-&gt;Show results table</em></strong> to show the results</li>
+<li>Click the <strong><em>AIC</em></strong> tab to look at AIC results</li>
+<li>Choose the model as 'best' that has the lowest AIC value (here it's GTR)</li>
+</ul>
 <p>We will run the analysis using the <a href="./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank">webPRANK</a> alignment of the sequences, calculating likelihood scores using the following parameters:</p>
 <ul class="incremental">
 <li>Number of substitution schemes-&gt;3</li>
