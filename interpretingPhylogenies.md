@@ -20,7 +20,7 @@
 
 #### Copy selected text
 
-Leftclick at the point you want to start the copy, shift-leftclick where you want to end, rightclick to get a menu and there choose 
+Leftclick at the point you want to start the copy, shift-leftclick where you want to end, rightclick to get a menu and there choose "Copy"
 
 #### Copy all text
 
