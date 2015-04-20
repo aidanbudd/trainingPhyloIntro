@@ -1,4 +1,4 @@
-crete2014
+trainingPhyloIntro
 =========
 
-Practical exercises for my Crete 2014 computational molecular evolution teaching
+Practical exercises for my introductory computational molecular evolution teaching
