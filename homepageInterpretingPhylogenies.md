@@ -1,7 +1,7 @@
 #Interpreting Molecular Phylogenetic Trees  
-####Wellcome Trust/EMBL-EBI Advanced Course on Computational Molecular Evolution 
-####EMBL-EBI, Wellcome Trust Genome Campus, Hinxton, UK
-####Monday 13th - Tuesday 14th 2015
+####[EMBO Practical Course on Computational Molecular Evolution](http://events.embo.org/16-computational-evolution/) 
+####[IMBBC-HCMR](http://www.imbbc.hcmr.gr/), Crete, Greece
+####Monday 9th May 2016
 ####Aidan Budd
 
 
