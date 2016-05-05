@@ -1,8 +1,7 @@
 <h1 id="interpreting-molecular-phylogenetic-trees">Interpreting Molecular Phylogenetic Trees</h1>
 <h2 id="table-of-contents">Table of contents</h2>
+<p>During the session:</p>
 <ul class="incremental">
-<li><a href="#definitionExercise">Phylogeny terminology and concepts &quot;definition&quot; exercise</a><br /></li>
-<li><a href="#NJplotExercise">Visualising trees with NJplot</a> (we probably won't use this exercise)</li>
 <li>Phylogeny from initial sequences to answering a question
 <ul class="incremental">
 <li>Drawing comparisions between phylogenetic analyses and 'standard' statistical analysies
@@ -19,85 +18,12 @@
 </ul></li>
 <li><a href="#LouisianaGastroenterologistDatsetDescription">Description of Louisiana gastroenterologist dataset</a></li>
 </ul>
-<h2 id="specific-tips-on-using-training-computers-for-hinxton-april-2015-teaching">Specific tips on using training computers for Hinxton April 2015 teaching</h2>
-<h3 id="firefox-and-other-windows">Firefox (and other windows)</h3>
-<h4 id="copy-selected-text">Copy selected text</h4>
-<p>Leftclick at the point you want to start the copy, shift-leftclick where you want to end, rightclick to get a menu and there choose &quot;Copy&quot;</p>
-<h4 id="copy-all-text">Copy all text</h4>
-<p>If you put the pointer in a window and do rightclick immediately, you'll get an option in the resulting menu to &quot;copy all&quot;</p>
-<h4 id="paste-text">Paste text</h4>
-<p>Rightclick in a field and choose the &quot;paste&quot; option</p>
-<h3 id="running-tools-from-the-commandline">Running tools from the commandline</h3>
-<p>The following commands can be run from the terminal to execute the tools needed to run the exercises below:</p>
-<pre><code>njplot &amp;
-jModelTest &amp;
-clustalx &amp;
-muscle -in filename -out filename
-prank filename
-jalview &amp;
-seaview &amp;
-dendroscope &amp;
-figtree &amp;
-consense</code></pre>
-<h2 id="phylogeny-terminology-and-concepts"><a name="definitionExercise"></a>Phylogeny Terminology and Concepts</h2>
-<h3 id="notes">Notes</h3>
-<p>This exercise focuses on how we understand vocabulary and concepts associated with phylogenies and molecular evolution. By asking you to write down and discuss you understanding of several fundamental concepts and terms used in the field, the aim is to help highlight:</p>
+<p>Additional study if you'd find them useful:</p>
 <ul class="incremental">
-<li>the diversity amongst course participants, of our understanding of these different terms and concepts</li>
-<li>assumptions we make concerning these terms and concepts</li>
+<li><a href="#NJplotExercise">Visualising trees with NJplot</a></li>
 </ul>
-<p>It has been shown that considering an issue in several different ways e.g. (i) silently on your own (ii) in direct discussion with others or (iii) in a larger group discussion) tends to reinforce our ability to benefit from a given learning experience. Hence the structure of the exercise provided below.</p>
-<h3 id="exercise">Exercise</h3>
-<p><strong>A. Write down definitions/descriptions of the terms given in the list below (1-3).</strong></p>
-<p>Do this silently, on your own, and please actually write it down (on paper, or in a document on your computer) - formulating your ideas into words like this helps highlight aspects of the topic where your ideas are less clear (i.e. in this case, the parts of the definitions you find hardest to write are those which you feel less confident about)</p>
-<p>It might help to begin by looking at the <a href="http://en.wikipedia.org/wiki/Phylogenetic_tree">Wikipedia page for phylogenetic trees</a>. If you do begin by consulting this page, please close the page when you write your own definitions/explanations of these terms, so that you don't find yourself just repeating what's already in the Wikipedia page.</p>
-<p>Here are the terms:</p>
-<ol class="incremental" style="list-style-type: decimal">
-<li>phylogenetic tree</li>
-<li>branch (of a phylogenetic tree)</li>
-<li>root (of a rooted phylogenetic tree)</li>
-</ol>
-<p><strong>B. Once you've finished, compare your definitions with those of your neighbours, and write together consensus definitions of these terms.</strong></p>
-<p>Make notes on how your definitions differ, and write together a definition that agrees with both your ideas of the meaning of these terms.</p>
-<p><strong>C. We'll compare the definitions you have written together with <a href="#suggested-definitions">definitions we prepared before coming to the class</a> - we'll discuss together any ways in which these pre-prepared definitions differ with the ones you have come up with.</strong></p>
-<p><strong>D. (If you quickly finish part A. of the exercise) Repeat the above steps, this time selecting two or more terms from the list below.</strong></p>
-<ol class="incremental" style="list-style-type: decimal">
-<li>node (of a phylogenetic tree)</li>
-<li>polytomy</li>
-<li>sister group</li>
-<li>subtree</li>
-<li>taxonomic unit</li>
-</ol>
-<p>If you're interested, you could consult these <a href="./documents/phyloTerminologyTakenFromWileyDictionary.pdf">definitions/explanations Alexis and I have written for these terms</a>.</p>
-<h3 id="suggested-definitions"><a name="SuggestedPhylogenyDefinitions"></a>Suggested Definitions</h3>
-<p><strong>phylogenetic tree</strong>: A description of a path of transmission of genetic information between a set of taxa.</p>
-<p><strong>branch</strong> (of a phylogenetic tree): Lineages of taxonomic units that link nodes within a phylogenetic tree.</p>
-<p><strong>root</strong> (of a rooted phylogenetic tree): In a rooted tree, the node that represents the most recent common ancestor taxon of all other taxa in the tree.</p>
-<h2 id="visualising-trees-with-njplot"><a name="NJplotExercise"></a> Visualising Trees with NJplot</h2>
-<h3 id="learning-objectives">Learning Objectives</h3>
-<p>After completing this section, you will hopefully be able to use NJplot to change the way a phylogenetic tree is visualised/drawn by the software by changing the root and rotating subtrees around internal branches to reach a specified/desired representation of a tree.</p>
-<h3 id="notes-1">Notes</h3>
-<p>Many applications of phylogenies involve using them to check whether a given set of taxa/organisms/OTUs are related to each other in a particular way i.e. whether the topology of the estimated phylogeny supports a particular set of relationships between OTUs. As a tree with a given topology can be drawn/represented/visualised in many different ways, it can sometimes be tricky to tell whether a given representation of a phylogenetic tree indeed contains the relationship of interest. Thus, working with and changing between different representations of a tree is a useful skill when interpreting the results of phylogenetic analyses.</p>
-<p>NJplot does not have many features and options, however it carries out the simple tasks of re-rooting and rotating branches - very useful when attempting to determine whether a given set of relationships exists in a tree, or when comparing to tree topologies - very quickly, which is often all you need when taking a first look at a phylogeny.</p>
-<p>This page describes how to carry out these kinds of manipulations using NJplot - we will also demo them for you using the example files on this short <a href="./usingNJplot.html">&quot;how to use NJplot&quot; page</a>.</p>
-<h3 id="hinxton-apr-2015-specific-instructions">Hinxton Apr 2015-specific instructions</h3>
-<p>These instructions are specfic for the course we're running in April 2015 in Hinxton.</p>
-<p>To start njplot, open a terminal, and type &quot;njplot &amp;&quot; in the terminal.</p>
-<p>To download the files below, right-click on the link to the file, viewing the html version of the file in Firefox, and choose to &quot;Save as&quot;. When &quot;Saving as&quot;, choose to save it somewhere easy-to-find (e.g. Desktop).</p>
-<p>Use the File menu in njplot to open the file in the njplot tree viewer.</p>
-<h3 id="exercise-1">Exercise</h3>
-<p>Load the following NEWICK/PHYLIP format <a href="./trees/eightTaxaUnscaledNjplotExercise.ph">unscaled phylogenetic file</a> into NJplot and use the software to try and reproduce as closely as possible the following image:</p>
-<div class="figure">
-<img src="./images/eightTaxaNjplotExercise.gif" title="Eight OTU unscaled tree shown in NJplot" />
-</div>
-<p>If the previous exercise was easy, try the same thing with the following <a href="./trees/twentyUnscaledTaxaNjplotExercise.ph">tree file</a> and image:</p>
-<div class="figure">
-<img src="./images/twentyTaxaNjplotExercise.gif" title="Twenty OTU unscaled tree shown in NJplot" />
-</div>
-<h3 id="tips-and-hints">Tips and hints</h3>
-<p>When re-arranging the way a tree is shown in a tree visualisation tool, if you're trying (as above) to make the tree look the same as in some other representation, it's helpful to <strong><em>firstly</em></strong> re-root the tree you are visualising, to have the same root as in the representation you are looking at, and <strong><em>secondly</em></strong>, beginning at the base of the tree i.e. first with the root, then with the branches nearest to the root, start rotating around internal branches to reach the desired representation.</p>
 <h2 id="phylogeny-from-initial-sequences-to-answering-a-question-considering-phylogenetic-analysis-as-a-standard-statistical-analysis"><a name="fromPhylogenyQuestionToAnswer"></a>Phylogeny from initial sequences to answering a question: considering phylogenetic analysis as a standard statistical analysis</h2>
-<h3 id="learning-objectives-1">Learning Objectives</h3>
+<h3 id="learning-objectives">Learning Objectives</h3>
 <p>After having been shown the demonstration, and carried out the exercise, listed below, you will hopefully have a better idea about how common parts of a 'typical' phylogenetic analysis have parallels to common features of a general, typical, statistical analysis.</p>
 <h3 id="demonstration-from-substantive-question-to-an-answer-using-north-african-dog-rabies-viruses"><a name="fromPhylogenyQuestionToAnswerStandardStatFocusDemoDogRabies"></a>Demonstration: from substantive question to an answer using North African dog rabies viruses</h3>
 <p>Sequences are taken from <a href="http://www.plospathogens.org/article/info%3Adoi%2F10.1371%2Fjournal.ppat.1001166">this paper</a> published Open Access in <a href="http://www.plospathogens.org/">PLoS Pathogens</a> (PubMed ID:<a href="http://www.ncbi.nlm.nih.gov/pubmed/21060816">21060816</a>), which analyses the possible influence of human activity on spread of rabies virus amongst endemic dog populations in North Africa. In case you're having Internet problems while running the demo, here is a link to a <a href="./documents/talbiEtAl2010PLoSPathogens_journal.ppat.1001166.pdf">local version of the article.</a></p>
@@ -133,7 +59,8 @@ consense</code></pre>
 <p>In the case of the North African rabies virus analysis, we will use a set of <a href="./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.fasta">nucleotide sequences of North African rabies virus phosphoprotein CDSs</a>, whose sequence identifiers have been modified so that its easy to tell which country they were sampled from (if the ID contains ALG it's Algeria, TUN, it's Tunisia, MAR it's Morocco) and to be compatible with the various software used in the analysis (in particular to contain only alphanumeric characters or underscores i.e. '_')</p>
 <p>We align the sequences using either <a href="http://www.ebi.ac.uk/goldman-srv/webprank/">webPRANK webserver</a> or the <a href="https://www.ebi.ac.uk/Tools/msa/muscle/">MUSCLE webserver</a>, both hosted by the EMBL-EBI, giving the following alignments:</p>
 <ul class="incremental">
-<li><a href="./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank">webPRANK</a><br /></li>
+<li><a href="./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank">webPRANK</a><br />
+</li>
 <li><a href="./sequences/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.muscle">MUSCLE</a></li>
 </ul>
 <h4 id="find-best-estimates-of-the-parameters-conditioned-on-these-observations">4. Find best estimate(s) of the parameter(s), conditioned on these observations</h4>
@@ -141,7 +68,7 @@ consense</code></pre>
 <p>We will only carry out a quick analysis here, using jModelTest to estimate an appropriate substitution model to use with PhyML, and then using PhyML to estimate topology and branch lengths using maximum likelihood.</p>
 <h5 id="estimating-best-substitution-model-with-jmodeltest">Estimating best substitution model (with jModelTest)</h5>
 <p>Some simple instructions on using jModelTest can be found <a href="./usingJModelTest.html">here</a>.</p>
-<h5 id="hinxton-apr-2015-specific-instructions-1">Hinxton Apr 2015-specific instructions</h5>
+<h5 id="crete-may-2016-specific-instructions">Crete May 2016-specific instructions</h5>
 <p>When navigating to a file to open in jModelTest, remember that &quot;..&quot; means &quot;up one level in the directory heiracy&quot; and to choose the filter to show &quot;all files&quot;.</p>
 <p>I'll use:</p>
 <ul class="incremental">
@@ -246,11 +173,12 @@ consense</code></pre>
 <h4 id="answer-your-question-using-these-parameter-estimates-2"><a name="A6ConceptGastroenterologistExercise"></a>&quot; 6. Answer your question using these parameter estimates</h4>
 <p>We estimated this tree and visualised it using Dendroscope.</p>
 <div class="figure">
-<img src="./images/thirtySeqsLouisianaGastroAligned.webPRANK.viaPhylogenyFr.phylipInterleaved_phyml_tree.jpg" />
+<img src="./images/thirtySeqsLouisianaGastroAligned.webPRANK.viaPhylogenyFr.phylipInterleaved_phyml_tree.jpg" alt="" />
+
 </div>
 <p>Looking at this tree, assuming it is correctly rooted and that the topology parameter has been correctly estimated, then the victim sequences are most closely related to the patient sequences, which is what we'd expect if the defendant is guilty. Thus, looking at the results of this analysis, I consider it now more probable that the defendant is guilty than before I did the analysis.</p>
 <h2 id="phylogeny-from-initial-sequences-to-answering-a-question-common-tasks-and-concepts-found-in-many-phylogenetic-analyses"><a name="fromPhylogenyQuestionToAnswer"></a>Phylogeny from initial sequences to answering a question: common tasks and concepts found in many phylogenetic analyses</h2>
-<h3 id="learning-objectives-2">Learning Objectives</h3>
+<h3 id="learning-objectives-1">Learning Objectives</h3>
 <p>After having been shown the demonstration, and carried out the exercise, listed below, you will hopefully have a better idea of common tools used in many phylogenetic analysis, and how they can be linked together to go from having a question of interest, to addressing/informing an answer to that question.</p>
 <h3 id="demonstration-using-north-african-rabies-dataset"><a name="fromPhylogenyQuestionToAnswerCommonToolsConceptsDemoRabies"></a>Demonstration using North African rabies dataset</h3>
 <p>Here we will work again with the North African rabies dataset, and will run again through the process of going from a question to an answer. The earlier demonstration of this kind was done to emphasise the conceptual steps we take while doing such an analysis; here, however, we'll focus more on the practicalities of how to carry out the different stages of the analysis.</p>
@@ -387,12 +315,14 @@ consense</code></pre>
 <p>Look at the tree and decide on how it informs the answer to your question of interest.</p>
 <p>Here, using the tree estimated by PhyML using theGTR plus gamma model, is the image of the tree shown in Dendroscope.</p>
 <div class="figure">
-<img src="./images/relativelyDivergentRabiesCDSsAlignedWithOthersMUSCLEEBI.PhylogenyFrFormatChange.phylipInterleaved_phyml_tree.jpg" />
+<img src="./images/relativelyDivergentRabiesCDSsAlignedWithOthersMUSCLEEBI.PhylogenyFrFormatChange.phylipInterleaved_phyml_tree.jpg" alt="" />
+
 </div>
 <p>You'll see that I made the mistake of running through the analysis without changing the sequence identifiers to contain the information about the country from which the samples were obtained! I'll leave the image here as an example of why it's so important to edit the sequence identifiers in a way that makes answering your substantive question easy...</p>
 <p>Here is another tree estimated from these sequences where the identifiers have been edited to indicate the country from which the sequences were sampled:</p>
 <div class="figure">
-<img src="./images/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank.phylip_phyml_tree.jpg" />
+<img src="./images/phosphoproteinCDSsLabelsEd_alphanumericUnderscoreOnly.webprank.phylip_phyml_tree.jpg" alt="" />
+
 </div>
 <p>The Tunisian sequence all cluster together on one end of a branch that separates them from all other sequences in the tree (using 'unrooted tree' language, they form a 'clan').</p>
 <p>The same is true for the Algerian sequences.</p>
@@ -405,9 +335,11 @@ consense</code></pre>
 <li><a href="./sequences/glycoproteinPartialAndIntergenicSpacerLabelsEd.txt">Sequence labels edited to easily identify country of origin</a></li>
 </ul>
 <ol class="incremental" style="list-style-type: decimal">
-<li><strong>Choose a question</strong><br /> Write down one or more substantive questions we want to address with the analysis</li>
+<li><strong>Choose a question</strong><br />
+Write down one or more substantive questions we want to address with the analysis</li>
 <li><strong>Collect sequences</strong></li>
-<li><strong>Edit sequence identifiers</strong><br /> Changing them to be unique, compatible with analysis tools, and meaningful (in the context of allowing us to easily answer our question(s) of interest when examining resulting phylogenetic trees and other results)</li>
+<li><strong>Edit sequence identifiers</strong><br />
+Changing them to be unique, compatible with analysis tools, and meaningful (in the context of allowing us to easily answer our question(s) of interest when examining resulting phylogenetic trees and other results)</li>
 <li><strong>Align sequences</strong></li>
 <li><strong>Model Selection</strong></li>
 <li><strong>Phylogeny estimation</strong></li>
@@ -447,8 +379,10 @@ consense</code></pre>
 <p>Here is a short description of how I might go about doing the analysis described above:</p>
 <p>aligning sequences:</p>
 <ul class="incremental">
-<li><a href="http://www.ebi.ac.uk/goldman-srv/webprank/">webPRANK</a><br /></li>
-<li><a href="http://www.ebi.ac.uk/Tools/msa/muscle/">MUSCLE</a><br /></li>
+<li><a href="http://www.ebi.ac.uk/goldman-srv/webprank/">webPRANK</a><br />
+</li>
+<li><a href="http://www.ebi.ac.uk/Tools/msa/muscle/">MUSCLE</a><br />
+</li>
 <li><a href="http://www.ebi.ac.uk/Tools/msa/mafft/">MAFFT</a></li>
 </ul>
 <p>removing sequences/columns from the analysis:</p>
@@ -461,9 +395,12 @@ consense</code></pre>
 </ul>
 <p>visualising trees:</p>
 <ul class="incremental">
-<li><a href="http://pbil.univ-lyon1.fr/software/njplot.html">NJplot</a><br /></li>
-<li><a href="http://ab.inf.uni-tuebingen.de/software/dendroscope/">Dendroscope</a><br /></li>
-<li><a href="http://tree.bio.ed.ac.uk/software/figtree/">FigTree</a><br /></li>
+<li><a href="http://pbil.univ-lyon1.fr/software/njplot.html">NJplot</a><br />
+</li>
+<li><a href="http://ab.inf.uni-tuebingen.de/software/dendroscope/">Dendroscope</a><br />
+</li>
+<li><a href="http://tree.bio.ed.ac.uk/software/figtree/">FigTree</a><br />
+</li>
 <li><a href="http://www.phylowidget.org/">PhyloWidget</a></li>
 </ul>
 <p>Bayesian phylogeny estimation:</p>
@@ -484,7 +421,8 @@ consense</code></pre>
 </ul>
 <p><a name="suggestedApproachToAdvancedLouisianGastroenterologistExercise"></a>One way of linking these together would be to:</p>
 <ol class="incremental" style="list-style-type: decimal">
-<li>Align the initial set of <strong>nucleotide</strong> (ignoring the fact that they're coding, or at least contain some coding regions) sequences using <a href="http://www.ebi.ac.uk/goldman-srv/webprank/">webPRANK</a>, asking webPRANK to estimate its own tree<br /></li>
+<li>Align the initial set of <strong>nucleotide</strong> (ignoring the fact that they're coding, or at least contain some coding regions) sequences using <a href="http://www.ebi.ac.uk/goldman-srv/webprank/">webPRANK</a>, asking webPRANK to estimate its own tree<br />
+</li>
 <li>for the sake of keeping data processing/formatting issues at a minimum I'd for now focus on nucleotide models rather than codon or protein models - the fact that they're not perhaps only coding sequences, and might contain some stop codons make it tricky to quickly go with these alternatives</li>
 <li>remove some sequences from the analysis using JalView</li>
 <li>realign the sequences automatically using webPRANK</li>
@@ -533,3 +471,23 @@ consense</code></pre>
 <p>However, in a class where everyone works on different data, and different kinds of research questions (which is usually the case), there will not be a dataset that is directly relevant to the work of all trainees. Thus, the challenge is to find a dataset which all/most/many trainees will find interesting, important, or relevant in a way that's not directly related to their specific work.</p>
 <p>The &quot;Lousisiana Gastroenterologist&quot; datasets described here have been chosen as an example of a phylogenetic analysis where everyone can understand the importance of obtaining an as-accurate as-precise as possible estimation of parameters of the phylogenetic model; the data was presented as evidence in a murder trial, and thus had the opportunity to have a huge impact on the life of an individual; if presented in a case where capital punishment were a possible sentence, it would even be in a position to directly influence the life or death of the accused.</p>
 <p>On top of that, there seems to be something ghastly fascinating in stories of betrayal, sex, and violence of this kind, and this seems to provide a good hook to keep our attention and interest when working with the data.</p>
+<h2 id="visualising-trees-with-njplot"><a name="NJplotExercise"></a> Visualising Trees with NJplot</h2>
+<h3 id="learning-objectives-2">Learning Objectives</h3>
+<p>After completing this section, you will hopefully be able to use NJplot to change the way a phylogenetic tree is visualised/drawn by the software by changing the root and rotating subtrees around internal branches to reach a specified/desired representation of a tree.</p>
+<h3 id="notes">Notes</h3>
+<p>Many applications of phylogenies involve using them to check whether a given set of taxa/organisms/OTUs are related to each other in a particular way i.e. whether the topology of the estimated phylogeny supports a particular set of relationships between OTUs. As a tree with a given topology can be drawn/represented/visualised in many different ways, it can sometimes be tricky to tell whether a given representation of a phylogenetic tree indeed contains the relationship of interest. Thus, working with and changing between different representations of a tree is a useful skill when interpreting the results of phylogenetic analyses.</p>
+<p>NJplot does not have many features and options, however it carries out the simple tasks of re-rooting and rotating branches - very useful when attempting to determine whether a given set of relationships exists in a tree, or when comparing to tree topologies - very quickly, which is often all you need when taking a first look at a phylogeny.</p>
+<p>This page describes how to carry out these kinds of manipulations using NJplot - we will also demo them for you using the example files on this short <a href="./usingNJplot.html">&quot;how to use NJplot&quot; page</a>.</p>
+<h3 id="exercise">Exercise</h3>
+<p>Load the following NEWICK/PHYLIP format <a href="./trees/eightTaxaUnscaledNjplotExercise.ph">unscaled phylogenetic file</a> into NJplot and use the software to try and reproduce as closely as possible the following image:</p>
+<div class="figure">
+<img src="./images/eightTaxaNjplotExercise.gif" title="Eight OTU unscaled tree shown in NJplot" alt="" />
+
+</div>
+<p>If the previous exercise was easy, try the same thing with the following <a href="./trees/twentyUnscaledTaxaNjplotExercise.ph">tree file</a> and image:</p>
+<div class="figure">
+<img src="./images/twentyTaxaNjplotExercise.gif" title="Twenty OTU unscaled tree shown in NJplot" alt="" />
+
+</div>
+<h3 id="tips-and-hints">Tips and hints</h3>
+<p>When re-arranging the way a tree is shown in a tree visualisation tool, if you're trying (as above) to make the tree look the same as in some other representation, it's helpful to <strong><em>firstly</em></strong> re-root the tree you are visualising, to have the same root as in the representation you are looking at, and <strong><em>secondly</em></strong>, beginning at the base of the tree i.e. first with the root, then with the branches nearest to the root, start rotating around internal branches to reach the desired representation.</p>
